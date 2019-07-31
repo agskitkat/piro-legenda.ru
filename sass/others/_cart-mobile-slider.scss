@@ -1,0 +1,35 @@
+.cart-category .cart-mobile-slider {
+  overflow: hidden;
+  margin:0 -20px;
+  .goods {
+    padding:20px 0;
+    .good {
+      width: 215px;
+      padding:10px 20px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .cart-category .cart-mobile-slider {
+    .goods {
+      .good {
+        padding-right:50px;
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .cart-category .cart-mobile-slider {
+    .goods {
+      .good {
+        width: 33.333%;
+        .cart-min-order-sum {
+          padding:0px;
+        }
+      }
+    }
+  }
+}

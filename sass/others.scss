@@ -1,0 +1,47 @@
+$version: "0.0.5";
+@import 'colors';
+
+/* Корзинка cart.html  /start */
+@import 'others/cart';
+@import 'others/_cart-mobile-slider';
+@import 'others/cart_v2';
+/* Корзинка cart.html  /stop */
+
+/* Авторизация, регистрация, восстановление auth.html /start */
+@import 'others/auth';
+/* Авторизация, регистрация, восстановление auth.html /stop */
+
+/* ЛК personal_area.html /start */
+@import 'others/personal_area';
+/* ЛК personal_area.html /stop */
+
+/* Заказ order.html /start */
+@import 'others/order';
+@import 'others/oreder_v4';
+@import 'others/_order_v5';
+/* Заказ order.html /stop */
+
+/* Заказ contact.html /start */
+@import 'others/contact';
+/* Заказ contact.html /stop */
+
+/* Заказ _bonus.html /start */
+@import 'others/bonus';
+/* Заказ _bonus.html /stop */
+
+/* Заказ delivery.html, payment.html, personal-data.hrml, company.html /start */
+@import 'others/delivery';
+@import 'others/delivery-tree';
+/* Заказ delivery.html, payment.html, personal-data.hrml, company.html /stop */
+
+/* 404.html /start */
+@import 'others/404';
+/* 404.html /stop */
+
+/* 404.html /start */
+@import 'others/_barcodes';
+/* 404.html /stop */
+
+//@import 'others/article-pyro-opt';
+
+/* By https://github.com/agskitkat  Others_Korsar Версия: #{$version} */

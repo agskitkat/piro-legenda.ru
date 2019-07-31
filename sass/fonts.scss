@@ -1,0 +1,266 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Manrope';
+  src: local("Manrope Semibold"), local("Manrope-Semibold"), url("../fonts/true/bold.woff2") format("woff2"), url("../fonts/bold.woff") format("woff"), url("../fonts/bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Manrope';
+  src: local("Manrope Medium"), local("Manrope-Medium"), url("../fonts/true/medium.woff2") format("woff2"), url("../fonts/medium.woff") format("woff"), url("../fonts/medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Manrope';
+  src: local("Manrope Thin"), local("Manrope-Thin"), url("../fonts/true/thin.woff2") format("woff2"), url("../fonts/true/thin.woff") format("woff"), url("../fonts/true/thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Manrope';
+  src: local("Manrope Light"), local("Manrope-Light"), url("../fonts/true/light.woff2") format("woff2"), url("../fonts/true/light.woff") format("woff"), url("../fonts/true/light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Manrope';
+  src: local("Manrope Regular"), local("Manrope-Regular"), url("../fonts/true/regular.woff2") format("woff2"), url("../fonts/true/regular.woff") format("woff"), url("../fonts/true/regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Manrope';
+  src: local("Manrope Bold"), local("Manrope-Bold"), url("../fonts/true/bold.woff2") format("woff2"), url("../fonts/true/bold.woff") format("woff"), url("../fonts/true/bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'KorsarIcons';
+  src: url("../fonts/icons/Korsar-icons.eot?#iefix&v=017") format("embedded-opentype"), url("../fonts/icons/Korsar-icons.woff?=017") format("woff"), url("../fonts/icons/Korsar-icons.ttf?=017") format("truetype"), url("../fonts/icons/Korsar-icons.svg#Korsar-icons?=017") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  font-display: auto;
+}
+
+.korsar-icon {
+  font-family: 'KorsarIcons';
+  display: inline-block;
+  font-size: 2rem; }
+
+.korsar-icon.arrow-back:before {
+  content: "\F0027" !important; }
+
+.korsar-icon.mines:before {
+  content: "\f0028" !important; }
+
+.korsar-icon.plus:before {
+  content: "\f0029" !important; }
+
+.korsar-icon.box_small:before {
+  content: "\f002A" !important; }
+
+.korsar-icon.box_big:before {
+  content: "\f002B" !important; }
+
+.korsar-icon.fireworks_2:before {
+  content: "\f002C" !important; }
+
+.korsar-icon.plus_big:before {
+  content: "\f0021" !important; }
+
+.korsar-icon.sertificated:before {
+  content: "\f002E" !important; }
+
+.korsar-icon.play_arrow:before {
+  content: "\f002F" !important; }
+
+.korsar-icon.hlop:before {
+  content: "\f002D" !important; }
+
+.korsar-icon.battary:before {
+  content: "\f0024" !important; }
+
+.korsar-icon.filters:before {
+  content: "\f0000" !important; }
+
+.korsar-icon.key:before {
+  content: "\f0001"; }
+
+.korsar-icon.roket:before {
+  content: "\f0002"; }
+
+.korsar-icon.inbox:before {
+  content: "\f0003"; }
+
+.korsar-icon.balls:before {
+  content: "\f0004"; }
+
+.korsar-icon.fakel:before {
+  content: "\f0005"; }
+
+.korsar-icon.box-mass:before {
+  content: "\f0006"; }
+
+.korsar-icon.disallow:before {
+  content: "\f0007"; }
+
+.korsar-icon.rim:before {
+  content: "\f0008"; }
+
+.korsar-icon.document-round:before {
+  content: "\f0009"; }
+
+.korsar-icon.fire-air:before {
+  content: "\f000A"; }
+
+.korsar-icon.arrow-down:before {
+  content: "\f000B"; }
+
+.korsar-icon.mail:before {
+  content: "\f000C"; }
+
+.korsar-icon.fire-bang:before {
+  content: "\f000D"; }
+
+.korsar-icon.height:before {
+  content: "\f000E"; }
+
+.korsar-icon.bengal:before {
+  content: "\f000F"; }
+
+.korsar-icon.document:before {
+  content: "\f0010"; }
+
+.korsar-icon.paly-round:before {
+  content: "\f0011"; }
+
+.korsar-icon.user-w:before {
+  content: "\f0012"; }
+
+.korsar-icon.box-closed:before {
+  content: "\f0013"; }
+
+.korsar-icon.arrow-up:before {
+  content: "\f0014"; }
+
+.korsar-icon.fontan:before {
+  content: "\f0015"; }
+
+.korsar-icon.time:before {
+  content: "\f0016"; }
+
+.korsar-icon.search:before {
+  content: "\f0017"; }
+
+.korsar-icon.menu:before {
+  content: "\f0018"; }
+
+.korsar-icon.close:before {
+  content: "\f0019"; }
+
+.korsar-icon.close-round:before {
+  content: "\f001A"; }
+
+.korsar-icon.user-b:before {
+  content: "\f001B"; }
+
+.korsar-icon.instagram:before {
+  content: "\f001C"; }
+
+.korsar-icon.cal:before {
+  content: "\f001D"; }
+
+.korsar-icon.cart:before {
+  content: "\f001E"; }
+
+.korsar-icon.bomb:before {
+  content: "\f001F"; }
+
+.korsar-icon.phone:before {
+  content: "\f0020"; }
+
+.korsar-icon.vk:before {
+  content: "\f0022"; }
+
+.korsar-icon.fb:before {
+  content: "\f0023"; }
+
+.korsar-icon.hamb:before {
+  content: "\f0025"; }
+
+.korsar-icon.check:before {
+  content: "\f0026" !important; }
+
+.korsar-icon.pnevmo:before {
+  content: "\f0030" !important; }
+
+.korsar-icon.user-mony:before {
+  content: "\f0031" !important; }
+
+.korsar-icon.store:before {
+  content: "\f0032" !important; }
+
+.korsar-icon.fire:before {
+  content: "\f0033" !important; }
+
+.korsar-icon.table-fire:before {
+  content: "\f0034" !important; }
+
+.korsar-icon.barcode:before {
+  content: "\f0035" !important; }
+
+.korsar-icon.sklad:before {
+  content: "\f0037" !important; }
+
+.korsar-icon.deliviry:before {
+  content: "\f0038" !important; }
+
+.korsar-icon.calendar:before {
+  content: "\f0039" !important; }
+
+.korsar-icon.point:before {
+  content: "\f003A" !important; }
+
+.korsar-icon.info:before {
+  content: "\f003B" !important; }
+
+.korsar-icon.fast-deliviry:before {
+  content: "\f0036" !important; }
+
+.korsar-icon.phone-stick:before {
+  content: "\f003C" !important; }
+
+.korsar-icon.documents:before {
+  content: "\f003D" !important; }
+
+.korsar-icon.crown:before {
+  content: "\f003F" !important; }
+
+.korsar-icon.star-w:before {
+  content: "\f0040" !important; }
+
+.korsar-icon.star:before {
+  content: "\f0041" !important; }
+
+.korsar-icon.check-w:before {
+  content: "\f0042" !important; }
+
+.korsar-icon.mishura:before {
+  content: "\f0044" !important; }
+
+.korsar-icon.line-width:before {
+  content: "\f0045" !important; }
+
+.korsar-icon.diametr:before {
+  content: "\f0046" !important; }
+

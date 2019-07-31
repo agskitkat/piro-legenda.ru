@@ -1,0 +1,30 @@
+.search-page {
+  form {
+    position:relative;
+    input:first-child {
+      border: 1px solid #E4E4E4;
+      border-radius: 5px;
+      height: 40px;
+      font-size: .75rem;
+      color: rgba(28,28,28,.5);
+      padding-right: 30px;
+      padding-left: 10px;
+      width: 100%;
+    }
+    input:nth-child(2) {
+      position:absolute;
+      display:block;
+      max-width:150px;
+      border: 1px solid #E4E4E4;
+      border-radius: 5px;
+      height: 40px;
+      font-size: .75rem;
+      color: rgba(28,28,28,.5);
+      line-height: 9px;
+      top:0px;
+      right:0px;
+      color:#FFF;
+      background: #0f28bf;
+    }
+  }
+}

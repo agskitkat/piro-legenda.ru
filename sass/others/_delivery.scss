@@ -1,0 +1,78 @@
+.page-delivery {
+  padding-top: 20px;
+  padding-bottom: 90px;
+  .map {
+    min-width:100%;
+    height:420px;
+    margin:0 -20px;
+  }
+  .deliviry-cost-calc {
+    margin-bottom: 20px;
+  };
+}
+
+.list-red {
+  list-style: none;
+  padding-left:25px;
+  li {
+    position:relative;
+  }
+  li:before {
+    position:absolute;
+    left:-18px;
+    top:8px;
+    content:" ";
+    display:block;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background: $red;
+    float:left;
+  }
+}
+
+.order-status {
+  text-align: center;
+  padding-top:44px;
+  padding-bottom:200px;
+  img {
+    width:80px;
+    height:80px;
+  }
+  .text {
+    line-height: 27px;
+    font-size: 15px;
+    color:$gray-1;
+  }
+}
+
+@media (min-width: 375px) {
+  .page-delivery {
+    .deliviry-cost-calc {
+      padding: 20px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 15px;
+      background: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-delivery {
+    .deliviry-cost {
+      position: relative;
+      .deliviry-cost-calc {
+        width:33%;
+        position: absolute;
+        z-index: 10;
+        right: 10px;
+        bottom: -10px;
+      }
+      .map {
+        margin: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,332 @@
+
+
+footer {
+  background: $background-footer;
+  min-height: 300px;
+  clear: both;
+  padding-top: 2rem;
+  text-align: center;
+}
+footer .follow-block-icon {
+  vertical-align: middle;
+  display:inline-block;
+  border-radius: 5px;
+  width:35px;
+  height:35px;
+  text-align: center;
+  color:#FFF;
+  position:relative;
+  line-height: 24px;
+  cursor:pointer;
+  margin-right:6px;
+}
+footer .follow-block-icon .korsar-icon {
+  line-height: 35px;
+  font-size: 1rem;
+  position:absolute;
+  top:0;
+  left:0px;
+  width:35px;
+}
+footer .follow-block-icon.vkontakte {
+  background-color: #ABABAB;
+  .korsar-icon {
+    font-size: 25px;
+    line-height:35px;
+  }
+}
+footer .follow-block-icon.facebook {
+  background-color: #1C1C1C;
+  .korsar-icon {
+    font-size: 34px;
+    line-height: 32px;
+  }
+}
+footer .follow-block-icon.instagram {
+  background-color: #ABABAB;
+  .korsar-icon {
+    font-size: 40px;
+    line-height:30px;
+  }
+}
+footer .footer-name {
+    font-size: 16px;
+    color:$black;
+    font-weight: bold;
+    display: none;
+}
+footer .footer-about {
+  font-size: 12px;
+  color:$gry;
+  display: none;
+}
+.gray-line {
+    border-top:1px solid $gray-line;
+    margin:1rem 0;
+}
+
+.phone-block {
+  line-height: 14px;
+  font-size: 15px;
+}
+
+.phone-block .phone-number {
+  float:left;
+}
+.phone-block .phone-number.tow{
+  float:right;
+}
+.phone-block .email {
+  clear: both;
+  padding-top:16px;
+}
+
+.desctop-only {
+  display:none;
+}
+.footer-more .footer-more-header {
+  line-height: 22px;
+  font-size: 15px;
+  color:#000;
+  padding-bottom:14px;
+  display: block;
+}
+.footer-more {
+  line-height: 26px;
+  font-size: 14px;
+  color:#828282;
+
+}
+.list-unstyled {
+  display: block;
+  padding-bottom:33px;
+  margin:0px;
+  a {
+    color:#828282;
+  }
+  a:hover {
+    color:#1c1c1c;
+  }
+}
+.policity {
+  display:none;
+}
+.follow-block img{
+  width:155px;
+  padding:0 20px;
+}
+.follow-block span{
+  padding-bottom:20px;
+  display:block;
+}
+
+footer .korsar {
+  clear: both;
+  text-align: center;
+  color:#B8B8B8;
+  font-size: 10px;
+  padding:20px 0px;
+  border-top:1px solid  #D4D4D4;
+}
+
+@media (min-width: 768px) {
+  .phone-block {
+    width:80%;
+    margin: 0 auto;
+  }
+  .follow-block span{
+    padding-bottom:0px;
+    display:inline;
+  }
+
+  footer .footer-name {
+    font-size: 16px;
+    color:$black;
+    font-weight: bold;
+    display: block;
+  }
+  footer .footer-about {
+    font-size: 12px;
+    color:$gry;
+    display: block;
+  }
+
+  .footre-more-info {
+    display:flex;
+    justify-content:space-between;
+    text-align: left;
+  }
+
+  .footre-more-info .footer-more:first-child{
+    display: none;
+  }
+  footer .footer-name, footer .footer-about {
+    display: none;
+  }
+  .phone-block {
+    margin:0px auto;
+    padding: 20px 0 0;
+    width:100%;
+    text-align:left;
+  }
+  .phone-block .phone-number,.phone-block .phone-number.tow, .phone-block .email {
+    float:none;
+    display: inline;
+    padding-right: 20px;
+  }
+  .phone-block .email {
+    float:right;
+    padding:0px;
+  }
+
+  footer .follow-block .align-self-center{
+    text-align: left;
+  }
+
+  footer .policity {
+    display:inline;
+    float:right;
+    margin-top:-59px;
+    font-size: 12px;
+    color:#8C8C8C;
+  }
+
+
+  footer .col-footer-more {
+    clear: both;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  footer {
+    text-align: left;
+  }
+  footer .policity {
+    display: block;
+    float:none;
+    margin:0px;
+    font-size: 12px;
+    color:#828282;
+  }
+  footer .col-footer-more {
+    clear: none;
+  }
+  footer .footer-name, footer .footer-about {
+    display: block;
+    font-size: 16px;
+  }
+  footer .footer-about {
+    border-bottom: 1px solid #D4D4D4;
+    padding-bottom:20px;
+    font-size: 12px;
+  }
+  .phone-block {
+    margin:0px;
+    padding: 20px 0 0;
+  }
+  .phone-block .phone-number {
+    line-height: 26px;
+    float:none;
+    display:block;
+  }
+  .phone-block .phone-number.tow{
+    float:none;
+    display:block;
+  }
+  .phone-block .email {
+    display:none;
+  }
+  .col-footer {
+    padding-right:20px;
+    width:30%;
+    float:left;
+  }
+  .col-footer-more {
+    width:70%;
+    float:right;
+  }
+  .policity {
+    display:block ;
+  }
+  footer .follow-block {
+    font-size: .75rem;
+    color: $black;
+  }
+  footer .footer-more-header {
+    color: $black;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+  }
+  footer .footer-more {
+    font-size: .75rem;
+    color: $gry;
+    text-decoration: none;
+  }
+  footer .policity a {
+    font-size: .75rem;
+  }
+  footer .footer-more .list-unstyled {
+    padding-top: .75rem;
+  }
+  footer .footer-more .list-unstyled li {
+    padding-bottom: .3rem;
+  }
+  footer .col-footer {
+    width:40%;
+    padding-right:60px;
+  }
+  footer .col-footer-more {
+    width:60%;
+  }
+  footer .col-footer-more .list-unstyled li{
+    line-height: 23px;
+    font-size: 13px;
+  }
+  footer .col-footer-more .list-unstyled {
+    padding-right: 45px;
+  }
+}
+
+@media (min-width: 1140px)  {
+  footer .follow-block-icon {
+    width: 24px;
+    height:24px;
+  }
+  footer .follow-block-icon .korsar-icon {
+    line-height: 24px;
+    width:24px;
+  }
+  footer .follow-block-icon.vkontakte {
+    .korsar-icon {
+      font-size: 17px;
+      line-height:22px;
+    }
+  }
+  footer .follow-block-icon.facebook {
+    .korsar-icon {
+      font-size: 24px;
+      line-height: 22px;
+    }
+  }
+  footer .follow-block-icon.instagram {
+    .korsar-icon {
+      font-size: 30px;
+      line-height:22px;
+    }
+  }
+  footer .col-footer {
+    width:35%;
+    padding-right:60px;
+  }
+  footer .col-footer-more {
+    width:65%;
+  }
+  .footre-more-info .footer-more:first-child{
+    display: block;
+  }
+  footer .col-footer-more .list-unstyled {
+    padding-right: 30px;
+  }
+}

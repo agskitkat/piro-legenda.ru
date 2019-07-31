@@ -1,0 +1,203 @@
+.top-fixed-header {
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  z-index: 100500;
+  .mobile {
+    display:none;
+    width:100%;
+    height:54px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    transition: all 0.2s;
+    .menu-btn-mobile {
+      float:left;
+      height:100%;
+      padding-left:20px;
+      padding-top:8px;
+    }
+    .logo-block-header {
+        height:100%;
+      .logo-image {
+        height: 29px;
+        width: 105px;
+        margin-top: 15px;
+        display: inline-block;
+        background-image: url(../images/logo-mobile.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    .login-block-header {
+      margin: 0;
+      height: 100%;
+      width: 43px;
+      padding-top: 18px;
+      text-align: center;
+      padding-right: 26px;
+    }
+    .cart-block-header {
+      height:100%;
+      display:block;
+      margin:0px;
+      padding-top:20px;
+      padding-right:20px;
+      width:42px;
+      text-align: right;
+      .items-count {
+        top: 9px;
+        right: 11px;
+      }
+    }
+  }
+  .desctop {
+    display:none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-fixed-header {
+    .desctop {
+      height:80px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      background-color: #FFF;
+      transition: all 0.2s;
+      .flex {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        .logo-phone {
+          height:80px;
+          min-width:345px;
+          display:flex;
+          justify-content: space-between;
+          align-items: center;
+          .logo {
+            padding-right:40px;
+            .logo-image {
+              height: 60px;
+              width: 170px;
+              background-image: url("../images/logo-legend.svg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+            }
+          }
+          > .phone {
+            height: 60px;
+            .work-time {
+              color:$gray-1;
+              font-size: 12px;
+            }
+            .phone {
+              line-height: 17px;
+              font-size: 15px;
+              color:$black;
+            }
+          }
+        }
+        .menu {
+          min-width:260px;
+          padding-left:25px;
+          .black {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: bold;
+          }
+        }
+        .menu-price-list {
+          font-size: 13px;
+          font-weight: 700;
+          display: flex;
+          margin:0 auto;
+          align-items: center;
+          justify-content: center;
+          margin-left: 15px;
+          img {
+            margin-right: 5px;
+          }
+        }
+        .enter-cart {
+          flex-grow:2;
+          display:flex;
+          justify-content: flex-end;
+          align-items: center;
+          .enter {
+            padding-left:10px;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            .korsar-icon {
+              line-height: 32px;
+              padding-right:5px;
+              font-size: 40px;
+              padding-bottom: 8px;
+            }
+            .login-text {
+              font-size: 13px;
+              line-height: 21px;
+            }
+          }
+          > .cart {
+            min-width:110px;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            .korsar-icon {
+              font-size: 50px;
+              line-height: 38px;
+              padding-bottom: 8px;
+            }
+            .count-price {
+              padding-left: 8px;
+              .count {
+                font-size: 12px;
+                color:$gray-1;
+              }
+              .price {
+                font-size: 14px;
+                text-align: right;
+                font-weight: bold;
+              }
+            }
+          }
+          > .cart:hover {
+            color:$red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .top-fixed-header {
+    .desctop {
+      .flex {
+        .logo-phone {
+          .logo {
+            padding-right: 75px;
+          }
+        }
+        .menu {
+          padding-left: 75px;
+          min-width:335px;
+        }
+        .enter-cart {
+          justify-content: flex-end;
+          .enter {
+            padding-right:75px;
+            .login-text {
+              max-width:192px;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}

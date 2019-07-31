@@ -1,0 +1,139 @@
+$black: #1C1C1C;
+$gray-1: #8D8D8D;
+$gray: #BBBBBB;
+$gray-2: #E8E8E8;
+$green: #08d04c;
+$red: #F12626;
+$blue: #0F28BF;
+$blue-2: #8692DE;
+
+.korsar-input {
+  border: 0px;
+  border-bottom: 1px solid $gray-2;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  color: $black;
+}
+
+.form button {
+  border-radius: 5px;
+  color:$gray-1;
+  border:1px solid $gray-1;
+  background: #FFF;
+  padding:17px 0;
+  display:block;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 14px;
+  width:100%;
+  font-weight: bold;
+  transition :all 0.2s;
+}
+.form button:hover{
+  background: $green;
+  color:#FFF;
+  border-color:$green;
+}
+
+.page-auth .auth-block {
+  position:relative;
+  height:100vh;
+}
+.page-auth {
+  text-align: center;
+  .logo-image {
+    height:40px;
+    width:150px;
+    margin-top:15px;
+    display:inline-block;
+    background-image:url("../../images/logo-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .auth-header {
+    text-align: center;
+    padding-top:30px;
+  }
+  .auth-header a{
+    font-size: 24px;
+    font-weight: bold;
+    color:$black;
+  }
+  .fragment {
+    max-width:500px;
+    text-align: center;
+    margin:0 auto;
+    display:none;
+      .auth-msg {
+        display:block;
+        font-size: 16px;
+        padding-top:45px;
+        width:250px;
+        margin: 0 auto;
+        font-weight: 500;
+      }
+
+      .form {
+        padding-top:32px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      .form {
+          button {
+            margin-top:34px;
+            margin-bottom:34px;
+          }
+          input {
+            margin-top:15px;
+            padding-left:30px;
+          }
+
+          fieldset {
+             position:relative;
+             .korsar-icon {
+               position: absolute;
+               left:5px;
+               top:3px;
+               color:$gray-1;
+             }
+          }
+      }
+
+      .service {
+        font-size: 13px;
+      }
+
+      .alternative {
+        text-align: center;
+        display: block;
+        font-size: 13px;
+        color:$blue-2;
+        bottom:30px;
+        padding-bottom: 30px;
+        padding-top:40px;
+      }
+  }
+  .fragment.active {
+    display:block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-auth .fragment .alternative {
+    position:relative;
+    padding-top:20px;
+    bottom:0px;
+  }
+  .page-auth {
+    .logo-image {
+      height: 60px;
+      width: 180px;
+      background-image: url("../../images/logo-legend.svg");
+    }
+  }
+}

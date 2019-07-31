@@ -1,0 +1,38 @@
+.fieldset-drop-live {
+  z-index: 100;
+  position:relative;
+  .icon.black {
+    z-index: 1;
+  }
+  .live-search-result {
+    background: #FFF;
+    padding: 20px 15px;
+    position:absolute;
+    top:calc(100% - 3px);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #E4E4E4;
+    left:0px;
+    right:0px;
+    max-height: 220px;
+    a {
+      margin-bottom:20px;
+      cursor:pointer;
+      display:flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 16px;
+      img {
+        width:50px;
+        height:30px;
+        margin-right:10px;
+      }
+    }
+    a:nth-last-child(1) {
+      margin-bottom:0px;
+    }
+  }
+  .live-search-result.close {
+    display:none;
+  }
+}

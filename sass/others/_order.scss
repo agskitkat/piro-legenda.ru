@@ -1,0 +1,553 @@
+.page-order {
+  padding-top:20px;
+  .page-header {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+  }
+  .delivery-block {
+    padding-top:18px;
+    font-size: 15px;
+    .delivery-options {
+      .delivery-option {
+        width:100%;
+        color:#8C8C8C;
+        display:block;
+        cursor: pointer;
+        input {
+          display:none;
+        }
+        .radio-group {
+          width:12%;
+          float:left;
+          padding-top:36px;
+          .radio {
+            width: 20px;
+            height: 20px;
+            border: 1px  solid $filter-item-text;
+            border-radius: 50%;
+            position: relative;
+            .round {
+              transition: all ease-out .3s;
+              position: absolute;
+              top: 3px;
+              right: 3px;
+              bottom: 3px;
+              left: 3px;
+              border-radius: 50%;
+            }
+          }
+        }
+        .icon {
+          width:23%;
+          float:left;
+          .img {
+            width:100%;
+            height:90px;
+            text-align: center;
+            padding-top: 20px;
+          }
+        }
+        .text {
+          width:65%;
+          float:left;
+          display:table;
+          height:90px;
+          .say {
+            display:table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+      .delivery-option:after {
+        content: " ";
+        clear: both;
+        display:block;
+      }
+      .delivery-option.current {
+        color: $black;
+        .radio-group {
+          .radio {
+            border: 1px solid $black;
+            .round {
+              display: block;
+              background: $black;
+            }
+            .icon {
+              .korsar-icon {
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .delivery-block:after {
+    clear:both;
+    display:block;
+    content: " ";
+  }
+  .forms {
+    .form {
+      .form-header {
+        position:relative;
+        display:block;
+        font-size: 16px;
+        color:$black;
+        font-weight: 500;
+        z-index: 3;
+        span {
+          font-size:40px;
+          margin-left: 20px;
+          line-height:30px;
+          display:block;
+          float:left;
+          margin-top:-3px;
+        }
+        span.text {
+          font-size:18px;
+          line-height:30px;
+          margin:0px;
+        }
+      }
+      .form-header:after {
+        clear:both;
+        display:block;
+        content: " ";
+      }
+      .required {
+        color:$red;
+      }
+      fieldset {
+        padding-bottom:20px;
+        .required {
+          position:absolute;
+          right:5px;
+          top:17px;
+          z-index: 2;
+        }
+        input {
+          margin-top:15px;
+          padding-left:30px;
+          transition: all 0.2s;
+          z-index: 1;
+          position: relative;
+        }
+        input:focus{
+          color:$black;
+          border-bottom: 1px solid $black;
+        }
+        input:focus + .korsar-icon {
+          color:$black;
+        }
+        .korsar-icon {
+          position: absolute;
+          left:5px;
+          top:3px;
+          color:$gray-1;
+          z-index: 2;
+        }
+        .korsar-icon.user-w {
+          top:7px;
+        }
+        .korsar-icon.mail {
+          top:7px;
+        }
+        .korsar-icon.phone  {
+          top: 2px;
+          left: 8px;
+          font-size: 39px;
+        }
+        .korsar-icon.sertificated {
+          top: 8px;
+          left: 8px;
+        }
+        .korsar-icon.hamb {
+          font-size:26px;
+          top: 12px;
+          left:3px;
+        }
+        .korsar-icon.point {
+          top:7px;
+        }
+      }
+
+      .tax-system {
+        padding-top:20px;
+        > span {
+          font-size: 14px;
+          font-weight: 500;
+          display: block;
+          width: 100%;
+          padding-bottom:15px;
+          :after {
+            clear: both;
+            content: " ";
+            display: block;
+          }
+        }
+        .item {
+          display:inline-block;
+          padding-right: 30px;
+          > span {
+            font-size: 14px;
+            line-height: 30px;
+            color:$gray-1;
+            padding-left: 3px;
+          }
+          input {
+            display: none;
+          }
+          .radio {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $gray-1;
+            border-radius: 50%;
+            position: relative;
+            margin: .3rem 0px .3rem 0px;
+            .round {
+              transition: all ease-out .2s;
+              position: absolute;
+              top: 3px;
+              right: 3px;
+              bottom: 3px;
+              left: 3px;
+              border-radius: 50%;
+            }
+          }
+        }
+        .item.current {
+          > span {
+            color: $blue;
+          }
+          .radio {
+            border: 1px solid $blue;
+            .round {
+              display:block;
+              background: $blue;
+            }
+          }
+        }
+      }
+
+      .btn-block {
+        padding-top:20px;
+      }
+
+      .payment-block {
+        padding-top: 30px;
+        .pay-system {
+          padding-top: 20px;
+          .item {
+            display: block;
+            padding-right: 30px;
+            > span {
+              font-size: 14px;
+              line-height: 30px;
+              color: $gray-1;
+            }
+            input {
+              display: none;
+            }
+            .radio {
+              margin-top: 5px;
+              margin-right: 10px;
+              width: 20px;
+              height: 20px;
+              border: 1px solid $gray-1;
+              border-radius: 50%;
+              position: relative;
+              float: left;
+              .round {
+                transition: all ease-out .2s;
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                bottom: 3px;
+                left: 3px;
+                border-radius: 50%;
+              }
+            }
+          }
+          .item.current {
+            > span {
+              color: $blue;
+            }
+            .radio {
+              border: 1px solid $blue;
+              .round {
+                display: block;
+                background: $blue;
+              }
+            }
+          }
+        }
+
+        .del-russia {
+          display:none;
+        }
+        .del-russia, .del-moscow {
+          display:none;
+        }
+      }
+
+      .form-down-block {
+        padding-top:60px;
+        padding-bottom:60px;
+        text-align: center;
+        span {
+          display:block;
+          margin-top:30px;
+        }
+      }
+
+      .deliviry-cost {
+        line-height: 26px;
+        font-size: 15px;
+        color:$gray-1;
+        padding-bottom: 16px;
+        .cost {
+          color:$black;
+        }
+      }
+      .step-0 {
+        padding-top:40px;
+        .form-header {
+          padding-bottom:20px;
+        }
+      }
+      .step-0, .step-1, .step-2, .personal-data-tooltipe {
+        display:none;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .step-1:after{
+        clear:both;
+        display:block;
+        content: " ";
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .page-order .forms .form .tax-system {
+      > span {
+        letter-spacing: 0.02em;
+        font-size: 14px;
+        width:66%;
+        display:block;
+        float:left;
+        line-height: 30px;
+      }
+      .item {
+        padding:0px;
+        width:17%;
+        float:left;
+        > span {
+          font-size: 13px;
+        }
+      }
+  }
+  .page-order .forms .form .tax-system:after {
+    clear: both;
+    display: block;
+    content: " ";
+  }
+}
+
+@media (min-width: 768px) {
+  .page-order .forms .form {
+    .step-0 {
+      fieldset {
+        .radio-block {
+          width: 50%;
+          float: left;
+          clear: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page-order {
+      .delivery-block .delivery-options {
+        // 728
+        .delivery-option {
+          float:left;
+          .radio-group {
+            padding-top:36px;
+            cursor: pointer;
+            .radio {
+              width: 20px;
+              height: 20px;
+              border: 1px  solid $filter-item-text;
+              border-radius: 50%;
+              position: relative;
+              .round {
+                transition: all ease-out .2s;
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                bottom: 3px;
+                left: 3px;
+                border-radius: 50%;
+              }
+            }
+          }
+          .text {
+            padding-left:20px;
+          }
+        }
+        .delivery-option:nth-child(1) {
+           width:25%;
+          margin-right:5%;
+            // 178px
+         }
+        .delivery-option:nth-child(2) {
+          width:37%;
+          // 265px
+          margin-right:5%;
+        }
+        .delivery-option:nth-child(3) {
+          width:27%;
+          // 191px
+        }
+      }
+      .forms .form {
+          .step-1 {
+              fieldset:nth-child(2n + 2) {
+                width:calc(50% - 10px);
+                float:right;
+              }
+
+              fieldset:nth-child(2n + 1) {
+                width:calc(50% - 10px);
+                float:left;
+              }
+          }
+          .step-2 {
+              clear: both;
+              .payment-block {
+                  width:50%;
+                  float:left;
+              }
+            .payment-block.del-none{
+              padding-left: 10px;
+            }
+          }
+        .step-2:after {
+          clear:both;
+          display:block;
+          content:" ";
+        }
+        .form-down-block {
+          position:relative;
+          .button {
+            display:block;
+            width:246px;
+            margin:0 auto;
+          }
+          .required {
+            position:absolute;
+            right:0px;
+            top:0px;
+            margin-top:73px;
+          }
+        }
+      }
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .page-order .forms .form {
+    .step-0 {
+      fieldset {
+        .radio-block {
+          width: 33.333%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+    .page-order {
+        .delivery-block .delivery-options {
+            .delivery-option:nth-child(2),  .delivery-option:nth-child(1), .delivery-option:nth-child(3){
+                width:33.333%;
+              margin-right: 0;
+            }
+            .delivery-option {
+                .text {
+                    padding-left:0px;
+                }
+            }
+        }
+      .delivery-block .delivery-options:after {
+        clear:both;
+        display:block;
+        content: " ";
+      }
+      .forms .form {
+          .step-1 {
+            fieldset:nth-child(3n + 3) {
+              width:calc(33.333% - 60px);
+              float:right;
+            }
+
+            fieldset:nth-child(3n + 2) {
+              width:calc(33.333% - 60px);
+              margin-left:90px;
+              float:left;
+            }
+
+            fieldset:nth-child(3n + 1) {
+              width:calc(33.333% - 60px);
+              float:left;
+            }
+          }
+          .step-2 {
+            clear: both;
+            .payment-block {
+              width:33.333%;
+              float:left;
+            }
+            .payment-block.del-none {
+              width:66.666%;
+              padding-left:0px;
+              .form-header {
+                margin-left:30px;
+              }
+              fieldset:nth-child(1) {
+                float:left;
+                width:calc(50% - 60px);
+                margin-left: 30px;
+              }
+              fieldset:nth-child(2) {
+                float:right;
+                width:calc(50% - 60px);
+              }
+              .moscow-text {
+                font-size: 13px;
+                width:50%;
+                float:left;
+                padding-left:10px;
+              }
+              .deliviry-cost {
+                padding-left:10px;
+              }
+              .office, .select.del-moscow {
+                 float:right;
+                 width:calc(50% - 20px);
+                 margin-left:20px;
+               }
+            }
+
+          }
+        }
+    }
+}

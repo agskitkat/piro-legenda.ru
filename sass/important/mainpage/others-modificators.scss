@@ -1,0 +1,253 @@
+.seo-text.mod-1 {
+  text-align: center;
+  h1 {
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+  }
+  p {
+    color: rgba(28, 28, 28, 0.6);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+}
+
+
+.piro-optom-list {
+  padding-top:80px;
+  .header {
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+  }
+  .text {
+    padding-top:10px;
+    font-size: 15px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .lists {
+    ul {
+      padding:0px;
+      list-style: none;
+      margin: 0px;
+      li {
+        display:flex;
+        justify-content: flex-start;
+        padding-bottom:16px;
+        img {
+          display: block;
+          margin-top:4px;
+          margin-right:8px;
+          width:18px;
+          height:18px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 480px) {
+  .piro-optom-list {
+    .header {
+      font-size: 18px;
+    }
+    .text {
+      font-size: 15px;
+    }
+    .lists {
+      padding-top: 18px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          padding-right:10px;
+          width:50%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .piro-optom-list {
+    .header {
+      font-size: 25px;
+    }
+    .text {
+      font-size: 18px;
+    }
+    .lists {
+      padding-top: 35px;
+    }
+  }
+}
+
+.piro-optom-text {
+  padding-top:80px;
+  text-align: center;
+  .header {
+    font-size:18px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .text {
+    text-align: left;
+    font-size:14px;
+  }
+}
+@media (min-width: 768px) {
+  .piro-optom-text {
+    padding-top:80px;
+    text-align: center;
+    .header {
+      font-size:25px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .text {
+      text-align: left;
+      font-size:14px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .piro-optom-text {
+    padding-top:80px;
+    text-align: center;
+    .header {
+      font-size:25px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .text {
+      text-align: left;
+      font-size:15px;
+     }
+  }
+}
+
+.piro-optom-map {
+  padding-top:50px;
+  .header {
+    font-size: 18px;
+    text-align: center;
+  }
+  img {
+    width:100%;
+  }
+   p {
+     line-height: 21px;
+     font-size: 14px;
+     color: rgba(0, 0, 0, 0.8);
+   }
+}
+
+.lead-options.mod-1{
+  .header {
+    font-size: 18px;
+  }
+  .sub-text {
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .main-advantages {
+
+    .advantage-wrap {
+      width:100%;
+      .advantage {
+        height:initial;
+        .img {
+          background-size: contain;
+        }
+        .text {
+
+        }
+      }
+    }
+  }
+}
+@media (min-width: 480px) {
+  .lead-options.mod-1{
+    .header {
+      font-size: 18px;
+    }
+    .sub-text {
+      font-weight: 500;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+    .main-advantages {
+      display: flex;
+      flex-wrap: wrap;
+      .advantage-wrap {
+        float:none;
+        width: 50%;
+        .advantage {
+
+          .img {
+
+          }
+          .text {
+
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .main-page-v2 .lead-options.mod-1 {
+    .header {
+      font-size: 18px;
+    }
+
+    .sub-text {
+      font-weight: 500;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+    .main-advantages {
+      display: flex;
+      flex-wrap: wrap;
+      .advantage-wrap {
+        float: none;
+        width: 33.333%;
+        padding-bottom:20px;
+        .advantage {
+
+          .img {
+
+          }
+
+          .text {
+            font-size: 14px;
+            height:initial;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .main-page-v2 .lead-options.mod-1 {
+    .header {
+    }
+    .sub-text {
+    }
+    .main-advantages {
+      .advantage-wrap {
+        .advantage {
+          .text {
+            width:100%;
+            min-width: 80%;
+            margin: 0 auto;
+            font-size: 15px;
+            height:initial;
+          }
+        }
+      }
+    }
+  }
+}

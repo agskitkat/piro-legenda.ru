@@ -1,0 +1,325 @@
+.page-order-v4 {
+  padding-bottom:90px;
+  .order-v4 {
+    padding-top:40px;
+
+    .order-steps {
+      padding:20px 0px;
+      .step-header {
+        padding-bottom:20px;
+        text-align: center;
+        font-size: 18px;
+      }
+      .order-step {
+        display:none;
+        .order-header {
+          .if-anon {
+            text-align: center;
+            padding-bottom:20px;
+          }
+          a {
+            color:$blue;
+          }
+        }
+      }
+    }
+
+    .order-steps {
+      .order-step.active {
+        display: block;
+      }
+    }
+
+    .step-nav {
+      display: none;
+       text-align: center;
+       .text {
+         text-align: center;
+         font-size: 13px;
+         color:$gray;
+       }
+
+       .round-steps {
+         padding:10px 0px;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         .round {
+           width:40px;
+           height:40px;
+           border:1px solid $gray;
+           border-radius: 50%;
+           text-align: center;
+           line-height: 40px;
+           color:$gray;
+         }
+         .line {
+           width:30px;
+           height:1px;
+           background-color: $gray;
+           margin:0 5px;
+         }
+         .round.active {
+           border:1px solid $green;
+           color:#FFF;
+           background-color:$green;
+         }
+         .round.active + .line {
+           background-color:$green;
+         }
+       }
+
+       .back {
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         .korsar-icon {
+           display:block;
+           font-size: 30px;
+           padding:0px 10px;
+           margin-top:-4px;
+         }
+       }
+     }
+    .step-nav.active {
+      display: block;
+    }
+
+    .step-delivery {
+      .delivery-options {
+        .delivery-option {
+          cursor: pointer;
+          padding-bottom:20px;
+          .wrap {
+            padding:20px;
+            border-radius: 15px;
+            border:1px solid $gray;
+            color:$gray;
+            text-align: center;
+            img {
+              width:41px;
+              height:41px;
+            }
+            .text {
+
+            }
+          }
+          input {
+            display:none;
+          }
+          .description {
+            font-size: 13px;
+            padding-top:20px;
+          }
+        }
+        .delivery-option.current,  .delivery-option:hover {
+          .wrap {
+            border: 1px solid $green;
+            color: $green;
+          }
+        }
+      }
+    }
+
+    .step-company-type {
+      fieldset {
+        max-width: 360px;
+        padding-top:20px;
+        margin:0 auto;
+      }
+    }
+
+    .required-fields {
+      color:$red;
+      padding-top:40px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .step-next-btn {
+      display:none;
+      .button {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .korsar-icon {
+          display:block;
+          font-size: 20px;
+          padding:0px 10px;
+        }
+
+    }
+
+    .step-next-btn.active {
+      display:block;
+    }
+
+    .required-fields {
+      display:none;
+    }
+
+    .required-fields.active {
+      display:block;
+    }
+
+
+  }
+  .must {
+    text-align: center;
+    label {
+      max-width:300px;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+@media (min-width: 480px) {
+  .page-order-v4 {
+    .order-v4 {
+      .step-nav {
+        .back {
+          float: left;
+          margin-top: -56px;
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+
+      .step-delivery {
+        .delivery-options {
+          .delivery-option {
+            width: 50%;
+            float: left;
+            height:320px;
+            font-size: 15px;
+            margin-bottom: 10px;
+            padding-bottom: 0px;
+            .wrap {
+              height: 130px;
+              padding:20px 5px;
+            }
+          }
+
+          .delivery-option:nth-child(2n+1) {
+            padding-right: 5px;
+          }
+
+          .delivery-option:nth-child(2n+2) {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page-order-v4 {
+    .order-v4 {
+      .required-fields {
+        float: right;
+        margin-top:-35px;
+        padding:0px;
+      }
+      .step-next-btn {
+        width:300px;
+        margin:0 auto;
+      }
+
+      .step-delivery {
+        .delivery-options {
+            max-width:768px;
+            margin:0 auto;
+            .delivery-option:nth-child(2n+1) {
+              padding-right: 20px;
+            }
+
+            .delivery-option:nth-child(2n+2) {
+              padding-left: 20px;
+            }
+
+            .delivery-option {
+              height:340px;
+              .wrap {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height:190px;
+                .text {
+                  padding-top:10px;
+                }
+              }
+              .description {
+                font-size: 14px;
+                padding-top:20px;
+              }
+            }
+        }
+      }
+
+
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-order-v4 {
+    .order-v4 {
+
+      .order-steps {
+        .order-header {
+          .if-anon {
+            float:right;
+            text-align: right;
+            padding-bottom: 20px;
+          }
+
+          .step-header {
+            text-align: left;
+          }
+        }
+        .order-header:after {
+          content: " ";
+          display: block;
+          clear:both;
+        }
+      }
+
+      .step-delivery {
+        .delivery-options {
+          max-width:100%;
+          display: flex;
+          justify-content: space-between;
+          .delivery-option:nth-child(2n+1) {
+            padding-right: 10px;
+          }
+          .delivery-option:nth-child(2n+2) {
+            padding-left: 10px;
+          }
+          .delivery-option {
+            padding: 0 10px;
+            .description {
+              font-size: 15px;
+              padding-top:20px;
+            }
+            .wrap {
+              height:160px;
+              padding: 20px;
+
+            }
+          }
+          .delivery-option:first-child {
+            padding-left: 0px;
+          }
+          .delivery-option:last-child {
+            padding-right: 0px;
+          }
+        }
+      }
+
+    }
+  }
+}

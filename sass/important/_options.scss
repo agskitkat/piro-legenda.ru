@@ -1,0 +1,236 @@
+.good_v2_options_cat_block {
+  display:none;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  margin-top:10px;
+  > .row {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    height:44px;
+    margin:0px!important;
+    .cell {
+      .cell-content {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+          height:17px;
+          padding-right:6px;
+          .korsar-icon {
+            line-height: 12px;
+            font-size: 35px;
+          }
+          .box_small {
+            font-size:25px;
+          }
+          .box_big {
+            font-size:35px;
+          }
+          .box-mass {
+            font-size:45px;
+          }
+          .line-width {
+            font-size:18px;
+          }
+          .diametr {
+            font-size:30px;
+          }
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .row {
+            margin:0px!important;;
+          }
+          .row:first-child {
+            color:$gray-1;
+          }
+          .row:last-child {
+            color:$black;
+          }
+        }
+      }
+    }
+  }
+  > .row.tow-cell {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  > .row.tow-cell.space-between{
+    justify-content: space-between;
+  }
+  > .row.one-cell {
+    display:flex;
+    justify-content: center;
+    height:22px;
+    .cell {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .good_v2_options_cat_block {
+    display: block;
+  }
+}
+
+.good_v2_options_good_block {
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  > .row {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    height:42px;
+    .cell {
+      .cell-content {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+          height:17px;
+          padding-right:6px;
+          .korsar-icon {
+            line-height: 12px;
+            font-size: 35px;
+          }
+          .box_small {
+            font-size:25px;
+          }
+          .box_big {
+            font-size:35px;
+          }
+          .box-mass {
+            font-size:45px;
+          }
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .row:first-child {
+            color:$gray-1;
+          }
+          .row:last-child {
+            color:$black;
+          }
+        }
+      }
+    }
+  }
+  > .row.tow-cell {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  > .row.tow-cell.space-between{
+    justify-content: space-between;
+  }
+  > .row.one-cell {
+    display:flex;
+    justify-content: center;
+    height:22px;
+    .cell {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .good_v2_options_good_block {
+    > .row {
+      height:50px;
+      font-size:14px;
+    }
+    > .row.one-cell {
+      height:30px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .good_v2_options_good_block {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    > .row + .row, > .row {
+      flex-basis: 45%;
+      font-size:14px;
+    }
+    > .row.one-cell {
+      flex-basis: 50%;
+      height:50px;
+      display:flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      .cell {
+        height:50px;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .good_v2_options_good_block {
+    display:block;
+    > .row {
+      .cell {
+        .cell-content {
+          .icon {
+            .korsar-icon {
+              line-height: 12px;
+              font-size: 45px;
+            }
+            .box_small {
+              font-size: 25px;
+            }
+            .box_big {
+              font-size: 35px;
+            }
+            .box-mass {
+              font-size: 45px;
+            }
+          }
+          .text {
+            > .row {
+              line-height: 15px;
+            }
+
+          }
+        }
+      }
+    }
+    > .row + .row, > .row {
+      flex-basis: 45%;
+      font-size:14px;
+      height:42px;
+    }
+    > .row.one-cell {
+      flex-basis: 50%;
+      height:42px;
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .cell {
+        height:42px;
+        line-height: 42px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .good_v2_options_good_block {
+    width:550px;
+    max-width: 100%;
+  }
+}

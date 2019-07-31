@@ -1,0 +1,184 @@
+.page-bonus {
+  padding-top: 20px;
+  padding-bottom: 90px;
+
+
+  .bonuses {
+    padding-bottom:5px;
+    .bonus {
+      padding-bottom:20px;
+      margin-bottom:25px;
+      border-bottom: 1px solid $gray-2;
+      .header {
+        font-weight: bold;
+        line-height: 33px;
+        font-size: 15px;
+      }
+      .sale-red-status {
+        color:#F12626;
+      }
+      .sale-silver-status {
+        color:#B6B6B6;
+      }
+      .sale-gold-status {
+        color:#E9D56A;
+      }
+      .pair {
+        font-size: 14px;
+        margin-bottom:5px;
+        > div {
+          width:70%;
+          float:left;
+        }
+        > div:nth-child(2n + 2) {
+          width:30%;
+          padding-left:10px;
+        }
+        .key {
+          color: $gray-1;
+        }
+        .value {
+          color:$black;
+        }
+      }
+      .pair:after {
+        content:" ";
+        display:block;
+        clear: both;
+      }
+    }
+  }
+
+  .avangar {
+    > p {
+      line-height: 25px;
+      font-size: 14px;
+    }
+    .pair {
+      font-size: 13px;
+      margin-bottom:10px;
+      .key {
+        display:inline;
+        color: $gray-1;
+      }
+      .value {
+        display:inline;
+        color:$black;
+      }
+    }
+    .pair:after {
+      content:" ";
+      display:block;
+      clear: both;
+    }
+
+    .row-1, .row-2 {
+        width:50%;
+      float:left;
+    }
+  }
+  .avangar:after {
+    content:" ";
+    display:block;
+    clear: both;
+  }
+}
+
+@media (min-width: 480px) {
+  .page-bonus {
+    .bonuses {
+      .bonus {
+          position:relative;
+          width:50%;
+          float:left;
+          height:200px;
+          padding:5px 0px;
+          margin-bottom: 0px;
+          padding-left:15px;
+          font-size: 15px;
+        .pair {
+          .key {
+            width:60%;
+          }
+          .value {
+            width:40%;
+          }
+        }
+      }
+      .bonus:nth-child(2n + 1):after {
+        content: " ";
+        display:block;
+        position:absolute;
+        height:170px;
+        border-left:1px solid $gray-2;
+        top:15px;
+        right:0px;
+      }
+      .bonus:nth-child(3),.bonus:nth-child(4){
+        border-bottom:0px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page-bonus {
+    .bonuses {
+      .bonus {
+        padding-left:10%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .page-bonus {
+    .bonuses {
+      padding-top:16px;
+      padding-bottom:40px;
+      .bonus {
+        padding-left:32px;
+        width:25%;
+        border-right:1px solid $gray-2;
+      }
+      .bonus:nth-child(1) {
+        padding-left:0px;
+        border-bottom:none;
+      }
+      .bonus:nth-child(2) {
+        border-bottom:none;
+      }
+      .bonus:nth-child(2n + 1):after {
+        display:none;
+      }
+      .bonus:nth-child(4) {
+        border-right:0px;
+      }
+    }
+    .bonuses:after {
+      content:" ";
+      display:block;
+      clear: both;
+    }
+    .avangar {
+      .row-1, .row-2 {
+        float:left;
+        width:auto;
+        display:inline
+      }
+      .pair {
+        display:inline;
+        float:left;
+        padding-right:30px;
+        .key {
+          display:inline;
+          color: $gray-1;
+        }
+        .value {
+          display:inline;
+          color:$black;
+        }
+      }
+    }
+  }
+}

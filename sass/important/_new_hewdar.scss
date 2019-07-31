@@ -1,0 +1,1041 @@
+$color-grey: rgba(28, 28, 28, 0.5);
+$color-grey-line: rgba(28, 28, 28, 0.1);
+$logo-desc-color:#8F8989;
+$color-search-border: #E4E4E4;
+$red: #F12626;
+$blue: #0F28BF;
+
+header {
+  padding-bottom:.75rem;
+  border:1px solid $gray-2;
+}
+
+.phone-block-header  {
+    padding:10px 20px;
+}
+
+
+.phone-block-header > div {
+  display:inline-block;
+  margin-right:23px;
+}
+
+.phone-block-header .work-time {
+    display:none;
+}
+
+.phone-block-header .phone {
+  font-size:.75rem
+}
+
+.menu-block-header {
+  position:relative;
+  float:left;
+}
+
+.menu-block-header .menu-items {
+  display:block;
+  background: #FFF;
+  position:absolute;
+  width:100vw;
+  top:0px;
+  z-index: 1;
+}
+.menu-block-header .menu-items.korsar-hide {
+   display:none;
+ }
+.menu-block-header .menu-mobile-control {
+  border-bottom: 1px solid $color-grey-line;
+  color:#000;
+  height: 60px;
+}
+.menu-block-header .menu-mobile-control .menu-text{
+  display:block;
+  font-size:1rem;
+  line-height: 20px;
+  margin-top: 20px;
+  float:left;
+  padding-left:20px;
+}
+.menu-block-header .menu-mobile-control .menu-close {
+  display:block;
+  font-size:1rem;
+  line-height: 20px;
+  margin-bottom: 20px;
+  float:right;
+  padding-right:20px;
+  opacity: 1;
+  margin-top:12px;
+}
+
+.menu-block-header .menu-mobile-control .menu-close .close {
+  font-size: 2rem;
+  opacity: 1;
+}
+
+.menu-block-header .menu-mobile-control:after {
+  clear: both;
+}
+.menu-block-header .black {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid $color-grey-line;
+  margin-bottom:22px;
+}
+.menu-block-header .black a:first-child {
+    margin-left: 20px;
+    float:left;
+    padding-top: 3px;
+}
+.menu-block-header .black a:last-child {
+  float:right;
+  margin-right: 20px;
+  padding-top: 3px;
+}
+
+.menu-block-header .black > a {
+  font-size: .8rem;
+  color:#000;
+  font-weight: bold;
+}
+.menu-block-header .black > a.red  {
+  color:$red;
+}
+
+
+.menu-block-header .gray {
+  padding-top:20px;
+  border-top:1px solid $gray-2;
+}
+
+.menu-block-header .gray > a {
+  display:block;
+  width:100%;
+  padding-left:20px;
+  padding-bottom:20px;
+  color:$gray-1;
+}
+
+
+
+
+.menu-block-header .menu-btn-mobile, .menu-block-header .menu-back-link {
+    display:block;
+  width: 40px;
+  height: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+    .korsar-icon {
+      font-size:2rem;
+      line-height: 0;
+    }
+}
+
+.menu-block-header .menu-item {
+  display:block;
+  padding-left: 20px;
+  margin-bottom:35px;
+  height: 100%;
+}
+.menu-block-header .menu-item:hover > a {
+  height: 100%;
+}
+
+.menu-block-header .menu-item:hover > a > span,
+.menu-block-header .menu-item.item-selected > a > span {
+  color:$blue;
+}
+.menu-block-header .menu-item .korsar-icon {
+  display:block;
+  font-size: 3rem;
+  line-height: 20px;
+  width:30px;
+  padding-right:5px;
+  float:left;
+}
+.menu-block-header .menu-item .korsar-icon.battary {
+  margin-top:-10px;
+}
+.menu-block-header .menu-item .korsar-icon.fire-bang {
+  margin-top:-10px;
+}
+.menu-block-header .menu-item .korsar-icon.rim {
+  margin-top:-10px;
+}
+.menu-block-header .menu-item .korsar-icon.roket {
+  margin-top:-5px;
+}
+.menu-block-header .menu-item .korsar-icon.balls {
+  margin-top:-7px;
+}
+.menu-block-header .menu-item .korsar-icon.fontan {
+  margin-top:-2px;
+}
+.menu-block-header .menu-item .korsar-icon.hlop {
+  margin-top:-6px;
+}
+.menu-block-header .menu-item .korsar-icon.bengal {
+  margin-top:-3px;
+}.menu-block-header .menu-item .korsar-icon.fireworks_2 {
+  margin-top:-3px;
+}
+.menu-block-header .menu-item .menu-item-name {
+  display:block;
+  padding-top:6px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.logo-block-header {
+  text-align: center;
+  margin:0 auto;
+  width:80%;
+
+}
+.logo-block-header .logo-image {
+  height:29px;
+  width:105px;
+  margin-top:15px;
+  display:inline-block;
+  background-image:url("../images/logo-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo-block-header img {
+  width:27px;
+  height:34px;
+  margin-top:.5rem;
+}
+.logo-block-header .logo-text-block {
+  display:none;
+}
+
+.cart-block-header {
+  float:right;
+  width:20px;
+  height:20px;
+  margin: 20px 20px 20px .75rem;
+  line-height: 10px;
+  position:relative;
+}
+
+.cart-block-header .items-count {
+  top: -11px;
+  right: -11px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #FFF;
+  background: #F12626;
+  border-radius: 50%;
+  color: #FFF;
+  font-size: 8px;
+  text-align: center;
+  line-height: 14px;
+}
+
+.cart-block-header .items-count .items-name, .cart-block-header .cart-sum {
+  display: none;
+}
+
+.login-block-header {
+  float:right;
+  width:20px;
+  height:20px;
+  margin: 20px .75rem 20px 0;
+  line-height: 10px;
+}
+
+.cart-block-header .korsar-icon,.login-block-header .korsar-icon {
+  font-size: 2.4rem;
+}
+
+.login-block-header .login-text {
+  display:none;
+}
+
+.header-sep-line {
+    border-top:1px solid $color-grey-line;
+     clear: both;
+}
+
+.search-block-header{
+  width:100%;
+  margin:0px;
+  margin-top:.75rem;
+  padding:0 20px;
+}
+.search-block-header .search-btn {
+  right:35px;
+}
+
+.search-block-header {
+  position:relative;
+  margin-top:.75rem;
+}
+
+.catalog .search-block-header {
+  width:80%;
+  margin-left:20px;
+}
+
+.search-block-header input {
+  border: 1px solid $color-search-border;
+  border-radius: 5px;
+  height: 40px;
+  font-size: .75rem;
+  color:$black;
+  padding-right: 30px;
+  padding-left: 10px;
+  width:100%;
+}
+
+
+.search-block-header button {
+  width:20px;
+  height:20px;
+  position: absolute;
+  right:15px;
+  top:8px;
+  background: transparent;
+  font-family: 'KorsarIcons', sans-serif;
+  border:0;
+  font-size: 2rem;
+  line-height: 0;
+}
+.search-block-header button:before {
+  content: "\f0017";
+  color:$blue;
+}
+
+.catalog .search-block-header {
+  width:85%;
+  margin-left:0px;
+}
+
+.catalog .search-block-header input {
+
+}
+
+.filters-block-header {
+    display:none;
+    float:right;
+    margin-right:20px;
+    padding-top:20px;
+}
+.catalog .filters-block-header {
+  display:block;
+}
+.filters-block-header .menu-btn-mobile {
+  font-size: 2rem;
+  line-height: 20px;
+}
+
+.topline-block {
+  display:none;
+}
+
+// MENU LEVEL 2
+.menu-block-header {
+  .menu-items {
+
+   .menu-item.menu-price-list {
+      cursor:pointer;
+      font-weight: 700;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height:15px;
+      img {
+        width:25px;
+        height:25px;
+        margin-right:5px;
+      }
+   }
+
+    .menu-item {
+      .menu-level-2 {
+        display: none;
+        position:absolute;
+        width:100%;
+        height:100vh;
+        background: #FFF;
+        top:0px;
+        left:0px;
+        .back {
+          border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+          color: #000;
+          height: 60px;
+          margin-bottom:25px;
+          .korsar-icon {
+            display: block;
+            font-size: 2rem;
+            line-height: 20px;
+            margin-top: 20px;
+            float: left;
+            padding-left: 20px;
+            width:50px;
+            height:40px;
+          }
+          .name {
+            display: block;
+            font-size: 18px;
+            line-height: 20px;
+            margin-top: 20px;
+            float: right;
+            padding-right: 20px;
+          }
+        }
+        .menu-item-2 {
+          font-size: 14px;
+          .korsar-icon {
+            display:none;
+          }
+          .menu-item-name {
+              padding-left:20px;
+              font-size: 14px;
+              padding-bottom:20px;
+              font-weight: normal;
+          }
+        }
+      }
+    }
+    .menu-item.open {
+      .menu-level-2 {
+        display: block;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 375px) {
+  .catalog .search-block-header {
+    width:88%;
+  }
+  .logo-block-header .logo-image {
+    height:33px;
+    width:119px;
+    margin-top:15px;
+  }
+}
+
+@media (min-width: 480px) {
+  .catalog .search-block-header {
+    width:91%;
+  }
+  .phone-block-header .work-time {
+      display: inline-block;
+      color:$color-grey;
+      font-size:.6rem;
+      line-height: 1.2rem;
+  }
+  .phone-block-header > div {
+    display:inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog .search-block-header {
+    width:95%;
+  }
+  .logo-block-header .logo-image {
+    height:37px;
+    width:135px;
+    margin-top:12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding-bottom:0rem;
+    border:0px solid $gray-2;
+  }
+
+  div {
+    float:none;
+  }
+
+  header {
+    position:relative;
+    margin-bottom: 110px;
+  }
+
+  .hidden-1024 {
+    display:none;
+  }
+
+  .topline-block {
+    display: block;
+    padding: 15px 45px;
+  }
+  .topline-block > div {
+    display:inline-block;
+    padding-right: 0px;
+  }
+  .topline-block > .menu-price-list {
+    cursor:pointer;
+    height: 26px;
+    margin:auto;
+    font-weight: bold;
+    font-size: 12px;
+    padding-right:15px;
+    margin-left:2%;
+    img {
+      margin-right: 10px;
+      width: 26px;
+      height: 26px;
+      margin-bottom: -8px;
+      line-height: 26px;
+    }
+  }
+  .topline-block > div > a{
+    font-size: .75rem;
+    padding-right: 24px;
+  }
+  .topline-block .black > a {
+    color:#000000;
+    font-weight: bold;
+  }
+  .topline-block .black > a.red {
+      color:$red;
+  }
+
+  .login-block-header {
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top: 1.3rem;
+    margin-bottom: 1.1rem;
+    margin-right: 45px;
+    width: auto;
+    text-align: right;
+  }
+
+  .login-block-header .login-text {
+    display:block;
+    float:right;
+    padding-top:4px;
+    padding-left:8px;
+    font-size: 13px;
+  }
+
+  .logo-block-header .logo-image {
+    height:72px;
+    width:201px;
+    margin-top:12px;
+    background-image: url("../images/logo-legend.svg");
+  }
+
+  // PHONE PHONE PHONE PHONE PHONE PHONE PHONE
+  .phone-block-header {
+      padding:0;
+      position:relative;
+      display:block;
+      float:none;
+      margin-left: 275px;
+      margin-top: 1.8rem;
+      margin-bottom: 2rem;
+  }
+  .phone-block-header > div {
+    dispaly:block;
+  }
+  .phone-block-header .work-time {
+      position:absolute;
+      left:0;
+      top:0;
+      font-size:.75rem;
+  }
+  .phone-block-header .phone {
+    font-size:1.1rem;
+    position:absolute;
+  }
+  .phone-block-header .phone{
+     top:40px;
+   }
+  .phone-block-header .phone:first-child{
+      top:20px;
+  }
+
+  // PHONE PHONE PHONE PHONE PHONE PHONE PHONE //
+  .logo-block-header {
+    float:left;
+    width:auto;
+    text-align: left;
+    margin-top: -1.1rem;
+    margin-left:45px;
+  }
+  .logo-block-header img {
+      height:80px;
+      width:auto;
+      margin-top: 0.3rem;
+  }
+  .logo-block-header .logo-text-block {
+    display:block;
+    float:right;
+    padding-top:.75rem;
+    margin-left: .2rem;
+  }
+  .logo-block-header .logo-text-block > span {
+    display:block;
+  }
+  .logo-block-header .logo-text-block .site-name {
+    font-size:1.5rem;
+    font-weight: bold;
+  }
+  .logo-block-header .logo-text-block .site-decr {
+    font-size:.75rem;
+    color:$logo-desc-color;
+  }
+
+  .menu-block-header {
+      position: absolute;
+      bottom:-110px;
+      left:0;
+      width:100%;
+      margin:0px;
+      border-top: 1px solid $color-grey-line;
+      border-bottom: 1px solid $color-grey-line;
+      padding: 10px 45px;
+      z-index: 100;
+  }
+
+  .menu-block-header .menu-btn-mobile {
+    display:none;
+  }
+  .menu-block-header .menu-items,.menu-block-header .menu-items.korsar-hide  {
+    display:flex;
+    width:100%;
+    height:auto;
+    position:relative;
+    background: transparent;
+    text-align: center;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .menu-block-header .menu-items {
+
+  }
+
+  .menu-block-header .menu-items .menu-item-name {
+    text-align: center;
+    font-size:.75rem;
+    font-weight: bold;
+    display:block;
+    line-height: 15px;
+
+  }
+  .menu-block-header .menu-items > .menu-item {
+    padding: 0 40px 0 0;
+    margin-bottom: 0;
+    flex-basis: calc(100% / 9);
+  }
+
+  .menu-block-header .menu-items > .menu-item.menu-price-list {
+    cursor:pointer;
+    display:none;
+  }
+
+  .menu-block-header .menu-items > .menu-item:hover {
+    color:$blue;
+  }
+  .menu-block-header .menu-items > .menu-item:last-child  {
+    padding-right: 0px;
+  }
+  .menu-block-header .menu-items > .menu-item:first-child {
+    padding-left: 40px;
+  }
+
+
+  .menu-block-header .menu-item .korsar-icon  {
+    font-size: 3rem;
+    line-height: 2rem;
+    display:block;
+    width:auto;
+    padding-right: 0;
+    float:none;
+  }
+  .menu-block-header .menu-item .korsar-icon.mishura {
+    font-size: 3.8rem;
+    margin-top: -10px;
+  }
+
+  .menu-block-header  .menu-mobile-control,  .menu-block-header .black, .menu-block-header .gray, .menu-block-header .menu-back-link {
+    display: none;
+  }
+
+    // Display on mobile filter
+  .filters-block-header {
+      display:none;
+  }
+
+
+  .search-block-header, .catalog .search-block-header {
+      float:left;
+      margin-left: 200px;
+      width:35%;
+      margin-top:20px;
+      padding:0px;
+  }
+  .search-block-header input {
+    padding-left: 15px;
+
+  }
+  /*
+  body.page-good .search-block-header .search-btn {
+    right: 0px;
+  }
+  */
+
+  .search-block-header .search-btn {
+      border:0px;
+      height:40px;
+      width:40px;
+      margin:0px;
+      right: 0px;
+      top: 0px;
+      border-radius: 5px;
+      background:$blue;
+      color:#FFF;
+  }
+
+  .search-block-header .search-btn:before{
+    color:#FFF;
+  }
+
+
+
+
+  .cart-block-header {
+    float:right;
+    margin: 20px 45px 20px 34px;
+    line-height: 10px;
+    position:relative;
+    width:130px;
+    height:auto;
+  }
+
+  .cart-block-header .korsar-icon{
+    font-size: 3.5rem;
+    color:$red;
+    float:left;
+    padding-right: 15px;
+    line-height: 1.5rem;
+    display:block;
+  }
+
+  .cart-block-header .items-count {
+      display:flex;
+      position:relative;
+      background: transparent;
+      border:0px;
+      color: $color-grey;
+      font-size: .75rem;
+      top: 0px;
+      right: 0px;
+      width: auto;
+     height: auto;
+
+  }
+
+  .cart-block-header .items-count .items-name {
+    display: block;
+    padding-left:4px;
+    white-space: nowrap;
+  }
+
+  .cart-block-header .cart-sum {
+    font-size: .9rem;
+    color:$red;
+    font-weight: bold;
+    line-height: 1.5rem;
+    display:block;
+    white-space: nowrap;
+  }
+
+
+
+  // MENU LEVEL 2
+  .menu-block-header {
+    .menu-items {
+      .menu-item {
+        position:relative;
+        .menu-level-2 {
+          display: none;
+          position:absolute;
+          width:auto;
+          height:auto;
+          background: transparent;
+          top:68px;
+          bottom:auto;
+          left:0;
+          padding-top:10px;
+          z-index: 10;
+
+          .dropshadow {
+            border-top:1px solid #E4E4E4;
+            background: #FFF;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            padding-top:16px;
+          }
+          .back {
+            display:none;
+          }
+          .menu-item-2 {
+            text-align: center;
+            display:block;
+            font-size: 14px;
+            .korsar-icon {
+              display:block;
+              font-size:3rem;
+            }
+            .menu-item-name {
+              display:block;
+              padding: 16px 16px 20px;
+              font-weight: bold;
+              font-size: 12px;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .menu-item.open {
+        .menu-level-2 {
+          display: block;
+        }
+      }
+    }
+    .menu-item.tail.open {
+
+      max-width:100%;
+      min-width:initial;
+      background: #FFFFFF;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      margin: -18px;
+      padding: 18px;
+      .menu-level-2 {
+        width:100%;
+        padding-top: 17px;
+      }
+      .menu-item {
+        border-top:1px solid #E8E8E8;
+        margin:0px;
+        padding:0px;
+        padding-top:10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+    }
+  }
+  .catalog .filters-block-header {
+    display:none;
+  }
+}
+
+$padding: 70px;
+$padding-menu: 2.5vw;
+@media (min-width: 1170px) {
+  header {
+    margin-bottom: 72px;
+  }
+  .topline-block {
+    padding-left:$padding;
+    padding-right:$padding;
+  }
+  .topline-block > div {
+    padding-right:40px;
+  }
+  .topline-block > .menu-price-list {
+    cursor:pointer;
+    height: 26px;
+    margin:auto;
+    font-weight: bold;
+    font-size: 12px;
+    padding-right:15px;
+    margin-left:1%;
+    img {
+      margin-right: 10px;
+      width: 26px;
+      height: 26px;
+      margin-bottom: -8px;
+      line-height: 26px;
+    }
+  }
+  .login-block-header {
+    margin-right: $padding;
+  }
+  .login-block-header {
+    margin-right: $padding;
+  }
+  .menu-block-header {
+    padding-left:$padding;
+    padding-right:$padding;
+  }
+  .cart-block-header {
+    margin-right: $padding;
+  }
+  .logo-block-header {
+    margin-left:$padding;
+  }
+  .phone-block-header {
+    margin-left: 300px;
+  }
+
+
+  .menu-block-header {
+    bottom:-72px;
+  }
+  .menu-block-header .menu-items {
+
+  }
+  .menu-block-header .menu-items > .menu-item {
+    padding:0px;
+  }
+  .menu-block-header .menu-items > .menu-item > a{
+    text-align: left;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 18px;
+
+  }
+  .menu-block-header .menu-items > .menu-item:last-child > a {
+    padding-right: 0px;
+  }
+  .menu-block-header .menu-items .korsar-icon {
+    padding-right: 12px;
+    line-height:40px;
+  }
+  .menu-block-header .menu-items .menu-item-name {
+    text-align: left;
+    font-size:.75rem;
+    font-weight: bold;
+    padding:0px;
+  }
+
+  .search-block-header, .catalog .search-block-header {
+    margin-left: 250px;
+    width: 33%;
+  }
+
+  .menu-block-header {
+    .menu-items {
+      .menu-item {
+        position: relative;
+        .menu-level-2 {
+          min-width:272px;
+          top:40px;
+          .dropshadow {
+            padding-bottom: 20px;
+          }
+          .menu-item-2 {
+            text-align: left;
+            padding-left: 20px;
+            display:flex;
+            .korsar-icon {
+              padding: 0px;
+              display: inline;
+              line-height: 2rem;
+              width:30px;
+              text-align: center;
+            }
+            .menu-item-name {
+              display: inline;
+              padding:0px;
+              font-size: 12px;
+              line-height: 2rem;
+              font-weight: bold;
+              padding-left: 7px;
+            }
+          }
+        }
+      }
+      .menu-item.tail.open {
+        max-width:100%;
+        min-width:initial;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        margin:-10px;
+        padding:10px;
+        .menu-level-2 {
+          width:100%;
+          max-width: 100%;
+          min-width: initial;
+          padding-top: 17px;
+        }
+        .menu-item {
+          margin:0px;
+          padding:0px;
+          padding-top:10px;
+          margin-left:10px;
+          margin-right:10px;
+          a {
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .topline-block {
+    padding-left:130px;
+    padding-right:130px;
+  }
+  .topline-block > .menu-price-list {
+    cursor:pointer;
+    height: 26px;
+    margin:auto;
+    font-weight: bold;
+    font-size: 12px;
+    padding-right:15px;
+    margin-left:8%;
+    img {
+      margin-right: 10px;
+      width: 26px;
+      height: 26px;
+      margin-bottom: -8px;
+      line-height: 26px;
+    }
+  }
+  .login-block-header {
+    margin-right: 130px;
+  }
+  .login-block-header {
+    margin-right: 130px;
+  }
+  .menu-block-header {
+    padding-left:130px;
+    padding-right:130px;
+  }
+  .cart-block-header {
+    margin-right: 130px;
+  }
+  .logo-block-header {
+    margin-left:130px;
+  }
+  .phone-block-header {
+    margin-left: 405px;
+  }
+  .menu-block-header .menu-items > .menu-item {
+    padding-right: 18px;
+  }
+
+  .search-block-header {
+    margin-left: 287px;
+    width:509px;
+  }
+}
+
+

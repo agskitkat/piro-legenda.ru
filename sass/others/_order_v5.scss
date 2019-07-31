@@ -1,0 +1,33 @@
+.page-order-v5 {
+  .order-v5 {
+    .header {
+      font-size:25px;
+      font-weight: bold;
+      display:block;
+      padding-bottom:40px;
+    }
+    .subheader {
+      font-size:18px;
+      font-weight: 500;
+    }
+
+    .order-block {
+      padding-bottom:30px;
+    }
+
+    .label {
+      font-size: 16px;
+      display:block;
+      padding-top: 16px;
+    }
+
+    .delivery-mode {
+      .delivery {
+        border:1px solid #DDD;
+        padding:16px;
+        border-radius: 5px;
+        margin-bottom:16px;
+      }
+    }
+  }
+}

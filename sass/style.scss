@@ -1,0 +1,46 @@
+$version: "1.0.64";
+
+/* Подключать везде /start */
+@import 'colors';
+@import 'important/anyway';
+@import 'fonts';
+@import 'important/new_hewdar';
+@import 'important/top-fixed-header';
+@import 'important/breadcrumbs';
+@import 'important/footer';
+@import 'important/kladr';
+@import 'important/custom_scroll';
+@import 'important/category_good_hit_new_discount';
+/* Подключать везде /stop */
+
+/* Подключать везде где товары /start */
+@import 'important/_options';
+@import 'important/content_catalog';
+@import 'important/filter-block';
+@import 'important/search';
+@import 'important/good';
+@import 'others/discount';
+/* Подключать везде где товары /stop */
+
+/* Подключать на страницах со слайдером /start */
+@import 'important/swipe_slider';
+/* Подключать на страницах со слайдером /stop */
+
+
+/* Главная index.html /start */
+@import 'important/main_v2';
+@import 'important/mainpage/opt-category';
+@import "important/mainpage/easy-block-v2";
+@import "important/mainpage/others-modificators";
+/* Главная index.html /stop */
+
+@import "important/sittings";
+
+@import "important/modal";
+
+@import "important/live_search";
+@import "important/sipmlebar";
+
+@import 'important/article.scss';
+
+/* By https://github.com/agskitkat  Important  Версия: #{$version} */

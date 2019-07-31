@@ -1,0 +1,56 @@
+.kladr-error{
+  color:#cb3e27;
+}
+
+#kladr_autocomplete ul{
+   position:absolute;
+   display:block;
+   margin:0;
+   padding:0;
+   border:0px solid #c4c4c4;
+   background-color:#fff;
+   z-index:9999;
+   overflow-x:hidden;
+   overflow-y:auto;
+   min-width:200px;
+   max-height:420px;
+   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  color:$gray-1;
+}
+#kladr_autocomplete li{
+  display:list-item;
+  list-style-type:none;
+  margin:0;
+  padding:8px 10px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  color:$gray-1;
+}
+#kladr_autocomplete li:hover{
+  color:$black;
+  cursor:pointer;
+}
+#kladr_autocomplete li.active{
+ color:$gray-1;
+}
+#kladr_autocomplete a{
+  text-decoration:none;
+  color:$gray-1;
+}
+#kladr_autocomplete li:hover a {
+  color:$black;
+}
+#kladr_autocomplete strong{
+  color:#038ebd;
+}
+#kladr_autocomplete .spinner{
+  position:absolute;
+  display:block;
+  margin:0;
+  padding:0;
+  width:16px;
+  height:16px;
+  background:url("../../images/svg/spiner.svg") center center no-repeat;
+  z-index:9999;
+}
