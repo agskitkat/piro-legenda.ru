@@ -1,0 +1,94 @@
+.map-of-russia {
+  padding-top:35px;
+  .header {
+    font-size: 24px;
+    line-height: 33px;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom:16px;
+  }
+  .big-text {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom:12px;
+  }
+  .image {
+    img {
+      width:100%;
+    }
+    padding-bottom: 30px;
+  }
+  .text {
+    font-size: 15px;
+    color:#484848;
+  }
+}
+
+@media (min-width: 375px) {
+  .map-of-russia {
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 480px) {
+  .map-of-russia {
+    .header {
+      font-size: 25px;
+    }
+    .big-text {
+      line-height: 27px;
+      font-size: 18px;
+      width: 338px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .map-of-russia {
+    .header {
+      text-align: center;
+      font-size: 30px;
+      line-height: 41px;
+    }
+    .big-text {
+      width:100%;
+      text-align: center;
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .map-of-russia {
+    .header {
+      font-size:25px;
+    }
+    .big-text {
+      width:90%;
+      font-size: 22px;
+    }
+    .b-1024 {
+      display:block;
+    }
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .map-of-russia {
+    .header {
+      font-size:25px;
+    }
+    .big-text {
+      width:719px;
+      font-size: 22px;
+    }
+    .b-1024 {
+      display:block;
+    }
+  }
+}

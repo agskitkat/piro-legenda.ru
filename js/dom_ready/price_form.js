@@ -12,42 +12,52 @@ var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="d
     '        </div>';
 
 var block_send = false;
-
+var old_text = "";
 function test_send_form(element) {
 
     var reachGoal = $(element).closest(".korsar-modal").attr('data-reachgoal');
     console.log("reachGoal:"+ reachGoal);
+    var btn =  $(element);
 
     var form_1 = $(element).parent();
     name = "Без имени";
+
+
+
     if(check_form(form_1, "on-view")) {
         var name = form_1.find(".i-name").val();
         var phone = form_1.find(".i-phone").val();
         var email = form_1.find(".i-email").val();
         var point = form_1.find(".i-point").val();
         //showBlock_2(name);
+
+
         block_send = false;
         form_1.find(".js-action-do-auth").html("Подождите, отправка...");
 
         if(block_send) {
             return false;
-        } else {
-            block_send = true;
         }
+
+        var old_text = btn.text();
+        btn.text("Отправка...");
 
         $.ajax({
             type: "POST",
             url: "/local/ajax/hash_auth.php",
             data: JSON.stringify({name: name, email: email, phone: phone,city: point})
         }).done(function (data) {
+            block_send = true;
+            btn.text(old_text);
+
             form_1.find(".js-action-do-auth").html("Получить оптовы цены");
             if (data.length) {
                 $(form_1).find(".error").remove();
                 $.each(data, function (k, v) {
                     $(form_1).append('<div class="error red">' + v.error + '</div>');
                 });
-            }
-
+            } 
+ 
             if (data.code == "200" && data.error == "null") {
                 $(".korsar-modal").animate({
                     opacity: 0

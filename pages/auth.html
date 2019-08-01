@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Корсар.ru</title>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css?v=T005" rel="stylesheet">
+</head>
+<!-- Global var class of taxonomy or page (page-auth)-->
+<body class="fonts-loaded page-auth">
+    <div class="container-3">
+        <div class="auth-block">
+            <div class="auth-header">
+                <a href="index.html">
+                    <div class="logo-image"></div>
+                </a>
+            </div>
+            <div class="fragments">
+
+                <div class="fragment login active">
+                    <div class="auth-msg">
+                        Добро пожаловать в личный кабинет
+                    </div>
+                    <div class="form">
+                        <fieldset>
+                            <span class="korsar-icon user-w"></span>
+                            <input  type="text" class="korsar-input" placeholder="Логин"/>
+                        </fieldset>
+                        <fieldset>
+                            <span class="korsar-icon key"></span>
+                            <input class="korsar-input" type="password" placeholder="Пароль" />
+                        </fieldset>
+                        <!-- TODO Ошибки форм надо как-то отображать -->
+                        <button onclick="location.href = 'personal_area.html'">Войти</button>
+                    </div>
+                    <a data="forgot" class="service fragmentChanger">Забыли логин или пароль?</a>
+                    <a data="registration" class="alternative fragmentChanger">Регистрация в личном кабинете</a>
+                </div>
+
+                <div class="fragment registration">
+                    <div class="auth-msg">
+                        Добро пожаловать в личный кабинет
+                    </div>
+                    <div class="form">
+                        <fieldset>
+                            <span class="korsar-icon mail"></span>
+                            <input  type="text" class="korsar-input" placeholder="Введите e-mail"/>
+                        </fieldset>
+                        <fieldset>
+                            <span class="korsar-icon key"></span>
+                            <input  type="password" class="korsar-input" placeholder="Придумайте пароль"/>
+                        </fieldset>
+                        <fieldset>
+                            <span class="korsar-icon key"></span>
+                            <input  type="password" class="korsar-input" placeholder="Повторите пароль"/>
+                        </fieldset>
+                        <button>ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                    </div>
+
+                    <a data="login" class="alternative fragmentChanger">Войти</a>
+                </div>
+
+                <div class="fragment forgot">
+                    <div class="auth-msg">
+                        Добро пожаловать в личный кабинет
+                    </div>
+                    <div class="form">
+                        <fieldset>
+                            <span class="korsar-icon mail"></span>
+                            <input class="korsar-input" type="email" placeholder="E-mail, указанный при регистрации" />
+                        </fieldset>
+                        <button>ОТПРАВИТЬ</button>
+                    </div>
+
+                    <a data="login" class="alternative fragmentChanger">Войти</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="production/scripts.min.js?v=T005"></script>
+</body>
+</html>

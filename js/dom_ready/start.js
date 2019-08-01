@@ -1,12 +1,9 @@
 window.dataLayer = window.dataLayer || [];
 // Include on HEADER !!!  /open
 function start_zz_call() {
-
     $('body').on("click", '.auth-link', function (e) {
         console.log("Alert !!!");
     });
-
-
 
     // Mobile click or select
     $(".mobile-499-800").on("touchstart mousedown", function() {
@@ -121,8 +118,6 @@ function start_zz_call() {
     */
 
 
-
-
     /*
          TOP FIXED VIEW & HIDE
    */
@@ -154,9 +149,6 @@ function start_zz_call() {
     /*
          /TOP FIXED VIEW & HIDE
    */
-
-
-
 
 
     // CATALOG IMAGE
@@ -300,6 +292,60 @@ function start_zz_call() {
 
         });
     });
+
+
+
+    /*
+        MAIN PAGE SLIDER REVIEW
+    */
+    $('#js-target-main-review-slider').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        adaptiveHeight: true,
+        dots: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+    /*
+        PRODUCTS SLIDER
+    */
+    $('.js-target-slider-goods').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        adaptiveHeight: true,
+        dots: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
 };
 
 // Include on HEADER !!! /close

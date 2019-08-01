@@ -29,9 +29,6 @@ $version: "1.0.64";
 
 /* Главная index.html /start */
 @import 'important/main_v2';
-@import 'important/mainpage/opt-category';
-@import "important/mainpage/easy-block-v2";
-@import "important/mainpage/others-modificators";
 /* Главная index.html /stop */
 
 @import "important/sittings";
@@ -42,5 +39,9 @@ $version: "1.0.64";
 @import "important/sipmlebar";
 
 @import 'important/article.scss';
+
+/* Import libs files */
+@import 'libs/slick/slick';
+@import "libs/slick/slick-theme";
 
 /* By https://github.com/agskitkat  Important  Версия: #{$version} */

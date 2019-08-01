@@ -10,6 +10,7 @@
     <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate">
     <link href="production/styles.min.css" rel="stylesheet">
 </head>
+</head>
 <!-- Global var class of taxonomy or page (page-cart)-->
 <body class="fonts-loaded page-cart">
 
@@ -210,85 +211,77 @@
         <div class="clear"></div>
     </header>
 
-    <!-- Breadcrumbs -->
+
+    <!-- Breadcrumbs
     <div class="container-3-a">
         <div class="breadcrumbs-block">
             <a href="index.html">Главная</a>
-            <a href="cart.html">Корзина</a>
-            <a href="order.html">Оформление заказа</a>
+            <a href="bonus.html">Отписка</a>
         </div>
     </div>
-
+    -->
     <!-- Content -->
-    <div class="container-3-a">
+     <div class="container-3-a ">
         <div class="content-wrapper">
-            <div class="page-order-v5 content_closer">
-                <div class="order-v5">
-                    <span class="header">Оформление заказа</span>
-
-                    <div class="region order-block">
-                        <span class="subheader">1. Укажите регион получения заказа</span>
-                        <fieldset>
-                            <span class="korsar-icon point"></span>
-                            <input  type="text" class="korsar-input" placeholder="Регион"/>
-                            <span class="required">*</span>
-                        </fieldset>
+            <div class="page-cancel-sub content_closer">
+                <div class="cancel-320">
+                    <div class="round">
+                        <span class="korsar-icon check"></span>
                     </div>
+                    <div class="">Вы успешно отписались<br>от рассылки</div>
+                </div>
 
-                    <div class="delivery-mode order-block">
-                        <span class="subheader">2. Выберите способ получения товара</span>
-                        <span class="label">Бесплатно</span>
-                        <div class="free">
-                            <div class="delivery active">
-                                <span>Самовывоз со склада в Москве</span>
-                            </div>
-                            <div class="delivery">
-                                <span>Самовывоз со склада в Пятигорске</span>
-                            </div>
+                <div class="sadness-block">
+                    <div class="sadness">Нам жаль, что вы отписываетесь!</div>
+                    <div class="question">Укажите, пожалуйста, причину, почему Вы больше не хотите получать наши письма? </div>
+                    <div class="question-form">
+                        <fieldset>
+                        <div class="radio-block items-vertical">
+                            <label class="item current">
+                                <span>Рассылка приходит слишком часто</span>
+                                <div class="radio"><div class="round"></div></div>
+                                <input class="radio-hidden" type="radio" name="radio-4" checked="">
+                            </label>
                         </div>
-                        <span class="label">Платно</span>
-                        <div class="no-free">
-                            <div class="delivery active">
-                                <span>Доставка по всей России</span>
-                                <span class="sub">доступно от 49 900 р.</span>
-                            </div>
-                            <div class="delivery">
-                                <span>Доставка до транспортной компании в Москве</span>
-                                <span class="sub">Бесплатно от 49 900 р.</span>
-                            </div>
+
+                        <div class="radio-block items-vertical">
+                            <label class="item ">
+                                <span>Цены на товары слишком высоки для меня</span>
+                                <div class="radio"><div class="round"></div></div>
+                                <input class="radio-hidden" type="radio" name="radio-4">
+                            </label>
                         </div>
-                    </div>
 
-                    <div class="user-data order-block">
-                        <span class="subheader">3. Заполните данные получателя</span>
+                        <div class="radio-block items-vertical">
+                            <label class="item">
+                                <span>Эти товары мне не интересны</span>
+                                <div class="radio"><div class="round"></div></div>
+                                <input class="radio-hidden" type="radio" name="radio-4" >
+                            </label>
+                        </div>
 
+                        <div class="radio-block items-vertical">
+                            <label class="item">
+                                <span>Больше не являюсь вашим клиентом</span>
+                                <div class="radio"><div class="round"></div></div>
+                                <input class="radio-hidden" type="radio" name="radio-4">
+                            </label>
+                        </div>
+
+                        <div class="radio-block items-vertical">
+                            <label class="item ">
+                                <span>Свой вариант</span>
+                                <div class="radio"><div class="round"></div></div>
+                                <input class="radio-hidden" type="radio" name="radio-4" >
+                            </label>
+                        </div>
+
+                    </fieldset>
                         <fieldset>
-                            <span class="korsar-icon user-w"></span>
-                            <input  type="text" class="korsar-input" placeholder="Имя"/>
-                            <span class="required">*</span>
-                        </fieldset>
-
-                        <fieldset>
-                            <span class="korsar-icon phone"></span>
-                            <input  type="text" class="korsar-input" placeholder="Телефон"/>
-                            <span class="required">*</span>
-                        </fieldset>
-
-                        <fieldset>
-                            <span class="korsar-icon mail"></span>
-                            <input  type="email" class="korsar-input" placeholder="Email"/>
-                            <span class="required">*</span>
-                        </fieldset>
-
-                        <fieldset>
-                            <span class="korsar-icon point"></span>
-                            <input  type="text" class="korsar-input" placeholder="Адрес"/>
-                            <span class="required">*</span>
-                        </fieldset>
-                    </div>
-
-                    <div class="oredr-sum order-block">
-
+                        <span class="korsar-icon user-w"></span>
+                        <textarea placeholder="Пишите здесь..."></textarea>
+                    </fieldset>
+                        <a class="button blue save-lk" href="javascript: 0;">СОХРАНИТЬ</a>
                     </div>
                 </div>
             </div>
@@ -296,102 +289,103 @@
     </div>
 </div>
 
-<!-- f2 -->
-<footer>
-    <div class="container-3">
-        <div class="container-3-a">
-            <div class="col-footer">
-                <span class="footer-name">Kopcap</span>
-                <span class="footer-about">Пиротехника оптом от производителя</span>
-                <div class="gray-line desctop-only"></div>
-                <div class="phone-block">
-                    <div class="phone-number">
-                        8 (499) 800-81-91
-                    </div>
-                    <div class="phone-number tow">
-                        8 (495) 737-81-91
-                    </div>
-                    <div class="email">
-                        corsar@mail.ru
-                    </div>
-                </div>
-                <div class="gray-line"></div>
-                <div class="follow-block">
-                    <div class="flex-grow-1 align-self-center">
-                        <span>Присоединятесь к нам</span>
-                        <div class="vkontakte follow-block-icon">
-                            <span class="korsar-icon vk"></span>
+    <!-- f2 -->
+    <footer>
+        <div class="container-3">
+            <div class="container-3-a">
+                <div class="col-footer">
+                    <span class="footer-name">Kopcap</span>
+                    <span class="footer-about">Пиротехника оптом от производителя</span>
+                    <div class="gray-line desctop-only"></div>
+                    <div class="phone-block">
+                        <div class="phone-number">
+                            8 (499) 800-81-91
                         </div>
-                        <div class="facebook follow-block-icon">
-                            <span class="korsar-icon fb"></span>
+                        <div class="phone-number tow">
+                            8 (495) 737-81-91
                         </div>
-                        <div class="instagram follow-block-icon">
-                            <span class="korsar-icon instagram"></span>
+                        <div class="email">
+                            corsar@mail.ru
                         </div>
                     </div>
-                    <div>
+                    <div class="gray-line"></div>
+                    <div class="follow-block">
+                        <div class="flex-grow-1 align-self-center">
+                            <span>Присоединятесь к нам</span>
+                            <div class="vkontakte follow-block-icon">
+                                <span class="korsar-icon vk"></span>
+                            </div>
+                            <div class="facebook follow-block-icon">
+                                <span class="korsar-icon fb"></span>
+                            </div>
+                            <div class="instagram follow-block-icon">
+                                <span class="korsar-icon instagram"></span>
+                            </div>
+                        </div>
+                        <div>
 
+                        </div>
+                    </div>
+                    <div class="gray-line"></div>
+                    <div class="policity">
+                        <a href="#">Политика обработки персональных данных</a>
                     </div>
                 </div>
-                <div class="gray-line"></div>
-                <div class="policity">
-                    <a href="#">Политика обработки персональных данных</a>
-                </div>
-            </div>
-            <div class="col-footer-more">
-                <div class="footre-more-info">
-                    <div class="footer-more ">
-                        <span class="footer-more-header">Продукция</span>
-                        <ul class="list-unstyled">
-                            <li>Батарея салютов </li>
-                            <li>Петарды оптом </li>
-                            <li>Римские свечи оптом </li>
-                            <li>Ракеты оптом </li>
-                            <li>Фестивальные шары оптом </li>
-                            <li>Фонтаны </li>
-                            <li>Хлопушка </li>
-                            <li>Бенгальские огни </li>
-                            <li>Фейерверк</li>
-                        </ul>
-                    </div>
-                    <div class="footer-more ">
-                        <span class="footer-more-header">Информация</span>
-                        <ul class="list-unstyled">
-                            <li>О компании</li>
-                            <li>Бонусная программа </li>
-                            <li>Доставка </li>
-                            <li>Оплата </li>
-                            <li>Контакты</li>
-                        </ul>
-                    </div>
-                    <div class="footer-more ">
-                        <span class="footer-more-header">Помощь</span>
-                        <ul class="list-unstyled">
-                            <li>Сертификаты</li>
-                            <li>Штрих коды </li>
-                            <li>Оптовым покупателям </li>
-                            <li>Блог</li>
-                        </ul>
-                    </div>
-                    <div class="footer-more ">
-                        <span class="footer-more-header">Остальное</span>
-                        <ul class="list-unstyled">
-                            <li>Фейерверк шоу </li>
-                            <li>Фейерверки для свадеб </li>
-                            <li>Фейерверки на Новый год</li>
-                        </ul>
+                <div class="col-footer-more">
+                    <div class="footre-more-info">
+                        <div class="footer-more ">
+                            <span class="footer-more-header">Продукция</span>
+                            <ul class="list-unstyled">
+                                <li>Батарея салютов </li>
+                                <li>Петарды оптом </li>
+                                <li>Римские свечи оптом </li>
+                                <li>Ракеты оптом </li>
+                                <li>Фестивальные шары оптом </li>
+                                <li>Фонтаны </li>
+                                <li>Хлопушка </li>
+                                <li>Бенгальские огни </li>
+                                <li>Фейерверк</li>
+                            </ul>
+                        </div>
+                        <div class="footer-more ">
+                            <span class="footer-more-header">Информация</span>
+                            <ul class="list-unstyled">
+                                <li>О компании</li>
+                                <li>Бонусная программа </li>
+                                <li>Доставка </li>
+                                <li>Оплата </li>
+                                <li>Контакты</li>
+                            </ul>
+                        </div>
+                        <div class="footer-more ">
+                            <span class="footer-more-header">Помощь</span>
+                            <ul class="list-unstyled">
+                                <li>Сертификаты</li>
+                                <li>Штрих коды </li>
+                                <li>Оптовым покупателям </li>
+                                <li>Блог</li>
+                            </ul>
+                        </div>
+                        <div class="footer-more ">
+                            <span class="footer-more-header">Остальное</span>
+                            <ul class="list-unstyled">
+                                <li>Фейерверк шоу </li>
+                                <li>Фейерверки для свадеб </li>
+                                <li>Фейерверки на Новый год</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="korsar">
-                Компания Корсар XXI © 2018. Все права защищены
+                <div class="korsar">
+                    Компания Корсар XXI © 2018. Все права защищены
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="production/scripts.min.js?v=T006"></script>
+
 </html>

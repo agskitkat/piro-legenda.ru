@@ -914,42 +914,52 @@ var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="d
     '        </div>';
 
 var block_send = false;
-
+var old_text = "";
 function test_send_form(element) {
 
     var reachGoal = $(element).closest(".korsar-modal").attr('data-reachgoal');
     console.log("reachGoal:"+ reachGoal);
+    var btn =  $(element);
 
     var form_1 = $(element).parent();
     name = "Без имени";
+
+
+
     if(check_form(form_1, "on-view")) {
         var name = form_1.find(".i-name").val();
         var phone = form_1.find(".i-phone").val();
         var email = form_1.find(".i-email").val();
         var point = form_1.find(".i-point").val();
         //showBlock_2(name);
+
+
         block_send = false;
         form_1.find(".js-action-do-auth").html("Подождите, отправка...");
 
         if(block_send) {
             return false;
-        } else {
-            block_send = true;
         }
+
+        var old_text = btn.text();
+        btn.text("Отправка...");
 
         $.ajax({
             type: "POST",
             url: "/local/ajax/hash_auth.php",
             data: JSON.stringify({name: name, email: email, phone: phone,city: point})
         }).done(function (data) {
+            block_send = true;
+            btn.text(old_text);
+
             form_1.find(".js-action-do-auth").html("Получить оптовы цены");
             if (data.length) {
                 $(form_1).find(".error").remove();
                 $.each(data, function (k, v) {
                     $(form_1).append('<div class="error red">' + v.error + '</div>');
                 });
-            }
-
+            } 
+ 
             if (data.code == "200" && data.error == "null") {
                 $(".korsar-modal").animate({
                     opacity: 0
@@ -1020,12 +1030,9 @@ function price_form_zz_call() {
 window.dataLayer = window.dataLayer || [];
 // Include on HEADER !!!  /open
 function start_zz_call() {
-
     $('body').on("click", '.auth-link', function (e) {
         console.log("Alert !!!");
     });
-
-
 
     // Mobile click or select
     $(".mobile-499-800").on("touchstart mousedown", function() {
@@ -1140,8 +1147,6 @@ function start_zz_call() {
     */
 
 
-
-
     /*
          TOP FIXED VIEW & HIDE
    */
@@ -1173,9 +1178,6 @@ function start_zz_call() {
     /*
          /TOP FIXED VIEW & HIDE
    */
-
-
-
 
 
     // CATALOG IMAGE
@@ -1319,6 +1321,60 @@ function start_zz_call() {
 
         });
     });
+
+
+
+    /*
+        MAIN PAGE SLIDER REVIEW
+    */
+    $('#js-target-main-review-slider').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        adaptiveHeight: true,
+        dots: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+    /*
+        PRODUCTS SLIDER
+    */
+    $('.js-target-slider-goods').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        adaptiveHeight: true,
+        dots: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
 };
 
 // Include on HEADER !!! /close

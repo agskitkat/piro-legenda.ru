@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>Потеряно соединение с интернетом</title>
+    <style>
+        @font-face {
+            font-family: 'Manrope';
+            src: local("Manrope Regular"), local("Manrope-Regular"), url("fonts/true/regular.woff2") format("woff"), url("fonts/true/regular.woff2") format("woff"), url("fonts/true/regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        * {
+            box-sizing: border-box;
+            font-family: 'Manrope';
+            text-align: center;
+        }
+        body {
+            padding:20px;
+        }
+        .logo {
+            display:block;
+            max-width:75%;
+            margin:20px auto;
+        }
+        .rocket {
+            display:none;
+        }
+        .p404 {
+            font-size: 130px;
+            color:#F12626;
+            line-height: 140px;
+        }
+        .text-1 {
+            font-size: 25px;
+            color:#000;
+        }
+        .text-2 {
+            font-size: 15px;
+            color:#8C8C8C;
+        }
+        .go-to-main-page {
+            margin-top:50px;
+        }
+        .go-to-main-page a {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-decoration: none;
+            color:#000;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        @media (min-width: 375px) {
+            .logo {
+                max-width:70%;
+            }
+        }
+        @media (min-width: 480px) {
+            .logo {
+                max-width:60%;
+            }
+        }
+        @media (min-width: 768px) {
+            .logo {
+                width:226px;
+            }
+            .rocket {
+                display: block;
+                position:relative;
+            }
+            .rocket::after {
+                content: " ";
+                display:block;
+                position:absolute;
+                z-index: 1;
+                width:266px;
+                height:266px;
+                border-radius: 50%;
+                background: #E9F0FB;
+                top:0px;
+                left:calc(50% - 133px);
+            }
+            .rocket img {
+                position:relative;
+                z-index: 2;
+                width:250px;
+            }
+            .go-to-main-page a {
+                width:260px;
+            }
+        }
+        @media (min-width: 1170px) {
+            .c {
+                width:1170px;
+                margin: 0 auto;
+            }
+            .logo {
+                width:100%;
+                float:left;
+                text-align: left;
+                margin-bottom:100px;
+            }
+            .logo::after {
+                content: " ";
+                display:block;
+                clear: both;
+            }
+            .logo img {
+                width:226px;
+            }
+
+            .rocket {
+                float:left;
+                width:45%;
+            }
+
+            .rocket img {
+                width: 340px;
+            }
+
+            .rocket::after {
+                content: " ";
+                display:block;
+                position:absolute;
+                z-index: 1;
+                width:400px;
+                height:400px;
+                border-radius: 50%;
+                background: #E9F0FB;
+                top:0px;
+                left:calc(50% - 200px);
+            }
+
+            .text-1, .p404, .text-2, .go-to-main-page {
+                text-align: left;
+                width:55%;
+                float:left;
+                padding-left:40px;
+            }
+
+            .text-1 {
+                font-size: 35px;
+            }
+
+            .text-2 {
+                font-size: 20px;
+            }
+            .go-to-main-page a {
+                margin:0;
+            }
+            .p404 {
+                font-size: 160px;
+                line-height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="c">
+    <div class="logo">
+        <img src="images/logo-legend.svg">
+    </div>
+    <div class="rocket">
+        <img src="images/svg/rocket.svg">
+    </div>
+    <div class="p404">
+
+    </div>
+    <div class="text-1">
+       Потеряно интернет соединение
+    </div>
+    <div class="text-2">
+        Соединение с интернетом прервано, может хотите пока запустить салют ?
+    </div>
+    <div class="go-to-main-page">
+        <a href="index.html">Бахнуть !</a>
+    </div>
+</div>
+</body>
+</html>

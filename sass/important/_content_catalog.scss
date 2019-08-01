@@ -449,6 +449,9 @@
 }
 
 @media (min-width: 768px)  {
+  .good_slide {
+    padding: 10px;
+  }
   .catalog-block .goods {
     margin: 0 -20px;
   }
@@ -1035,7 +1038,7 @@
     padding-top:0px;
   }
 
-  .catalog .catalog-block .good .add_to_cart_block .add_button, .swipe_slider .good_slide .add_to_cart_block .add_button {
+  .catalog .catalog-block .good .add_to_cart_block .add_button,  .good_slide .add_to_cart_block .add_button {
     font-size: 14px;
     line-height: 14px;
     padding-top: 14px;
@@ -1044,7 +1047,7 @@
     max-width: 100%;
   }
 
-  .catalog .catalog-block .good:hover .add_to_cart_block .add_button, .swipe_slider .good_slide:hover .add_to_cart_block .add_button {
+  .catalog .catalog-block .good:hover .add_to_cart_block .add_button, .good_slide:hover .add_to_cart_block .add_button {
     border: 1px solid #08D04C;
     background: #08D04C;
     color: #FFF;

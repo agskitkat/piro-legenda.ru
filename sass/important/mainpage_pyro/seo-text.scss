@@ -1,0 +1,43 @@
+.seo-text {
+  h1 {
+    font-size: 24px;
+    line-height: 33px;
+    text-align: left;
+  }
+  p {
+    line-height: 25px;
+    font-size: 14px;
+    color:#1C1C1C;
+  }
+  ul {
+    li {
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .seo-text {
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .seo-text {
+    h1 {
+      font-size: 25px;
+      text-align: left;
+    }
+    p {
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+}

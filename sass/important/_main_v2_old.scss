@@ -1,13 +1,9 @@
-// Перенос стилей главнорй страницы с pyrosalut.ru, изменение структуры HTML
-// от 01.08.2019
+// Файл временно не используется
+// Новая версия файла от 01.08.2019
 
-
-@import "mainpage_pyro/opt-categogy.scss";
-@import "mainpage_pyro/map.scss";
-@import "mainpage_pyro/how-to-get-price.scss";
-@import "mainpage_pyro/form-v2.scss";
-@import "mainpage_pyro/seo-text";
-
+@import 'important/mainpage/opt-category';
+@import "important/mainpage/easy-block-v2";
+@import "important/mainpage/others-modificators";
 
 .main-page-v2 {
   .slider {
@@ -84,10 +80,8 @@
   }
 
   .goods-category {
-    padding-top:28px;
     .header {
-      font-size: 24px;
-      line-height: 33px;
+      font-size: 18px;
       text-align: center;
       display:block;
       font-weight: bold;
@@ -202,20 +196,22 @@
       overflow: hidden;
       .header {
         display:block;
-        text-align: left;
+        text-align: center;
         color:$black;
-        font-size: 22px;
-        line-height: 28px;
+        font-size:20px;
+        line-height:28px;
         font-weight: 500;
         padding-bottom:10px;
       }
+
       .text {
         font-size: 15px;
-        line-height: 26px;
+        line-height: 23px;
         padding-bottom:20px;
         display: block;
-        text-align: left;
+        text-align: center;
       }
+
       img {
         width:100%;
         margin-bottom:-40px;
@@ -377,6 +373,7 @@
         display: block;
       }
     }
+
     .msg {
       padding-top:20px;
       display: block;
@@ -394,7 +391,7 @@
     }
 
     .start-now {
-      padding-top: 45px;
+      padding-top: 1 5px;
       .wrap {
         text-align: center;
         .text {
@@ -428,7 +425,8 @@
 
     .callback-form {
       position:relative;
-      padding-top: 45px;
+      /* padding-top: 45px; */
+      padding-top:5px;
       padding-bottom: 20px;
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15);
       border-radius: 15px;
@@ -440,17 +438,18 @@
         .header {
           font-size: 20px;
           font-weight: bold;
-          padding-bottom: 30px;
+          /* padding-bottom: 30px; */
+          padding-top:15px;
         }
         .shadow-drop {
-          box-shadow: 0px 2px 6px #0084ff;
+          box-shadow: 0px 2px 6px rgba(9, 138, 61, 0.5);
           position: relative;
         }
         .shadow-drop:before {
           position: absolute;
           content: " ";
           display: block;
-          background: #3454d2;
+          background: #098A3D;
           border-radius: 10px;
           left: 10px;
           right: 10px;
@@ -466,7 +465,8 @@
         }
         .callback-time {
           color: $gray-1;
-          padding-top: 60px;
+          /* padding-top: 60px; */
+          padding-top:15px;
           font-size: 13px;
         }
       }
@@ -475,7 +475,6 @@
       display:block;
     }
   }
-
   .form-cm:after {
     clear:both;
     content: " ";
@@ -525,12 +524,9 @@
         font-weight: bold;
       }
       .review {
-        text-align: center;
-        padding:0 0px;
+        padding:0 10px;
         .face{
-          text-align: center;
           img {
-            margin: 0 auto;
             width: 90px;
             height:90px;
           }
@@ -549,24 +545,23 @@
           border-radius: 15px;
           padding:16px;
           padding-top:0px;
-          max-height:120px;
+          height:284px;
           overflow: hidden;
+          overflow-y: hidden;
           transition: all 0.2s;
           .text {
-            font-size: 13px;
-            line-height: 18px;
+            font-size: 15px;
             color:$black;
             text-align: left;
             padding:16px 0px;
           }
         }
         .readmore {
-          font-size: 14px;
           padding-left:16px;
           text-align:left;
           font-weight:bold;
           cursor:pointer;
-          margin-top: 16px;
+          margin-top: 10px;
           .add {
             margin: auto auto;
             width:90%;
@@ -676,7 +671,6 @@
   }
 
   .fura-delivery {
-    margin-top: 40px;
     border:1px solid $gray-2;
     border-radius: 15px;
     padding:16px;
@@ -687,33 +681,49 @@
         display:block;
         width:100%;
         text-align: center;
-        font-size: 22px;
-        padding-top:35px;
-        padding-bottom:20px;
+        font-size: 18px;
+        padding-top:10px;
+        padding-bottom:30px;
+      }
+      a {
+        margin-bottom:30px;
+        .vertical-centred {
+          display: inline-block;
+          position:relative;
+          width:30px;
+          .korsar-icon {
+            font-weight: normal;
+            position: absolute;
+            transform: rotate(180deg);
+            bottom:-4px;
+            right:0px;
+            transition: right 0.2s;
+          }
+        }
       }
       .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-        height: 44px;
+        width:202px;
+        height:44px;
+        line-height: 22px;
+        padding:10px 16px;
         margin: 0 auto;
-        img {
-          margin-left:10px;
-          transition: transform ease-in 0.2s;
+        margin-bottom:20px;
+        text-transform: none;
+        font-size: 14px;
+        .vertical-centred {
+          .korsar-icon {
+            bottom:-8px;
+            font-size: 25px;
+          }
         }
       }
       a:hover {
-        img {
-          transform: translateX(10px);
+        .korsar-icon {
+          right:-10px;
         }
       }
-      > img {
-        display: block;
-        max-width:100%;
-        min-width: 100%;
-        margin: 0 auto;
-        margin-bottom:40px;
+      img {
+        width:100%;
       }
     }
   }
@@ -761,68 +771,6 @@
           clear: both;
           display: block;
           content: " ";
-        }
-      }
-    }
-
-    .good-sertificad {
-      .wrap-sertificad {
-        .header {
-          font-size: 22px;
-          padding-bottom: 16px;
-        }
-        .text {
-
-        }
-        img {
-
-        }
-      }
-    }
-
-    .reviews-block {
-      padding-top: 45px;
-      padding-bottom: 45px;
-      .wrap {
-        .header {
-          font-size: 22px;
-          line-height: 30px;
-          color: #000000;
-        }
-        .review {
-
-          .review-text-wrap {
-            padding: 0px 0px 16px;
-            border-radius: 0px;
-          }
-          .readmore {
-            padding-left: 0px;
-          }
-        }
-      }
-    }
-
-    .best-price {
-      padding-top: 10px;
-      .wrap {
-        .header {
-          font-size: 24px;
-          line-height: 33px;
-          color: #1C1C1C;
-          text-align: left;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 414px) {
-  .main-page-v2 {
-    .reviews-block {
-      .wrap {
-        .review {
-          width:300px;
-          margin: 0 auto;
         }
       }
     }
@@ -1064,18 +1012,18 @@
         padding-left: 20px;
         overflow: visible;
         .header {
-          width:calc(100% - 347px);
+          width:calc(100% - 267px);
           text-align: left;
           font-size: 20px;
         }
         .text {
-          width:279px;
+          width:calc(100% - 267px);
           text-align: left;
           font-size: 15px;
         }
         img {
           position:absolute;
-          width:347px;
+          width:257px;
           bottom:0px;
           right:20px;
           margin: 0px;
@@ -1272,7 +1220,6 @@
           font-size:24px;
         }
         .review {
-          width:100%;
           padding:0 50px;
           .company {
             display:inline;
@@ -1284,10 +1231,6 @@
           .review-text-wrap {
             clear:both;
             height:118px;
-            .text {
-              font-size: 15px;
-              line-height: 21px;
-            }
           }
         }
       }
@@ -1360,34 +1303,38 @@
     }
 
     .fura-delivery {
-      padding: 30px 16px 30px;
       overflow: hidden;
       position:relative;
       margin-bottom: 90px;
       .wrap {
-        .header {
-          margin-top: 5px;
-          display: initial;
-          padding:0px;
-          font-size: 22px;
+        .calculate {
+          float:right;
+          width:45%;
+          .header {
+            text-align: left;
+            font-size: 25px;
+            margin-bottom:10px;
+            padding-bottom: 0px;
+            line-height: 38px;
+          }
+          .button {
+            display:inline;
+            padding:10px 16px;
+            text-transform: none;
+          }
         }
-        > img {
-          width:450px;
-          max-width: 450px;
-          min-width:initial;
-          float:left;
-          margin-bottom:0px;
-          margin-right:27px;
-        }
-        .button {
-          margin:0px;
-          margin-top: 24px;
+        img {
+          top:calc(55% - 70px);
+          width:469px;
+          height:120px;
+          position:absolute;
+          left:-120px;
         }
       }
       .wrap:after {
-        content: "";
-        display:none;
-        clear: both;
+        content: " ";
+        display:block;
+        clear:both;
       }
     }
 
@@ -1404,14 +1351,6 @@
 
 @media (min-width: 1024px) {
   .main-page-v2 {
-
-    .goods-category {
-      .header {
-        font-size: 25px;
-        line-height: 34px;
-      }
-    }
-
     .lead-options {
       .main-advantages {
         .advantage-wrap {
@@ -1426,18 +1365,15 @@
     .good-sertificad {
       .wrap-sertificad {
         img {
-          width:386px;
+          width:330px;
         }
         .text {
-          width:386px;
+          width:calc(100% - 330px);
         }
         .header {
-          width:calc(100% - 386px);
+          width:calc(100% - 330px);
           padding-bottom:20px;
           font-size: 25px;
-          br {
-            display: none;
-          }
         }
       }
     }
@@ -1577,6 +1513,7 @@
         text-align: left;
         font-size: 25px;
         line-height: 34px;
+
         .red {
           display:block;
         }
@@ -1609,6 +1546,21 @@
         > div,  .callback-form{
           width:360px;
           height:450px;
+        }
+        .callback-form {
+          .wrap {
+            .header {
+              padding-top: 35px;
+            }
+            .form {
+              .button {
+                margin-top: 25px;
+              }
+            }
+            .callback-time {
+              padding-top:110px;
+            }
+          }
         }
         .start-now {
           padding-top:66px;
@@ -1664,8 +1616,6 @@
     }
 
     .reviews-block {
-      padding-left:40px;
-      padding-right:40px;
       .wrap {
         .header {
           font-size:25px;
@@ -1695,8 +1645,34 @@
       position:relative;
       margin-bottom: 90px;
       .wrap {
-        width:782px;
-        margin: 0 auto;
+        .calculate {
+          float:right;
+          width:37%;
+          .header {
+            text-align: left;
+            font-size: 25px;
+            margin-bottom:10px;
+            padding-bottom: 0px;
+            line-height: 38px;
+          }
+          .button {
+            display:inline;
+            padding:10px 16px;
+          }
+        }
+        img {
+          top:calc(55% - 70px);
+          width:469px;
+          height:120px;
+          position:absolute;
+          left:auto;
+          right:44%;
+        }
+      }
+      .wrap:after {
+        content: " ";
+        display:block;
+        clear:both;
       }
     }
 
@@ -1718,7 +1694,6 @@
         }
       }
     }
-
     .best-firework {
       .wrap {
         .more {
@@ -1726,7 +1701,6 @@
         }
       }
     }
-
     .form-cm {
       > .header {
         left: 420px;
@@ -1739,7 +1713,6 @@
         left: 420px;
       }
     }
-
     .form-cm.last {
       > .header {
         left: 480px;
@@ -1762,24 +1735,18 @@
         top:270px;
       }
     }
-
     .form-cm.last {
       padding:0 60px;
     }
 
     .fura-delivery {
-      //padding: 60px 16px 60px;
+      padding: 60px 16px 60px;
       .wrap {
-        width: 820px;
-        padding-top:20px;
-        > img {
-          margin-top:-20px;
-          width:577px;
-          max-width: 577px;
-          min-width: 577px;
+        .calculate {
+          width:43%;
         }
-        .button {
-          margin-top: 10px;
+        img {
+          right:52%;
         }
       }
     }

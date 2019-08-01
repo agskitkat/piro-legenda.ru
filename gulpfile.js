@@ -9,7 +9,6 @@ var minifyCSS = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var uncss = require('gulp-uncss');
 var browserSync = require('browser-sync');
-var minifyjs  = require('gulp-js-minify');
 var autoprefixer = require('gulp-autoprefixer');
 var rigger = require('gulp-rigger');
 
@@ -24,46 +23,6 @@ gulp.task('sass', function () {
                 keepBreaks: false
              }))
             .pipe(gulp.dest('production'));
-
-        gulp.src('sass/style.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(autoprefixer('last 2 version', 'ie 8', 'ie 9'))
-            .pipe(concat('korsar.min.css'))
-            //.pipe(minifyCSS({
-                //keepBreaks: false
-            //}))
-            .pipe(gulp.dest('production'));
-
-        gulp.src('sass/others.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(autoprefixer('last 2 version', 'ie 8', 'ie 9'))
-            .pipe(concat('others.min.css'))
-            //.pipe(minifyCSS({
-                //keepBreaks: false
-            //}))
-            .pipe(gulp.dest('production'));
-
-
-
-        // MINIMAL
-        gulp.src('sass/minimal.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(autoprefixer('last 2 version', 'ie 8', 'ie 9'))
-            .pipe(concat('minimal.min.css'))
-            .pipe(minifyCSS({
-                keepBreaks: false
-            }))
-            .pipe(gulp.dest('production'));
-
-        // ARTICLE
-        gulp.src(['sass/colors.scss', 'sass/others/article-pyro-opt.scss'])
-            .pipe(sass().on('error', sass.logError))
-            .pipe(autoprefixer('last 2 version', 'ie 8', 'ie 9'))
-            .pipe(concat('article.min.css'))
-            .pipe(minifyCSS({
-                keepBreaks: false
-            }))
-            .pipe(gulp.dest('production/page/'));
 });
 
 gulp.task('css', function () {
@@ -102,10 +61,6 @@ gulp.task('js', function () {
         .pipe(concat('scripts.min.js'))
         .pipe(gulp.dest('production'));
 
-
-
-
-
     gulp.src([
         'js/minimal_dom_ready/*.js',
         'js/dom_ready/menu.js',
@@ -140,6 +95,15 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
+gulp.task('html', function () {
+    gulp.src(['pages/*.html'])
+        .pipe(rigger())
+        .pipe(gulp.dest(''));
+});
+gulp.task('html:watch', function () {
+    gulp.watch(['pages/*.html'], ['html']);
+});
+
 gulp.task('default', ['clean'], function() {
-    gulp.start('sass:watch', 'js:watch', 'sass', 'js');
+    gulp.start('html:watch', 'sass:watch', 'js:watch', 'sass', 'js');
 });

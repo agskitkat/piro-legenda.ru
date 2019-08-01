@@ -243,6 +243,40 @@ button.button.green.active.color-hold, button.button.green.active.color-hold:hov
   border-color:$green!important;
 }
 
+
+
+a.button.yellow,
+a.button.yellow.active:hover,
+button.button.yellow,
+button.button.yellow.active:hover,
+input[type=submit].button.yellow,
+input[type=submit].button.yellow.active:hover {
+  background:#000;
+  color:#F9DB67;
+  border-color:#F9DB67;
+}
+
+a.button.yellow:hover,
+a.button.yellow.active,
+button.button.yellow:hover,
+button.button.yellow.active,
+input[type=submit].button.yellow:hover,
+input[type=submit].button.yellow.active {
+  background: #F9DB67;
+  color:#000;
+  border-color:#F9DB67;
+}
+
+a.button.yellow.active.color-hold, a.button.yellow.active.color-hold:hover,
+button.button.yellow.active.color-hold, button.button.yellow.active.color-hold:hover{
+  background: #F9DB67!important;
+  color:#000!important;
+  border-color:#F9DB67!important;
+}
+
+
+
+
 a.button.blue,
 a.button.blue.active:hover,
 button.button.blue,
