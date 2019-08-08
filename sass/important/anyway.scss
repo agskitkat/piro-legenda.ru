@@ -186,9 +186,7 @@ label {
 
 
 
-a.button,
-button.button,
-input[type=submit] {
+.button{
   border-radius: 5px;
   color:$gray-1;
   border:1px solid $gray-1;
@@ -200,44 +198,36 @@ input[type=submit] {
   text-transform: uppercase;
   line-height: 14px;
   width:100%;
-  font-weight: bold;
+  font-weight: normal;
   transition :all 0.2s;
   cursor: pointer;
 }
-a.button:hover,
-a.button.active,
-button.button:hover,
-button.button.active,
-input[type=submit].button:hover,
-input[type=submit].button.active {
+
+.button:hover,
+.button.active {
   background: $gray-1;
   color:#FFF;
   border-color:$gray-1;
 }
-a.button.green,
-a.button.green.active:hover,
-button.button.green,
-button.button.green.active:hover,
-input[type=submit].button.green,
-input[type=submit].button.green.active:hover {
+
+.button.green,
+.button.green.active:hover {
   background:#FFF;
   color:$green;
   border-color:$green;
 }
 
-a.button.green:hover,
-a.button.green.active,
-button.button.green:hover,
-button.button.green.active,
-input[type=submit].button.green:hover,
-input[type=submit].button.green.active {
+
+.button.green:hover,
+.button.green.active {
   background: $green;
   color:#FFF;
   border-color:$green;
 }
 
-a.button.green.active.color-hold, a.button.green.active.color-hold:hover,
-button.button.green.active.color-hold, button.button.green.active.color-hold:hover{
+
+.button.green.active.color-hold,
+.button.green.active.color-hold:hover{
   background: $green!important;
   color:#FFF!important;
   border-color:$green!important;
@@ -245,112 +235,75 @@ button.button.green.active.color-hold, button.button.green.active.color-hold:hov
 
 
 
-a.button.yellow,
-a.button.yellow.active:hover,
-button.button.yellow,
-button.button.yellow.active:hover,
-input[type=submit].button.yellow,
-input[type=submit].button.yellow.active:hover {
-  background:#000;
-  color:#F9DB67;
-  border-color:#F9DB67;
+.button.yellow,
+.button.yellow.active:hover {
+  background: #FCC30D;
+  color:#000;
+  border-color:#FCC30D;
 }
 
-a.button.yellow:hover,
-a.button.yellow.active,
-button.button.yellow:hover,
-button.button.yellow.active,
-input[type=submit].button.yellow:hover,
-input[type=submit].button.yellow.active {
+.button.yellow:hover,
+.button.yellow.active {
   background: #F9DB67;
   color:#000;
   border-color:#F9DB67;
 }
 
-a.button.yellow.active.color-hold, a.button.yellow.active.color-hold:hover,
-button.button.yellow.active.color-hold, button.button.yellow.active.color-hold:hover{
+.button.yellow.active.color-hold:hover{
   background: #F9DB67!important;
   color:#000!important;
   border-color:#F9DB67!important;
+  box-shadow: 0px 2px 6px #FCC30D;
 }
 
 
-
-
-a.button.blue,
-a.button.blue.active:hover,
-button.button.blue,
-button.button.blue.active:hover,
-input[type=submit].button.blue,
-input[type=submit].button.blue.active:hover {
+.button.blue,
+.button.blue.active:hover {
   color:$blue;
   border:1px solid $blue;
   background: #FFF;
 }
-a.button.blue:hover,
-a.button.blue.active,
-button.button.blue:hover,
-button.button.blue.active,
-input[type=submit].button.blue:hover,
-input[type=submit].button.blue.active {
+
+.button.blue:hover,
+.button.blue.active {
   color:#FFF;
   border:1px solid $blue;
   background: $blue;
 }
-a.button.red,
-a.button.red.active:hover,
-button.button.red,
-button.button.red.active:hover,
-input[type=submit].button.red,
-input[type=submit].button.red.active:hover {
+
+.button.red,
+.button.red.active:hover {
   color:#FFF;
   border:1px solid $red;
   background: $red;
 }
-a.button.red:hover,
-a.button.red.active,
-button.button.red:hover,
-button.button.red.active,
-input[type=submit].button.red:hover,
-input[type=submit].button.red.active
-{
+
+.button.red:hover,
+.button.red.active {
   color:$red;
   border:1px solid $red;
   background: #FFF;
 }
 
-a.button.black,
-a.button.black.active:hover,
-button.button.black,
-button.button.black.active:hover,
-input[type=submit].button.black,
-input[type=submit].button.black.active:hover {
+.button.black,
+.button.black.active:hover {
   color:$black;
   border:1px solid $black;
   background: #FFF;
 }
-a.button.black:hover,
-a.button.black.active,
-button.button.black:hover,
-button.button.black.active,
-input[type=submit].button.black:hover,
-input[type=submit].button.black.active {
+
+.button.black:hover,
+.button.black.active {
   color:#FFF;
   border:1px solid $black;
   background: $black;
 }
 
-a.button.disabled,
-a.button.disabled.active,
-a.button.disabled:hover,
-a.button.disabled.active:hover,
-button.button.disabled:hover,
-button.button.disabled,
-button.button.disabled.active:hover,
-button.button.disabled.active,
-input[type=submit].button.disabled:hover,
-input[type=submit].button.disabled
-{
+
+.button.disabled:hover,
+.button.disabled,
+.button.disabled.active:hover,
+.button.disabled.active {
   color: $gray-1;
   border: 1px solid $gray-1;
   background: #FFF;

@@ -52,7 +52,6 @@ function remove_from_cart_YE(good) {
 }
 
 
-
 function remove_from_cart_YE(purchase, goods) {
     dataLayer.push({
         "ecommerce": {

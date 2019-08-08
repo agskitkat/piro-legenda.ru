@@ -87,7 +87,9 @@
     justify-content: space-between;
     align-items: center;
     font-size: 10px;
-    height:42px;
+    height: 30px;
+    padding-top: 22px;
+    padding-bottom: 24px;
     .cell {
       .cell-content {
         display:flex;
@@ -98,7 +100,7 @@
           padding-right:6px;
           .korsar-icon {
             line-height: 12px;
-            font-size: 35px;
+            font-size:40px;
           }
           .box_small {
             font-size:25px;
@@ -145,8 +147,9 @@
 @media (min-width: 375px) {
   .good_v2_options_good_block {
     > .row {
-      height:50px;
+      height:45px;
       font-size:14px;
+      padding-bottom: 20px;
     }
     > .row.one-cell {
       height:30px;
@@ -155,13 +158,16 @@
 }
 
 @media (min-width: 768px) {
-  .good_v2_options_good_block {
+  .disabled.good_v2_options_good_block {
     display:flex;
     justify-content: space-between;
     width: 100%;
+    > .row + .row {
+      font-size:14px;
+    }
     > .row + .row, > .row {
       flex-basis: 45%;
-      font-size:14px;
+
     }
     > .row.one-cell {
       flex-basis: 50%;
@@ -179,7 +185,7 @@
 }
 
 @media (min-width: 1024px) {
-  .good_v2_options_good_block {
+  .disabled.good_v2_options_good_block {
     display:block;
     > .row {
       .cell {
@@ -229,7 +235,7 @@
 }
 
 @media (min-width: 1024px) {
-  .good_v2_options_good_block {
+  .disabled.good_v2_options_good_block {
     width:550px;
     max-width: 100%;
   }

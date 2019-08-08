@@ -20,6 +20,8 @@ $red: #F12626;
 
 .good_content .good_image_block img{
   width:100%;
+  max-width:500px;
+  margin:0 auto;
 }
 
 .good_content .good_image_block .good_actions {
@@ -108,7 +110,7 @@ $red: #F12626;
 
 .good_content .good_price_block .price_list {
   width:100%;
-  float:left;
+  float:none;
   padding-right:14px;
   .good_prices_mode {
     .flex-row-price {
@@ -126,6 +128,8 @@ $red: #F12626;
     }
   }
 }
+
+
 .good_content .good_price_block .price_list span {
   text-align: start;
 }
@@ -165,12 +169,11 @@ $red: #F12626;
 
 .good_content .good_price_block .discount_list {
   width:45%;
-  // padding-left: 14px;
+  //padding-left: 14px;
   display:table-cell;
   vertical-align: middle;
   height:100px;
-  // border-left: 1px solid $gray;
-
+  //border-left: 1px solid $gray;
 }
 
 .good_content .good_price_block .discount_list .discount {
@@ -305,7 +308,6 @@ $red: #F12626;
   .total_good_sum_block {
     text-align: center;
     width: 100%;
-    float: right;
     padding-right:0px;
   }
 }
@@ -324,8 +326,6 @@ $red: #F12626;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .add_to_cart_block .text {
@@ -333,7 +333,7 @@ $red: #F12626;
   font-size: .75rem;
   display: inline;
   line-height: 44px;
-  padding-right: 0px ;
+  padding-right: 0px;
 }
 
 .add_to_cart_block .btn-block :before {
@@ -390,7 +390,6 @@ $red: #F12626;
 .add_to_cart_block .add_button {
   text-align: center;
   width:100%;
-  border:1px solid #000;
   background: transparent;
   border:1px solid $gray-2;
   font-size: 1rem;
@@ -403,9 +402,7 @@ $red: #F12626;
 }
 
 .add_to_cart_block .add_button:hover, .add_to_cart_block .add_button.active {
-  background: $green;
-  color:#FFF;
-  border:1px solid $green;
+
 }
 
 
@@ -459,6 +456,7 @@ $red: #F12626;
 }
 .good_similars {
   padding-bottom:80px;
+  margin: 0 -20px;
 }
 .good_similars .similars_header {
   display: block;
@@ -469,12 +467,6 @@ $red: #F12626;
 }
 
 
-
-
-@media (min-width: 320px) {
-
-}
-
 @media (min-width: 375px) {
   .good_characteristics_block:after {
     content: " ";
@@ -482,8 +474,8 @@ $red: #F12626;
     clear: both;
   }
   .good_characteristics_block .characteristics_list .options .option {
-      width:50%;
-      float:left;
+    width:50%;
+    float:left;
   }
 }
 
@@ -491,7 +483,7 @@ $red: #F12626;
   .good_content .good_image_block .good_actions {
     position:absolute;
     left:0;
-    top:25px;
+    top:0;
   }
   .good_content {
     .good_options_block {
@@ -661,13 +653,18 @@ $red: #F12626;
   }
 
 
-  .add_to_cart_block .good_quantity_block .btn-block {
-    display:block;
-  }
   .add_to_cart_block .good_quantity_block {
-    justify-content: center;
     flex-direction: row;
-    align-items: flex-start;
+    .text {
+      width:33.333%;
+    }
+    .btn-block {
+      width:66.666%;
+      .total_good_sum_block {
+        width:50%;
+        float:right;
+      }
+    }
   }
 }
 
@@ -731,8 +728,8 @@ $red: #F12626;
   }
 
   .good_content .good_options_block .options {
-      display:flex;
-      justify-content: space-between;
+    display:flex;
+    justify-content: space-between;
   }
   .good_content .good_options_block .options .option {
     display: block;
@@ -871,12 +868,18 @@ $red: #F12626;
 
   .add_to_cart_block .good_quantity_block {
     display: flex;
-    float:left;
-    max-width:50%;
-  }
-
-  .add_to_cart_block .good_quantity_block .text {
-    line-height: 50px;
+    flex-direction: row-reverse;
+    width:50%;
+    float:right;
+    .text {
+      width: 50%;
+    }
+    .btn-block {
+      width: 50%;
+      .total_good_sum_block {
+        width:100%;
+      }
+    }
   }
 
   .add_to_cart_block .add_button {
@@ -898,6 +901,8 @@ $red: #F12626;
 
   .good_content .good_image_block img {
     width:100%;
+    max-width:500px;
+    margin:0 auto;
   }
 }
 
@@ -918,6 +923,7 @@ $red: #F12626;
   .good_content .desktop-right {
     float:right;
     width:50%;
+    padding-top: 10px;
   }
 
   .good_content .good_characteristics_block {
@@ -948,6 +954,12 @@ $red: #F12626;
       max-width: 100%;
     }
   }
+
+
+  .good_content .good_art {
+    line-height: 30px;
+  }
+
 
   // OPTIONS ! OPTIONS ! OPTIONS ! OPTIONS ! OPTIONS !
   .good_content .good_options_block {
@@ -1178,17 +1190,30 @@ $red: #F12626;
     margin-top:44px;
   }
   .add_to_cart_block .good_quantity_block {
-    text-align: left;
+    text-align: center;
     flex-direction: column;
+    justify-content: flex-end;
+    .text {
+      width:100%;
+      float:none;
+      text-align: center;
+    }
+    .btn-block {
+      text-align: center;
+      width:100%;
+      .total_good_sum_block {
+        text-align: center;
+      }
+    }
   }
   .add_to_cart_block .good_quantity_block .text {
     display:block;
     width:100%;
-    text-align: left;
+    text-align: center;
   }
 
   .add_to_cart_block .good_quantity_block .btn-block .total_good_sum_block {
-    text-align: left;
+    text-align: center;
     float:left;
   }
 
@@ -1204,7 +1229,7 @@ $red: #F12626;
   }
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 1440px) {
   .good_content .good_image_block {
     width:40%;
     float:left;
@@ -1265,7 +1290,8 @@ $red: #F12626;
   .add_to_cart_block .good_quantity_block {
     width:60%;
     max-width: 100%;
-    flex-direction: row;
+    float:right;
+    flex-direction: row-reverse;
   }
 
   .add_to_cart_block .good_quantity_block .btn-block {
@@ -1284,12 +1310,12 @@ $red: #F12626;
   .add_to_cart_block .good_quantity_block .text {
     float:left;
     width:50%;
-    text-align: left;
+    text-align: right;
   }
 
 
   .add_to_cart_block .add_button {
-    float: right;
+    float: left;
     width: 30%;
   }
   .good_content .good_characteristics_block {

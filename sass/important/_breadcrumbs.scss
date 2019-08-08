@@ -1,4 +1,38 @@
+// Breadcumbs hide on product body class
+.product {
+  .breadcrumbs-block {
+    display:none;
+  }
+}
 
+.catalog {
+  .breadcrumbs-block {
+    display:none;
+  }
+  .display-768 {
+    display:none;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .catalog {
+    .breadcrumbs-block {
+      display:block;
+    }
+    .display-768 {
+      display:block;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .product {
+    .breadcrumbs-block {
+      display:block;
+    }
+  }
+}
 
 .breadcrumbs-block {
   font-size: .75rem;
@@ -44,6 +78,6 @@
 }
 
 body.page-good {
-   @include display-full-breadcrumbs();
+  @include display-full-breadcrumbs();
 }
 

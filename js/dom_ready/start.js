@@ -66,7 +66,7 @@ function start_zz_call() {
     var last_scroll = $(window).scrollTop();
 
     // Filter open close function
-    $(".filters-block-header .menu-btn-mobile-filters,.oreder-close-filter-block .menu-btn-mobile-filters").click(function(event) {
+    $(".header-v2 .filter-btn, .oreder-close-filter-block .menu-btn-mobile-filters").click(function(event) {
         event.preventDefault();
         var elem = $(".aside-filters");
 
@@ -81,30 +81,36 @@ function start_zz_call() {
     });
 
     // Menu open close function
-    $(".menu-block-header .menu-btn-mobile, .menu-block-header .menu-close, .top-fixed-header .menu-btn-mobile")
-    .click(function(event) {
-        event.preventDefault();
-        var elem = $(".menu-block-header .menu-items");
+    $(".header-v2 .menu-btn, .menu-block-header .menu-close")
+        .click(function(event) {
+            event.preventDefault();
 
-        if(is_open_filter) {
-            is_open = !is_open;
-            $(".aside-filters").addClass("korsar-hide");
-            is_open_filter = false;
-        }
+            if($(this).is('.product')) {
+                window.history.back();
+                return false;
+            }
 
-        if(is_open) {
-            elem.addClass("korsar-hide");
-            setTimeout(function(){
-                $(window).scrollTop(last_scroll);
-            }, 100);
+            var elem = $(".header-v2 .menu-block-header");
 
-        } else {
-            last_scroll = $(window).scrollTop();
-            $(window).scrollTop(0);
-            elem.removeClass("korsar-hide");
-        }
-        content_display();
-    });
+            if(is_open_filter) {
+                is_open = !is_open;
+                $(".aside-filters").addClass("korsar-hide");
+                is_open_filter = false;
+            }
+
+            if(is_open) {
+                elem.addClass("korsar-hide");
+                setTimeout(function(){
+                    $(window).scrollTop(last_scroll);
+                }, 100);
+
+            } else {
+                last_scroll = $(window).scrollTop();
+                $(window).scrollTop(0);
+                elem.removeClass("korsar-hide");
+            }
+            content_display();
+        });
 
 
     function content_display() {
@@ -346,6 +352,40 @@ function start_zz_call() {
         ]
     });
 
+
+    /*
+       PRODUCTS SLIDER SIMILAR
+   */
+    $('.js-target-slider-goods-similar').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        adaptiveHeight: true,
+        dots: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }, {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 };
 
 // Include on HEADER !!! /close

@@ -7,65 +7,69 @@ function menu_zz_call() {
     var max_item = 9;
     var item_interator = 0;
     var tail_element = false;
+    var count_elements = $(".menu-block-wrap .menu-block > .menu-item").length;
     var h_plus = 37;
-    if(win_w > 1024) {
+    if( count_elements > max_item ) {
+        if (win_w > 1024) {
+            $(".menu-block-wrap .menu-block > .menu-item").each(function (k, v) {
+                item_interator++;
+                if (item_interator === max_item) {
+                    $(".menu-block-wrap .menu-block").css({
+                        "padding-left": "20px",
+                        "padding-right": "20px"
+                    });
+                    $(v).find(".dropshadow").remove();
+                    tail_element = $(v);
 
-        $(".menu-block-header .menu-items > .menu-item:not('.menu-price-list')").each(function(k, v){
-            item_interator++;
-
-            if(item_interator === max_item) {
-                $(".menu-block-header .menu-items").css({
-                    "padding-left":"20px",
-                    "padding-right":"20px"});
-                $(v).find(".dropshadow").remove();
-
-                tail_element = $(v);
-
-                if (tail_element.find(".menu-level-2").length === 0) {
-                    console.log("Append");
-                    tail_element.append("<div class='menu-level-2'></div>");
-                } else {
-                    console.log(tail_element.find(".menu-level-2"));
+                    if (tail_element.find(".menu-level-2").length === 0) {
+                        console.log("Append");
+                        tail_element.append("<div class='menu-level-2'></div>");
+                    } else {
+                        console.log(tail_element.find(".menu-level-2"));
+                    }
                 }
-            }
-            if(item_interator > max_item) {
-                tail_element.addClass("tail");
-                $(v).find(".menu-level-2").remove();
-                tail_element.find(".dropshadow").remove();
-                tail_element.find(".menu-level-2").append($(v));
-            }
-        });
-    }
-    if(win_w > 1170) {
-        var h_plus = 20;
-    }
-
-    var padding_bottom_start = 0;
-    var margin_bottom_start = 0;
-
-    if(tail_element) {
-
-        tail_element.hover(function (e) {
-            var item = $(this);
-            var height = 0;
-            item.addClass("open");
-            padding_bottom_start = parseInt(item.css("padding-bottom"));
-            margin_bottom_start = parseInt(item.css("margin-bottom"));
-
-            item.find(".menu-level-2 .menu-item").each(function (k, v) {
-                height += $(v).outerHeight();
+                if (item_interator > max_item) {
+                    tail_element.addClass("tail");
+                    $(v).find(".menu-level-2").remove();
+                    tail_element.find(".dropshadow").remove();
+                    tail_element.find(".menu-level-2").append($(v));
+                }
             });
-            console.log(height);
-            item.css({"margin-bottom": -1 * (height + h_plus) + "px", "padding-bottom": (height + h_plus) + "px"});
-        }, function (e) {
-            var item = $(this);
-            item.removeClass("open");
-            item.css({
-                "padding-bottom": padding_bottom_start + "px",
-                "margin-bottom": (margin_bottom_start) + "px"
+        }
+        if (win_w > 1170) {
+            var h_plus = 20;
+        }
+
+        var padding_bottom_start = 0;
+        var margin_bottom_start = 0;
+
+        if(tail_element) {
+            tail_element.hover(function (e) {
+                var item = $(this);
+                var height = 0;
+                item.addClass("open");
+                padding_bottom_start = parseInt(item.css("padding-bottom"));
+                margin_bottom_start = parseInt(item.css("margin-bottom"));
+
+                item.find(".menu-level-2 .menu-item").each(function (k, v) {
+                    height += $(v).outerHeight();
+                });
+                console.log(height);
+                item.css({"margin-bottom": -1 * (height + h_plus) + "px"});
+            }, function (e) {
+                var item = $(this);
+                item.removeClass("open");
+                item.css({
+                    //"padding-bottom":padding_bottom_start+"px",
+                    "margin-bottom": (margin_bottom_start) + "px"
+                });
             });
-        });
+
+        }
     }
+
+
+
 
     var menu_item = $(".menu-block-header .menu-items .menu-item:not(.tail)");
     menu_item.on("click, mouseover", function() {
@@ -104,7 +108,7 @@ function menu_zz_call() {
                 menu_level_2.prepend('<div class="back"><span class="korsar-icon arrow-back"></span><span class="name">' + name + '</span></div>');
             }
         }
-   });
+    });
     menu_item.on("click, mouseout", function(e) {
         e.stopPropagation();
         if(is_open) {

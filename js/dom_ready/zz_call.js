@@ -12,8 +12,7 @@ $().ready(function(){
     modal_zz_call();
     loader_zz_call();
     price_form_zz_call();
-
+    zz_scroll_modal();
     zz_auth_modal();
-
     delivery_tab();
 });

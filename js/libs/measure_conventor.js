@@ -121,4 +121,8 @@ $(document).ready(function(){
     $('.info .value span').each(function(el, k) {
         $(k).html( hms( $(k).html() ) );
     });
+
+    $('.good-v2__sitting .good-v2__sitting-col_value').each(function(el, k) {
+        $(k).html( hms( $(k).html() ) );
+    });
 });

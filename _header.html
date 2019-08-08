@@ -1,265 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport"  content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Корсар.ru</title>
+    <link rel="icon" href="favicon.ico">
+    <title>Piro-legenda.ru</title>
     <meta http-equiv="Cache-Control" content="max-age=3600">
-
     <link href="production/styles.min.css" rel="stylesheet">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
-    <link rel="icon" type="image/ico" sizes="16x16" href="images/icon/favicon.ico">
-    <link rel="icon" href="images/icon/favicon.ico">
-
-    <meta http-equiv="imagetoolbar" content="no" />
-
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
 </head>
-
-<body class="fonts-loaded">
-
-<div class="container-3">
-    <header>
-        <div class="topline-block">
-
-            <div class="gray">
-                <a href="#">О компании</a>
-                <a href="#">Как сделать заказ?</a>
-                <a href="#">Новости</a>
-                <a href="#">Контакты</a>
-            </div>
-            <!-- !!! SECOND ITEMS IN MENU DUOBLE... -->
-            <div class="black">
-                <a href="#">Новинки</a>
-                <a href="#">Хиты продаж</a>
-                <a href="#" class="red">Акции</a>
-            </div>
-
-            <div class="menu-item menu-price-list call-modal" data-target=".js-action-open-price">
-                <img src="images/svg/excel-green.svg"> Прайс-лист
-            </div>
-
-            <!-- /SECOND ITEMS IN MENU DUOBLE !!! -->
-        </div>
-
-        <div class="header-sep-line"></div>
-
-        <div class="phone-block-header">
+<body class="fonts-loaded page-good">
+<header class="header-v2">
+    <!--noindex-->
+    <div class="mobile">
+        <div class="phone-line">
             <div class="phone">8 (499) 800-81-91</div>
             <div class="phone">8 (495) 737-81-91</div>
-            <div class="work-time">c 09:00 до 18:00 по Мск</div>
+            <div class="worcktime">c 09:00 до 18:00 по Мск</div>
         </div>
+        <div id="getFixed-mobile">
+            <div class="logo-line">
 
-        <div class="header-sep-line hidden-1024"></div>
-
-        <div class="menu-block-header">
-            <div class="menu-btn-mobile">
-                <span class="korsar-icon menu"></span>
-            </div>
-
-            <!-- На странице товара возвращаем в категорию
-            <div class="menu-back-link">
-                <a><span class="korsar-icon arrow-back"></span></a>
-            </div>
-            -->
-
-            <div class="menu-items korsar-hide">
-                <div class="menu-mobile-control">
-                    <div class="menu-text">
-                        Меню
-                    </div>
-                    <div class="menu-close">
-                        <span class="korsar-icon close"></span>
-                    </div>
-                    <div class="clear"></div>
+                <div class="menu-btn">
+                    <div class="menu-btn-mobile"><span class="korsar-icon menu"></span></div>
                 </div>
 
+                <a class="wrap-logo" href="/"></a>
+
+                <a class="personal-btn" href="/personal/">
+                    <span class="korsar-icon user-b"></span>
+                </a>
+
+                <a class="cart-btn" href="/personal/cart/">
+                    <span class="korsar-icon cart"></span>
+                    <div>
+                        <div class="items-count">0 <span class="items-name">тов.</span></div>
+                        <div class="cart-sum">0 руб.</div>
+                    </div>
+                </a>
+
+                <!--
+                <a class="cart-btn get-price">
+                    <button class="button green active color-hold">
+                        <img src="images/svg/Union.svg">
+                        <span class="text">Получить <span class="break"></span>прайс-лист</span>
+                    </button>
+                </a>
+                -->
+
+            </div>
+            <div class="search-line">
+                <div class="search-group"><input class="search" placeholder="Найдите, что ищете..."><span class="korsar-icon search"></span></div>
+                <div class="filter-btn">
+                    <span class="korsar-icon filters blue"></span>
+                </div>
+            </div>
+            <div class="blue-line">Оптовый интернет-магазин пиротехники</div>
+        </div>
+        <div class="menu-block-header korsar-hide">
+            <!-- На странице товара возвращаем в категорию<div class="menu-back-link"><a><span class="korsar-icon arrow-back"></span></a></div>-->
+            <div class="menu-items">
+                <div class="menu-mobile-control">
+                    <div class="menu-text">Меню</div>
+                    <div class="menu-close"><span class="korsar-icon close"></span></div>
+                </div>
                 <!-- !!! SECOND ITEMS IN MENU DUOBLE... -->
                 <div class="black">
-                    <a href="#">Новинки</a>
-                    <a href="#">Хиты продаж</a>
-                    <a href="#" class="red">Акции</a>
+                    <a href="/catalog/new_products/">Новинки</a>
+                    <a href="/catalog/hits_offer/">Хиты продаж</a>
+                    <a class="yellow-bg" href="/catalog/offers/">Акции</a>
                 </div>
                 <!-- / SECOND ITEMS IN MENU DUOBLE !!! -->
-
-
-                <div class="menu-item menu-price-list call-modal" data-target=".js-action-open-price">
-                    <img src="images/svg/excel-green.svg"> Прайс-лист
-                </div>
-
-                <div class="menu-item">
-                    <a href="category.html">
-                        <span class="korsar-icon battary"></span>
-                        <span class="menu-item-name" href="#">Батареи салютов</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="category.html">
-                        <span class="korsar-icon fire-bang"></span>
-                        <span class="menu-item-name" href="#">Петарды</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="category.html">
-                        <span class="korsar-icon rim"></span>
-                        <span class="menu-item-name" href="#">Римские свечи</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="category.html">
-                        <span class="korsar-icon roket"></span>
-                        <span class="menu-item-name" href="#">Ракеты</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="category.html">
-                        <span class="korsar-icon balls"></span>
-                        <span class="menu-item-name" href="#">Фестивальные шары</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="javascript: 0;">
-                        <span class="korsar-icon fontan"></span>
-                        <span class="menu-item-name">Фонтаны</span>
-                    </a>
-                    <div class="menu-level-2">
-                        <div class="dropshadow">
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon fire"></span>
-                                <span class="menu-item-name">Фаер</span>
-                            </a>
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon table-fire"></span>
-                                <span class="menu-item-name">Настольный фонтан</span>
-                            </a>
-                        </div>
+                <div class="menu-item price-list-item">
+                    <div class="menu-price-list call-modal" data-reachgoal="Lid-head" data-target=".js-action-open-price">
+                        <img class="lizy_load" data-src="images/svg/excel-green.svg">
+                        Прайс-лист
                     </div>
                 </div>
-                <div class="menu-item">
-                    <a href="javascript: 0;">
-                        <span class="korsar-icon hlop"></span>
-                        <span class="menu-item-name" href="#">Хлопушки</span>
-                    </a>
-                    <div class="menu-level-2">
-                        <div class="dropshadow">
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon pnevmo"></span>
-                                <span class="menu-item-name">Пневмохлопушки</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <a href="javascript: 0;">
-                        <span class="korsar-icon bengal"></span>
-                        <span class="menu-item-name" href="#">Бенгальские огни</span>
-                    </a>
-                    <div class="menu-level-2">
-                        <div class="dropshadow">
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon bengal"></span>
-                                <span class="menu-item-name">Большие бенгальские огни</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <a href="javascript: 0;">
-                        <span class="korsar-icon fireworks_2"></span>
-                        <span class="menu-item-name" href="#">Фонтаны</span>
-                    </a>
-                    <div class="menu-level-2">
-                        <div class="dropshadow">
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon user-mony"></span>
-                                <span class="menu-item-name">Продажа фейерверков</span>
-                            </a>
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon store"></span>
-                                <span class="menu-item-name">Торговля фейерверками</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <a href="javascript: 0;">
-                        <span class="korsar-icon fireworks_2"></span>
-                        <span class="menu-item-name" href="#">Хлопушки</span>
-                    </a>
-                    <div class="menu-level-2">
-                        <div class="dropshadow">
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon user-mony"></span>
-                                <span class="menu-item-name">Продажа фейерверков</span>
-                            </a>
-                            <a class="menu-item-2" href="">
-                                <span class="korsar-icon store"></span>
-                                <span class="menu-item-name">Торговля фейерверками</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-
+                <div class="menu-item"> <a href="/catalog/salyuty-optom/"> <span class="korsar-icon battary"></span> <span class="menu-item-name">Батареи салютов</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/bengalskie-ogni-optom/"> <span class="korsar-icon bengal"></span> <span class="menu-item-name">Бенгальские огни</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/letayushchie-fejerverki/"> <span class="korsar-icon fire-air"></span> <span class="menu-item-name">Летающие, наземные фейерверки</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/petardy-optom/"> <span class="korsar-icon fire-bang"></span> <span class="menu-item-name">Петарды</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/rakety-optom/"> <span class="korsar-icon roket"></span> <span class="menu-item-name">Ракеты</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/rimskie-svechi-optom/"> <span class="korsar-icon rim"></span> <span class="menu-item-name">Римские свечи</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/festivalnye-shary-optom/"> <span class="korsar-icon balls"></span> <span class="menu-item-name">Фестивальные шары</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/fejerverki-fontany/"> <span class="korsar-icon fontan"></span> <span class="menu-item-name">Фонтаны</span> </a> </div>
+                <div class="menu-item"> <a href="/catalog/hlopushka/"> <span class="korsar-icon hlop"></span> <span class="menu-item-name">Хлопушки</span> </a> </div>
                 <!-- !!! SECOND ITEMS IN MENU DUOBLE... -->
-                <div class="gray">
-                    <a href="#">О компании</a>
-                    <a href="#">Как сделать заказ?</a>
-                    <a href="#">Новости</a>
-                    <a href="#">Контакты</a>
-                </div>
+                <div class="gray"> <a href="/about/">О компании</a> <a href="/about/howto/">Как сделать заказ?</a> <a href="/about/discount/">Скидки</a> <a href="/about/contacts/">Контакты</a> </div>
                 <!-- / SECOND ITEMS IN MENU DUOBLE !!! -->
             </div>
         </div>
-
-        <div class="cart-block-header">
-            <a href="cart.html">
-                <span class="korsar-icon cart"></span>
-                <div class="items-count">+99 <span class="items-name">товара</span></div>
-                <div class="cart-sum">4000 руб.</div>
-            </a>
-        </div>
-
-        <div class="login-block-header">
-            <a href="auth.html"><span class="korsar-icon user-b"></span> <span class="login-text">Войти</span></a>
-        </div>
-
-        <div class="logo-block-header">
-            <a href="index.html"><div class="logo-image"></div></a>
-        </div>
-
-        <div class="header-sep-line hidden-1024"></div>
-
-        <!-- disabled
-            <div class="filters-block-header">
-                <span class="menu-btn-mobile korsar-icon filters menu-btn-mobile-filters"></span>
+    </div>
+    <!--/noindex-->
+    <div class="desctop">
+        <div class="top-line-wrap">
+            <div class="container-3">
+                <div class="container-3-a">
+                    <div class="top-line">
+                        <div class="menu-gray">
+                            <a href="/about/">О компании</a>
+                            <a href="/about/howto/">Как сделать заказ?</a>
+                            <a href="/about/discount/">Скидки</a>
+                            <a href="/about/contacts/">Контакты</a>
+                        </div>
+                        <div class="menu-black">
+                            <a href="/catalog/new_products/">Новинки</a>
+                            <a href="/catalog/hits_offer/">Хиты продаж</a>
+                            <a class="yellow-bg" href="/catalog/offers/">Акции</a>
+                        </div>
+                        <div class="menu-price-list call-modal" data-target=".js-action-open-price">
+                            <img src="images/svg/excel-green.svg"> Прайс-лист
+                        </div>
+                        <div class="enter-block">
+                            <a href="/personal/">
+                                <span class="korsar-icon user-b"></span>
+                                <span class="login-text">Войти</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        -->
-
-        <div class="search-block-header">
-            <input type="text" placeholder="Найдите, что ищите...">
-            <button class="search-btn"></button>
         </div>
-        <div class="clear"></div>
-    </header>
+        <div class="header-block-wrap">
+            <div class="container-3">
+                <div class="container-3-a">
+                    <div class="header-block">
+                        <a href="/">
+                            <div class="logo"></div>
+                        </a>
+                        <div class="phone">
+                            <div class="worcktime">c 09:00 до 18:00 по Мск</div>
+                            <div class="phone-num">8 (499) 800-81-91</div>
+                            <div class="phone-num">8 (495) 737-81-91</div>
+                        </div>
+                        <div class="search">
+                            <form action="/catalog/"><input id="title-search-input" type="text" name="q" value="" autocomplete="off" class="bx-form-control" placeholder="Найдите, что ищете..."><span class="bx-input-group-btn"> <button class="search-btn" type="submit" name="s"></button></span></form>
+                        </div>
+                        <div class="cart cart-block-header">
+
+
+                            <a class="cart-btn" href="/personal/cart/">
+                                <span class="korsar-icon cart"></span>
+                                <div>
+                                    <div class="items-count">0 <span class="items-name">тов.</span></div>
+                                    <div class="cart-sum">0 руб.</div>
+                                </div>
+                            </a>
+
+<!--
+                            <a class="button green active color-hold">
+                                <img src="images/svg/Union.svg"><span class="text">Получить <span class="break"></span>прайс-лист</span>
+                            </a>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-block-wrap">
+            <div class="container-3">
+                <div class="container-3-a">
+                    <div class="menu-block">
+
+                        <div class="menu-item">
+                            <a href="/catalog/salyuty-optom/">
+                                <span class="korsar-icon battary"></span>
+                                <span class="menu-item-name">Батареи салютов</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/bengalskie-ogni-optom/">
+                                <span class="korsar-icon bengal"></span>
+                                <span class="menu-item-name">Бенгальские огни</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/letayushchie-fejerverki/">
+                                <span class="korsar-icon fire-air"></span>
+                                <span class="menu-item-name">Летающие, наземные фейерверки</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/petardy-optom/">
+                                <span class="korsar-icon fire-bang"></span>
+                                <span class="menu-item-name">Петарды</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/rakety-optom/">
+                                <span class="korsar-icon roket"></span>
+                                <span class="menu-item-name">Ракеты</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/rimskie-svechi-optom/">
+                                <span class="korsar-icon rim"></span>
+                                <span class="menu-item-name">Римские свечи</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/festivalnye-shary-optom/">
+                                <span class="korsar-icon balls"></span>
+                                <span class="menu-item-name">Фестивальные шары</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/fejerverki-fontany/">
+                                <span class="korsar-icon fontan"></span>
+                                <span class="menu-item-name">Фонтаны</span>
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <a href="/catalog/hlopushka/">
+                                <span class="korsar-icon hlop"></span>
+                                <span class="menu-item-name">Хлопушки</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--noindex-->
+    <div class="top-fixed-header">
+
+        <div class="desctop" style="display: none; opacity: 0;">
+            <div class="container-3">
+                <div class="container-3-a">
+                    <div class="flex">
+                        <div class="logo-phone">
+                            <a href="/" class="logo">
+                                <div class="logo-image"></div>
+                            </a>
+                            <div class="phone">
+                                <div class="work-time">09:00 - 18:00 по Мск</div>
+                                <div class="phone mobile-499-800">8 (499) 800-81-91</div>
+                                <div class="phone mobile-495-737">8 (495) 737-81-91</div>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div class="black"> <a href="/catalog/new_products/">Новинки</a> <a href="/catalog/hits_offer/">Хиты продаж</a> <a class="yellow-bg" href="/catalog/offers/">Распродажа</a> </div>
+                        </div>
+                        <div class="enter-cart">
+                            <a class="enter" href="/personal/"><span class="korsar-icon user-b"></span><span class="login-text">Войти</span></a>
+
+                            <!--
+                             <a class="cart-btn" href="/personal/cart/">
+                                 <span class="korsar-icon cart"></span>
+                                 <div>
+                                     <div class="items-count">0 <span class="items-name">тов.</span></div>
+                                     <div class="cart-sum">0 руб.</div>
+                                 </div>
+                             </a>
+ -->
+
+                            <a class="cart-btn get-price">
+                                <button class="button green active color-hold">
+                                    <img src="images/svg/Union.svg">
+                                    <span class="text">Получить <span class="break"></span>прайс-лист</span>
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/noindex-->
+</header>

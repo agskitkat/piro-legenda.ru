@@ -1,0 +1,321 @@
+.korsar-modal {
+  z-index: 100501;
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  .wrap {
+    padding:20px;
+    position: relative;
+    width:100%;
+    height: 100%;
+    .modal-body {
+      padding:0 20px;
+      top: 0;
+      bottom: 0;
+      left:0;
+      right:0;
+      position: absolute;
+      margin: auto auto;
+      width:300px;
+      height:600px;
+      background: #FFF;
+      border-radius: 15px;
+      .header {
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        padding-top:32px;
+      }
+      > .close {
+        text-align: center;
+        position:absolute;
+        width:32px;
+        height:32px;
+        border:1px solid $gray-1;
+        border-radius: 50%;
+        top:10px;
+        right:10px;
+        z-index: 999;
+        cursor: pointer;
+        .close {
+          line-height: 28px;
+          font-size: 20px;
+          color:$gray-1;
+        }
+      }
+    }
+  }
+}
+
+.korsar-modal {
+  fieldset {
+    padding-bottom: 10px;
+  }
+}
+
+.korsar-modal.video-modal{
+  .wrap {
+    .modal-body {
+      padding-top:30px;
+      width:90%;
+      max-width:1170px;
+      background: #000;
+      video {
+        width:100%;
+      }
+      .form {
+        .header {
+
+        }
+      }
+    }
+  }
+}
+
+
+// FORM Получить прайс лист
+.korsar-modal {
+  .wrap {
+    .modal-body {
+      width: 272px;
+      height: 418px;
+      padding: 0 15px;
+      .header {
+        font-size: 18px;
+        line-height: 25px;
+        padding-top: 53px;
+      }
+      .form {
+        padding-top:6px;
+        fieldset {
+          padding:0 10px;
+          input {
+            margin-top: 11px;
+            height: 35px;
+          }
+          .korsar-icon {
+            left: 12px;
+          }
+        }
+        .button {
+          margin-top: 29px;
+
+        }
+        > .checkbox {
+          display:flex;
+          justify-content: center;
+          float: none;
+          height:auto;
+          font-size:8px;
+          padding-top: 15px;
+          .checkbox {
+            width:14px;
+            height:14px;
+            border-radius: 4px;
+            border: 1px solid #E8E8E8;
+            margin: 0px;
+            margin-right: 5px;
+            float: none;
+            position:relative;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            .korsar-icon {
+
+              font-size: 12px;
+              position: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 375px)  {
+  .korsar-modal {
+    .wrap {
+      .modal-body {
+        width: 330px;
+        height: 500px;
+        padding: 0 15px;
+        .header {
+          font-size: 20px;
+          line-height: 31px;
+          padding-top: 67px;
+        }
+        .form {
+          padding-top:20px;
+          fieldset {
+            padding:0 28px;
+            input {
+              margin-top: 11px;
+              height: 35px;
+            }
+            .korsar-icon {
+              left: 30px;
+            }
+          }
+          .button {
+            width:250px;
+            margin: 0 auto;
+            margin-top: 41px;
+
+          }
+          > .checkbox {
+            display:flex;
+            justify-content: center;
+            float: none;
+            height:auto;
+            font-size:9px;
+            padding-top: 18px;
+            .checkbox {
+              width:14px;
+              height:14px;
+              border-radius: 4px;
+              border: 1px solid #E8E8E8;
+              margin: 0px;
+              margin-right: 5px;
+              float: none;
+              position:relative;
+              display:flex;
+              align-items: center;
+              justify-content: center;
+              .korsar-icon {
+                font-size: 12px;
+                position: initial;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 414px)  {
+  .korsar-modal {
+    .wrap {
+      .modal-body {
+        width: 350px;
+        height: 550px;
+        padding: 0 15px;
+        .header {
+          font-size: 21px;
+          line-height: 32px;
+          padding-top: 107px;
+        }
+        .form {
+          padding-top:22px;
+          fieldset {
+            padding:0 28px;
+            input {
+              margin-top: 11px;
+              height: 35px;
+            }
+            .korsar-icon {
+              left: 30px;
+            }
+          }
+          .button {
+            width:272px;
+            margin: 0 auto;
+            margin-top: 41px;
+
+          }
+          > .checkbox {
+            display:flex;
+            justify-content: center;
+            float: none;
+            height:auto;
+            font-size:9px;
+            padding-top: 18px;
+            .checkbox {
+              width:14px;
+              height:14px;
+              border-radius: 4px;
+              border: 1px solid #E8E8E8;
+              margin: 0px;
+              margin-right: 5px;
+              float: none;
+              position:relative;
+              display:flex;
+              align-items: center;
+              justify-content: center;
+              .korsar-icon {
+                font-size: 12px;
+                position: initial;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px)  {
+  .korsar-modal {
+    .wrap {
+      .modal-body {
+        width: 384px;
+        height: 450px;
+        padding: 0 15px;
+        .header {
+          font-size: 21px;
+          line-height: 32px;
+          padding-top: 38px;
+        }
+        .form {
+          padding-top:15px;
+          fieldset {
+            padding:0 28px;
+            input {
+              margin-top: 11px;
+              height: 35px;
+            }
+            .korsar-icon {
+              left: 30px;
+            }
+          }
+          .button {
+            width:250px;
+            margin: 0 auto;
+            margin-top: 41px;
+
+          }
+          > .checkbox {
+            display:flex;
+            justify-content: center;
+            float: none;
+            height:auto;
+            font-size:9px;
+            padding-top: 18px;
+            .checkbox {
+              width:14px;
+              height:14px;
+              border-radius: 4px;
+              border: 1px solid #E8E8E8;
+              margin: 0px;
+              margin-right: 5px;
+              float: none;
+              position:relative;
+              display:flex;
+              align-items: center;
+              justify-content: center;
+              .korsar-icon {
+                font-size: 12px;
+                position: initial;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
