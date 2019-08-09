@@ -6,6 +6,8 @@ $green: #007700;
 $red: #F12626;
 $new_green: #3DDB05;
 
+$green_in_stock: #007700;
+
 $header-font-size: 16px;
 
 .good-v2 {
@@ -128,7 +130,7 @@ $header-font-size: 16px;
         color: #6B6B6B
       }
       .good-v2__instock {
-        color: #08D04C
+        color: $green_in_stock;
       }
       .good-v2__instock_out {
         color: $red
@@ -350,12 +352,6 @@ $header-font-size: 16px;
         .good-v2__artice {
           color: #6B6B6B
         }
-        .good-v2__instock {
-          color: #08D04C
-        }
-        .good-v2__instock_out {
-          color: $red
-        }
       }
       .good-v2__opt-price {
         padding-left: 28px;
@@ -540,12 +536,6 @@ $header-font-size: 16px;
         padding:14px 18px 7px 18px;
         .good-v2__artice {
           color: #6B6B6B
-        }
-        .good-v2__instock {
-          color: #08D04C
-        }
-        .good-v2__instock_out {
-          color: $red
         }
       }
       .good-v2__opt-price {
@@ -757,12 +747,7 @@ $header-font-size: 16px;
         .good-v2__artice {
           color: #6B6B6B
         }
-        .good-v2__instock {
-          color: #08D04C
-        }
-        .good-v2__instock_out {
-          color: $red
-        }
+
       }
       .good-v2__opt-price {
         padding-left: 0px;

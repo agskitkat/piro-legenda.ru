@@ -172,24 +172,28 @@
           display:block;
           height:40px;
           border-radius: 5px;
-          border:1px solid $gray-2;
+          border: 3px solid #F9DB67;
           width:100%;
           padding-left: 10px;
           font-size: 12px;
         }
+        input.search::-webkit-input-placeholder { color: #000; }
+        input.search:-ms-input-placeholder { color: #000; }
+        input.search::-ms-input-placeholder { color: #000; }
+        input.search::placeholder { color: #000; }
         span {
           position:absolute;
           right:0px;
           top:0px;
           width:40px;
           text-align: center;
-          color:$blue;
+          color:#000;
         }
       }
       .filter-btn {
         width:40px;
         text-align: right;
-        color:$blue;
+        color:#000;
       }
     }
 
@@ -466,8 +470,8 @@
           display:flex;
           align-items: center;
           .logo {
-            width:212px;
-            height:65px;
+            width: 226px;
+            height: 81px;
             background-image: url("../images/logo-legend.svg");
             background-position: center;
             background-repeat: no-repeat;
@@ -476,6 +480,9 @@
             width:180px;
             padding:0 24px;
             padding-bottom:2px;
+            border-left: 1px solid rgba(28, 28, 28, 0.1);
+            border-right: 1px solid rgba(28, 28, 28, 0.1);
+            margin: 0 26px;
             .worcktime {
               font-size: 10px;
               color:$gray-1;
@@ -490,15 +497,20 @@
           .search {
             flex-grow: 2;
             position:relative;
+            max-width:377px;
             input {
               height:40px;
               width:100%;
               display:block;
               border-radius: 5px;
               font-size: 12px;
-              border:1px solid $gray-2;
+              border: 3px solid #F9DB67;
               padding-left:10px;
             }
+            input.search::-webkit-input-placeholder { color: #000; }
+            input.search:-ms-input-placeholder { color: #000; }
+            input.search::-ms-input-placeholder { color: #000; }
+            input.search::placeholder { color: #000; }
             .search-btn {
               position:absolute;
               top:0px;
@@ -506,15 +518,15 @@
               display:block;
               height:40px;
               width:40px;
-              background: $blue;
-              color:#FFF;
+              background: transparent;
+              color:#000;
               text-align: center;
               border-radius: 5px;
               border:0px;
             }
             .search-btn:before {
               font-family: KorsarIcons;
-              color:#FFF;
+              color:#000;
               content: "\f0017";
               font-size: 30px;
             }
@@ -652,6 +664,7 @@
           }
           .menu-item.item-selected {
             a {
+              color: #0175E1;
               .menu-item-name {
                 color: #0175E1;
               }
@@ -698,8 +711,7 @@
       .header-block-wrap {
         .header-block {
           .logo {
-            width: 248px;
-            height: 77px;
+            margin-right:36px;
           }
           .phone {
             width:240px;
