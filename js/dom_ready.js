@@ -1549,7 +1549,7 @@ function start_zz_call() {
         if(w < 1024) {
             h = h + 30;
         }
-        img.height(h);
+        //img.height(h);
     });
 
     // SELECT OPEN SELECT CLOSE

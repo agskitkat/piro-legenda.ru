@@ -2,7 +2,7 @@ $black: #000;
 $gray-1: #8D8D8D;
 $gray: #BBBBBB;
 $gray-2: #E8E8E8;
-$green: #08d04c;
+$green: #007700;
 $red: #F12626;
 $new_green: #3DDB05;
 
@@ -797,18 +797,19 @@ $header-font-size: 16px;
         display: flex;
         justify-content: space-between;
         .good-v2__count-block {
+          padding-top:2px;
           display:block;
           .good-v2__count-buttons {
             display: flex;
             .good-v2__button {
               cursor: pointer;
-              width: 50px;
-              height: 50px;
+              width: 40px;
+              height: 40px;
               display: flex;
               justify-content: center;
               align-items: center;
               border: 1px solid #000000;
-              border-radius: 50%;
+              border-radius: 5px;
               font-size: 30px;
               line-height: 0px;
             }
@@ -838,7 +839,7 @@ $header-font-size: 16px;
             }
 
             input {
-              width: 28px;
+              width: 59px;
               text-align: center;
               border:0px;
               font-size: 18px;
@@ -853,8 +854,11 @@ $header-font-size: 16px;
           }
         }
         .good-v2__add2cart-button {
-          width: 170px;
-          margin: 5px 0;
+          font-weight: normal;
+          text-transform: none;
+          width: 160px;
+          height: 45px;
+          margin: 0;
         }
       }
       .good-v2__sale-block {
@@ -896,7 +900,7 @@ $header-font-size: 16px;
         //margin-right: 20px;
       }
       .good-v2__options {
-        padding: 9px 78px 9px 0;
+        padding: 9px 120px 9px 0;
         display: flex;
         flex-direction: column;
         margin-left:10px;
