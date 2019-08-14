@@ -1,0 +1,235 @@
+.blog-post {
+  line-height: 110%;
+  padding-bottom: 50px;
+  .blog-post__image {
+    margin:0 -20px;
+    width:100vw;
+  }
+
+  .blog-post__viewed {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:13px;
+    color:#BBBBBB;
+    padding-top:10px;
+    img {
+      margin-right:5px;
+    }
+  }
+
+  .blog-post__h1 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 110%;
+  }
+
+  .blog-post__p {
+    font-size: 14px;
+  }
+
+  .blog-post__bold {
+    font-weight: bold;
+  }
+
+  .blog-post__red {
+    color: #E52421;
+  }
+
+  .blog-post__small {
+    font-size: 14px;
+  }
+
+  .blog-post__big {
+    font-size: 16px;
+  }
+
+  .blog-post__list {
+    margin:0px;
+    padding-left: 18px;
+    li {
+      padding-bottom: 15px;
+    }
+  }
+
+  .blog-post__center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 375px) {
+  .blog-post {
+
+    .blog-post__h1 {
+      font-size: 18px;
+    }
+
+    .blog-post__p {
+      font-size: 15px;
+    }
+
+    .blog-post__small {
+      font-size: 15px;
+    }
+
+    .blog-post__big {
+      font-size: 20px;
+    }
+
+    .blog-post__list {
+      padding-left: 18px;
+      li {
+        padding-bottom: 0px;
+      }
+    }
+
+
+  }
+}
+
+
+@media (min-width: 480px) {
+  .blog-post {
+    .blog-post__somebigestfonts {
+      .blog-post__p {
+        font-size: 18px;
+      }
+      .blog-post__p.blog-post__bold.blog-post__red {
+        margin-top: 30px;
+      }
+      .blog-post__small {
+        margin-top: 30px;
+      }
+    }
+
+    .blog-post__h1 {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .blog-post__p {
+      font-size: 15px;
+    }
+
+    .blog-post__small {
+      font-size: 15px;
+    }
+
+    .blog-post__big {
+      font-size: 20px;
+    }
+
+    .blog-post__list {
+      padding-left: 18px;
+      li {
+        padding-bottom: 0px;
+      }
+    }
+
+
+  }
+}
+
+
+@media (min-width: 768px) {
+  .blog-post {
+    margin-bottom: 200px;
+    .blog-post__image {
+      margin:0px;
+      width:100%;
+    }
+
+    .blog-post__somebigestfonts {
+      .blog-post__p {
+        font-size: 22px;
+      }
+      .blog-post__p.blog-post__bold.blog-post__red {
+        margin-top: 40px;
+      }
+      .blog-post__small {
+        margin-top: 40px;
+      }
+    }
+
+    .blog-post__h1 {
+      font-size: 24px;
+    }
+
+    .blog-post__p {
+      font-size: 15px;
+    }
+
+    .blog-post__small {
+      font-size: 15px;
+    }
+
+    .blog-post__big {
+      font-size: 22px;
+    }
+
+
+
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .blog-post {
+    .blog-post__max-width-800 {
+      max-width:800px;
+      margin: 0 auto;
+    }
+
+    .blog-post__image {
+      margin:0px;
+      width:100%;
+    }
+
+    .blog-post__somebigestfonts {
+      .blog-post__p {
+        font-size: 22px;
+      }
+      .blog-post__p.blog-post__bold.blog-post__red {
+        margin-top: 40px;
+      }
+      .blog-post__small {
+        margin-top: 40px;
+      }
+    }
+
+    .blog-post__h1 {
+      font-size: 28px;
+    }
+
+    .blog-post__p {
+      font-size: 15px;
+    }
+
+    .blog-post__small {
+      font-size: 15px;
+    }
+
+    .blog-post__big {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .blog-post {
+    .blog-post__image {
+      max-width: 960px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .blog-post__viewed {
+      padding-top: 24px;
+    }
+
+    .blog-post__somebigestfonts {
+      padding-bottom: 24px;
+    }
+  }
+}

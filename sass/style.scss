@@ -47,9 +47,12 @@ $version: "1.0.64";
 @import 'important/korsal-modal-price-form';
 
 @import 'important/article.scss';
+@import 'others/blog-post';
+@import 'others/blog-posts';
 
 /* Import libs files */
 @import 'libs/slick/slick';
 @import "libs/slick/slick-theme";
+
 
 /* By https://github.com/agskitkat  Important  Версия: #{$version} */

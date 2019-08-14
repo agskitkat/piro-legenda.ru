@@ -1,0 +1,119 @@
+.blog-posts {
+  .blog-posts__header {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: bold;
+    padding-bottom:20px;
+  }
+  .blog-posts__list {
+    .blog-posts__post {
+      display: block;
+      margin-bottom:20px;
+      .blog-posts__post-image {
+        border-radius: 10px;
+        width:100%;
+        min-height:149px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom:10px;
+      }
+      .blog-posts__post-name {
+        font-size: 14px;
+        line-height: 110%;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 375px) {
+  .blog-posts {
+
+    .blog-posts__list {
+      .blog-posts__post {
+        .blog-posts__post-image {
+          min-height:180px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (min-width: 480px) {
+  .blog-posts {
+    .blog-posts__list {
+      .blog-posts__post {
+        margin-bottom: 30px;
+        .blog-posts__post-image {
+          min-height:235px;
+        }
+        .blog-posts__post-name {
+          max-width: 70%;
+          font-size: 18px;
+          line-height: 110%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .blog-posts {
+    .blog-posts__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .blog-posts__post {
+        width:calc(50% - 10px);
+        margin-bottom: 30px;
+        .blog-posts__post-image {
+          min-height:235px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .blog-posts {
+    .blog-posts__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .blog-posts__post {
+        width:calc(33.333% - 10px);
+        margin-bottom: 30px;
+        .blog-posts__post-image {
+          min-height:160px;
+        }
+        .blog-posts__post-name {
+          max-width: 100%;
+          font-size: 14px;
+          line-height: 110%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .blog-posts {
+
+    .blog-posts__list {
+      margin:0 auto;
+      width:1030px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .blog-posts__post {
+        width:300px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

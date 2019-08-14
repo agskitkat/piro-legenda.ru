@@ -2,6 +2,8 @@ var liveSearch = function(config) {
     console.log(config);
     var MIN_QUERY_LEN = config.MIN_QUERY_LEN ? config.MIN_QUERY_LEN : 3;
 
+    var searchInput = $("#"+config.INPUT_ID);
+
     var limitExecByInterval = function(fn, time) {
         var lock, execOnUnlock, args;
         return function() {
@@ -37,12 +39,12 @@ var liveSearch = function(config) {
 
     var searchResultUpdate = function(){
 
-        $("#"+config.INPUT_ID).closest(".fieldset-drop-live").find(".live-search-result").remove();
+        searchInput.closest(".fieldset-drop-live").find(".live-search-result").remove();
 
         if(result.length) {
-            $("#" + config.INPUT_ID).closest(".fieldset-drop-live").append('<div class="live-search-result"></div>');
+            searchInput.closest(".fieldset-drop-live").append('<div class="live-search-result"></div>');
 
-            var container = $("#" + config.INPUT_ID).closest(".fieldset-drop-live").find(".live-search-result");
+            var container = searchInput.closest(".fieldset-drop-live").find(".live-search-result");
 
             $.each(result, function (k, v) {
                 container.append('<a href="' + v.URL + '">\n' +
@@ -57,7 +59,7 @@ var liveSearch = function(config) {
         }
     }
 
-    $("#"+config.INPUT_ID).keyup(function () {
+    searchInput.keyup(function () {
 
         var val = $(this).val();
 
@@ -67,5 +69,28 @@ var liveSearch = function(config) {
             result = [];
             searchResultUpdate();
         }
+    });
+
+    var container = searchInput.closest(".search-line");
+
+    var orderbtn = container.find(".order-btn");
+    var orderbtnWidth = orderbtn.width();
+    var orderbtnMarginRighr = orderbtn.css("margin-right");
+
+    container.find(".fieldset-drop-live").focusin(function(e) {
+        if(orderbtn) {
+            orderbtnWidth = orderbtn.width();
+            orderbtn.animate({opacity: 0,  width: "0%", marginRight: 0}, 300)
+        }
+    });
+
+    $(document).click(function(e) {
+        if(orderbtn) {
+            orderbtn.animate({opacity: 1,  width: orderbtnWidth + "px", marginRight: orderbtnMarginRighr}, 300)
+        }
+        result = [];
+        searchResultUpdate();
+    }).find(".fieldset-drop-live").click(function (e) {
+        e.stopPropagation();
     });
 };
