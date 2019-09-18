@@ -7,7 +7,7 @@
 @import "mainpage_pyro/how-to-get-price.scss";
 @import "mainpage_pyro/form-v2.scss";
 @import "mainpage_pyro/seo-text";
-
+@import "mainpage_pyro/articles-block";
 
 .main-page-v2 {
   .slider {
@@ -498,8 +498,8 @@
   }
 
   .orders-today {
-    padding-top:90px;
-    padding-bottom:45px;
+    padding-top:0px;
+    padding-bottom:0px;
     .wrap {
       .header {
         text-align: center;
@@ -1259,6 +1259,7 @@
     }
 
     .orders-today {
+      padding-top: 30px;
       .wrap {
         .header {
           font-size:24px;

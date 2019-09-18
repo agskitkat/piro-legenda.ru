@@ -190,6 +190,19 @@ function modal_zz_call(){
         });
         return false;
     });
+
+
+    $('.cart-v2-wrapper .delivery-call-modal').on('click', function(e) {
+        e.preventDefault();
+        var d = $(this).attr('data-target');
+        $(d).css({"display":"flex"}).animate({
+            opacity: 1
+        },200);
+        $(d).find('.round').unbind('click').on('click', function(){
+            $(d).css({"display":"none"});
+        });
+    });
+
 };
 window.dataLayer = window.dataLayer || [];
 // Include on HEADER !!!  /open
@@ -518,6 +531,42 @@ function start_zz_call() {
 
 
     /*
+
+    */
+    $('#js-target-main-article-slider').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll:3,
+        adaptiveHeight: true,
+        dots: false,
+        lazyLoad: 'ondemand',
+        centerMode: false,
+        variableWidth: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: false,
+                    variableWidth: true,
+                    slidesToShow: 1,
+                    slidesToScroll:1
+                }
+            }, {
+                breakpoint: 1023,
+                settings: {
+                    centerMode: false,
+                    variableWidth: true,
+                    slidesToShow: 1,
+                    slidesToScroll:1,
+                }
+            }
+        ]
+    });
+
+   
+    /*
         PRODUCTS SLIDER
     */
     $('.js-target-slider-goods').slick({
@@ -575,6 +624,42 @@ function start_zz_call() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+    $('.catalog-block.catalog-block__slider .product-slick-slider').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        adaptiveHeight: false,
+        dots: false,
+        centerMode: false,
+        variableWidth: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 640,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },{
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
                 }
             }
         ]

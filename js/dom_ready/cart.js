@@ -38,8 +38,7 @@ function cart_zz_call() {
                 var input = false;
 
 
-
-                if(window.innerWidth < 768) {
+                if (window.innerWidth < 768) {
                     var modal = row.closest(".modal");
                     if (modal.length !== 0) {
                         input = modal.find(".item-count__count").find("input");
@@ -58,8 +57,6 @@ function cart_zz_call() {
                     input = goodv2.find("input");
                     //console.log(goodv2, input);
                 }
-
-
 
 
                 multiplicity = getMultiplicity(row);
@@ -94,7 +91,7 @@ function cart_zz_call() {
             multiplicity = goodv2.find(".good-v2__prices .good-v2__price-rwo_current").attr("data-multiplicity");
         }
 
-        if(window.innerWidth < 768) {
+        if (window.innerWidth < 768) {
             //var modal = btn.closest("#scroll-modal__item-count");
             var modal = btn.closest(".modal");
             if (modal.length !== 0) {
@@ -220,6 +217,7 @@ function cart_zz_call() {
 
         }
     }
+
     // Обновление основной корзины по инпуту
     $('.good input').change(function () {
         updateMainCartOnInputChange($(this));
@@ -264,8 +262,8 @@ function cart_zz_call() {
         var min_quantity = 1;
         console.log("updateCartOnInputChange: ", quantity);
         $parent = $input.parent();
-        $increment =  $parent.find(".increment");
-        $decrement =  $parent.find(".decrement");
+        $increment = $parent.find(".increment");
+        $decrement = $parent.find(".decrement");
 
         $increment.removeClass('disabled');
         $decrement.removeClass('disabled');
@@ -280,7 +278,7 @@ function cart_zz_call() {
         if (quantity <= min_quantity) {
             quantity = min_quantity;
             $input.val(quantity);
-            $increment .removeClass('disabled');
+            $increment.removeClass('disabled');
             $decrement.addClass('disabled');
         }
 
@@ -297,7 +295,7 @@ function cart_zz_call() {
 
     //  #scroll-modal__item-count .increment
     $('.good_quantity_block .increment, .add-control .increment').click(function () {
-
+        console.log('Click');
         var input = $(this).parent().find("input");
         var quantity = parseInt(input.val());
         var multiplicity = getMultiplicity($(this));
@@ -360,7 +358,6 @@ function cart_zz_call() {
             update_total_price(quantity);
         }
     });
-
 
 
     $('.good_quantity_block input, #scroll-modal__item-count .item-count__count input, #scroll-modal__item-count-good .item-count__count input').change(function () {
@@ -449,7 +446,6 @@ function cart_zz_call() {
     });
 
 
-
     $('.page-cart .add-control .increment, .cart-v2-wrapper .btn-block .increment, #scroll-modal__item-count .increment, #scroll-modal__item-count-good .increment')
         .unbind('click').click(function () {
         var quantity = $(this).parent().find("input").val();
@@ -513,7 +509,8 @@ function cart_zz_call() {
         var obj = {
             type: action,
             product_id: good
-        }
+        };
+
         if (quantity) {
             obj.quantity = +quantity;
         }
@@ -539,7 +536,7 @@ function cart_zz_call() {
             error: function (data) {
                 callback(data);
             }
-        })
+        });
     }
 
     /**
@@ -560,10 +557,10 @@ function cart_zz_call() {
             el.html("Ошибка, повторите.")
         });
     }
+
     $(".cart-v2-wrapper .present-add").click(function () {
         add_present(this);
     });
-
 
 
     function update_mini_cart(p, i) {
@@ -618,6 +615,8 @@ function cart_zz_call() {
 
         $(".cart-v2-wrapper .count_items").html(data.count_item);
 
+        setProgress($('#circle-delivery'), data.price, window.nowPriceToDelivery);
+        setProgress($('#circle-moscowfree'), data.price, window.allowFreeShippingMoscow);
 
         // Каждый обновляем
         $(data.items).each(function (k, v) {
@@ -715,4 +714,62 @@ function cart_zz_call() {
         }
     }
 
-};
+
+    $('#circle-1').circleProgress({
+        size: 40,
+        value: 1,
+        fill: "#08d04c",
+        animationStartValue: 0
+    });
+
+    $('#circle-delivery').circleProgress({
+        size: 40,
+        value: 0,
+        fill: "#F02626",
+        animationStartValue:0
+    });
+
+    $('#circle-moscowfree').circleProgress({
+        size: 40,
+        value: 0,
+        fill: "#F02626",
+        animationStartValue:0
+    });
+
+    function setProgress(dc, price, maxPrice) {
+        var attr = dc.attr('id');
+        if(!price) {
+            price = "0";
+        }
+        if(!window.prevDeliveryProgress[attr]) {
+            window.prevDeliveryProgress[attr] = 0;
+        }
+        var delivery_progress = (100 / maxPrice) * parseFloat(price.replace(/\s/g, ''));
+        var delivery_color = "#F02626";
+        var delivery_class = "bad";
+        dc.parent().parent().addClass(delivery_class);
+        if(delivery_progress >= 100 ) {
+            delivery_progress = 100;
+            delivery_color = "#08d04c";
+            dc.parent().parent().removeClass(delivery_class);
+        }
+        dc.circleProgress({
+            value: delivery_progress / 100,
+            fill:delivery_color,
+            size: 40,
+            animationStartValue: window.prevDeliveryProgress[attr]
+        });
+        window.prevDeliveryProgress[attr] = delivery_progress / 100;
+    }
+
+    window.prevDeliveryProgress = [];
+
+    var startPrice = $(".cart-v2-wrapper .order_price_real").html();
+
+    if(!startPrice) {
+        startPrice = "0";
+    }
+
+    setProgress($('#circle-delivery'), startPrice, window.nowPriceToDelivery);
+    setProgress($('#circle-moscowfree'), startPrice, window.allowFreeShippingMoscow);
+}

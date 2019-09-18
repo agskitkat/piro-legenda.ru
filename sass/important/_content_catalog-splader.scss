@@ -1,0 +1,29 @@
+.catalog-block.catalog-block__slider {
+  .goods {
+    display: block;
+    .good {
+      border-bottom: none;
+    }
+  }
+}
+
+@media (min-width: 768px)  {
+  .catalog-block.catalog-block__slider {
+    padding-top:10px;
+    .wrap {
+      .header {
+        padding-bottom: 10px;
+      }
+
+      .goods {
+        display: block;
+
+        .good {
+          width: 100%;
+          border-bottom: none;
+          height: 550px;
+        }
+      }
+    }
+  }
+}

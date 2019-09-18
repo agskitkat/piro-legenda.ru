@@ -1153,14 +1153,14 @@ $green: #3DDB05;
   .swipe_slider .add_to_cart_block {
     display:block;
   }
-  .catalog .add_to_cart_block {
+  .add_to_cart_block {
     display:block;
     padding-top:15px;
   }
 
 
 
-  .catalog .add_to_cart_block .good_quantity_block,
+   .add_to_cart_block .good_quantity_block,
   .swipe_slider .add_to_cart_block .good_quantity_block {
     padding-bottom:0px;
     display: flex;
@@ -1169,7 +1169,7 @@ $green: #3DDB05;
   }
 
 
-  .catalog .catalog-block .add_to_cart_block .good_quantity_block,
+  .catalog-block .add_to_cart_block .good_quantity_block,
   .swipe_slider .add_to_cart_block .good_quantity_block {
     width:100%;
     padding-top:20px;
@@ -1178,7 +1178,7 @@ $green: #3DDB05;
   }
 
 
-  .catalog .catalog-block .add_to_cart_block .good_quantity_block .text ,
+   .catalog-block .add_to_cart_block .good_quantity_block .text ,
   .swipe_slider .add_to_cart_block .good_quantity_block .text {
     display:inline;
     float:right;
@@ -1193,7 +1193,7 @@ $green: #3DDB05;
   }
 
 
-  .catalog .catalog-block .add_to_cart_block .good_quantity_block .btn-block,
+   .catalog-block .add_to_cart_block .good_quantity_block .btn-block,
   .swipe_slider .add_to_cart_block .good_quantity_block .btn-block{
     display:flex;
     float:left;
@@ -1203,13 +1203,13 @@ $green: #3DDB05;
     height:28px;
   }
 
-  .catalog .catalog-block .add_to_cart_block .good_quantity_block.disabled .btn-block,
+   .catalog-block .add_to_cart_block .good_quantity_block.disabled .btn-block,
   .swipe_slider .add_to_cart_block .good_quantity_block.disabled .btn-block{
     float:none;
     margin: 0 auto;
   }
 
-  .catalog .catalog-block .add_to_cart_block .good_quantity_block .btn-block button,
+   .catalog-block .add_to_cart_block .good_quantity_block .btn-block button,
   .swipe_slider .add_to_cart_block .good_quantity_block .btn-block button {
     width: 28px;
     padding: 25px 0px 0px;
@@ -1217,27 +1217,27 @@ $green: #3DDB05;
     height:25px;
   }
 
-  .catalog .catalog-block .add_to_cart_block .good_quantity_block .btn-block button:before
+   .catalog-block .add_to_cart_block .good_quantity_block .btn-block button:before
   .swipe_slider .add_to_cart_block .good_quantity_block .btn-block button:before {
     content: none;
     display:none;
   }
 
-  .catalog .catalog-block .add_to_cart_block .good_quantity_block .btn-block input,
+   .catalog-block .add_to_cart_block .good_quantity_block .btn-block input,
   .swipe_slider .add_to_cart_block .good_quantity_block .btn-block input {
     width: 34px;
     line-height: 25px;
     font-size: 14px;
   }
 
-  .catalog .catalog-block .add_to_cart_block .add_button,
+   .catalog-block .add_to_cart_block .add_button,
   .swipe_slider .add_to_cart_block .add_button {
     margin-top: 18px;
     max-width:100%;
     width:100%;
   }
 
-  .catalog .catalog-block .goods .good_quantity_block .btn-block button .korsar-icon,
+   .catalog-block .goods .good_quantity_block .btn-block button .korsar-icon,
   .swipe_slider .good_quantity_block .btn-block button .korsar-icon {
     font-size: 20px;
     position: absolute;
@@ -1245,7 +1245,7 @@ $green: #3DDB05;
     left: 13px;
   }
 
-  .catalog .add_to_cart_block .good_quantity_block.disabled .btn-block,
+   .add_to_cart_block .good_quantity_block.disabled .btn-block,
   .swipe_slider .good_quantity_block.disabled .btn-block {
     button.decrement,
     button.increment {
@@ -1256,11 +1256,11 @@ $green: #3DDB05;
     }
   }
 
-  .catalog .catalog .catalog-block .add_to_cart_block {
+   .catalog .catalog-block .add_to_cart_block {
     padding-top:0px;
   }
 
-  .catalog .catalog-block .good .add_to_cart_block .add_button,
+   .catalog-block .good .add_to_cart_block .add_button,
   .swipe_slider .good_slide .add_to_cart_block .add_button {
     font-size: 14px;
     line-height: 14px;
@@ -1270,7 +1270,7 @@ $green: #3DDB05;
     max-width: 100%;
   }
 
-  .catalog .catalog-block .good:hover .add_to_cart_block .add_button,
+   .catalog-block .good:hover .add_to_cart_block .add_button,
   .swipe_slider .good_slide:hover .add_to_cart_block .add_button {
     cursor: pointer;
     font-size: 14px;

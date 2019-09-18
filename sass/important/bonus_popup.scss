@@ -1,0 +1,145 @@
+.bonus-popup {
+  background: #FFF;
+  border-radius: 10px;
+  padding:20px;
+  .bonus-popup__close {
+
+  }
+  .bonus-popup__header {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .bonus-popup__text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .bonuses {
+    margin-top: 30px;
+
+    .bonus {
+      padding-left:20px;
+      margin-bottom: 30px;
+      border: 0px;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+      font-size: 13px;
+      line-height: 16px;
+      .header {
+        display: flex;
+        font-size: 15px;
+        color: #F12626;
+        padding-bottom:20px;
+        font-weight: bold;
+        img {
+          margin-right: 10px;
+        }
+      }
+      .header.silver {
+        color: #B6B6B6;
+      }
+      .header.gold {
+        color: #E9D56A;
+      }
+      .header.vip {
+        color: #1C1C1C;
+      }
+      .pair {
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        .key {
+          color: #969696;
+
+        }
+        .value {
+          white-space: nowrap;
+        }
+      }
+      .pair:last-of-type {
+        padding-bottom:0px;
+      }
+    }
+  }
+  .avangar {
+    .bonuses {
+      .bonus {
+        min-height: initial;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .bonus-popup {
+    .bonus-popup__header {
+      font-size: 20px;
+      line-height: 27px;
+    }
+    .bonus-popup__text {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+      padding-top:20px;
+    }
+    .bonuses {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      .bonus {
+        width:48%;
+        padding-left:20px;
+        margin-bottom: 30px;
+        border: 0px;
+        border-left: none;
+
+        font-size: 13px;
+        line-height: 16px;
+        .header {
+          display: flex;
+          font-size: 15px;
+          color: #F12626;
+          padding-bottom:20px;
+          font-weight: bold;
+          img {
+            margin-right: 10px;
+          }
+        }
+        .header.silver {
+          color: #B6B6B6;
+        }
+        .header.gold {
+          color: #E9D56A;
+        }
+        .header.vip {
+          color: #1C1C1C;
+        }
+        .pair {
+          padding-bottom: 20px;
+          display: flex;
+          justify-content: space-between;
+          .key {
+            color: #969696;
+
+          }
+          .value {
+            white-space: nowrap;
+          }
+        }
+        .pair:last-of-type {
+          padding-bottom:0px;
+        }
+      }
+    }
+    .avangar {
+      .bonuses {
+        border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+        .bonus {
+          min-height: initial;
+        }
+      }
+    }
+  }
+}

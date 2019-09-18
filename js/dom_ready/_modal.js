@@ -26,4 +26,17 @@ function modal_zz_call(){
         });
         return false;
     });
+
+
+    $('.cart-v2-wrapper .delivery-call-modal').on('click', function(e) {
+        e.preventDefault();
+        var d = $(this).attr('data-target');
+        $(d).css({"display":"flex"}).animate({
+            opacity: 1
+        },200);
+        $(d).find('.round').unbind('click').on('click', function(){
+            $(d).css({"display":"none"});
+        });
+    });
+
 };

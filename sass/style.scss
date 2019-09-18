@@ -10,18 +10,17 @@ $version: "1.0.64";
 @import 'important/footer';
 @import 'important/kladr';
 @import 'important/custom_scroll';
-@import 'important/category_good_hit_new_discount';
 /* Подключать везде /stop */
 
 /* Подключать везде где товары /start */
 @import 'important/_options';
 @import 'important/content_catalog';
+@import 'important/content_catalog-splader';
 @import 'important/filter-block';
 @import 'important/search';
 @import 'important/good';
 @import "important/good_new";
 @import "important/good_new_item-count";
-
 @import 'others/discount';
 @import "important/opt-discount-bonus-table";
 /* Подключать везде где товары /stop */
@@ -30,29 +29,27 @@ $version: "1.0.64";
 @import 'important/swipe_slider';
 /* Подключать на страницах со слайдером /stop */
 
-
 /* Главная index.html /start */
 @import 'important/main_v2';
 /* Главная index.html /stop */
 
 @import "important/sittings";
-
 @import "important/modal";
 @import "important/scroll_modal";
-
 @import "important/live_search";
 @import "important/sipmlebar";
-
 @import "important/price-list-after-category";
 @import 'important/korsal-modal-price-form';
-
 @import 'important/article.scss';
 @import 'others/blog-post';
 @import 'others/blog-posts';
+@import 'important/bonus_popup';
 
 /* Import libs files */
 @import 'libs/slick/slick';
 @import "libs/slick/slick-theme";
+@import "important/slickslider-main-theme";
+@import "important/category_good_hit_new_discount";
 
 
 /* By https://github.com/agskitkat  Important  Версия: #{$version} */

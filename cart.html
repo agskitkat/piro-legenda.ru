@@ -40,15 +40,6 @@
                     </div>
                 </a>
 
-                <!--
-                <a class="cart-btn get-price">
-                    <button class="button green active color-hold">
-                        <img src="images/svg/Union.svg">
-                        <span class="text">Получить <span class="break"></span>прайс-лист</span>
-                    </button>
-                </a>
-                -->
-
             </div>
             <div class="search-line">
                 <div class="search-group"><input class="search" placeholder="Найдите, что ищете..."><span class="korsar-icon search"></span></div>
@@ -386,23 +377,7 @@
             <article class="content_closer good_content ">
 
                 <div class="cart-v2-wrapper">
-                    <div class="present">
-                        <span class="header">Вам подарок при первом заказе</span>
-                        <div class="flex">
-                            <div class="present-image">
-                                <div class="round" style="background-image: url(images/good.jpg)"></div>
-                            </div>
-                            <div class="present-info">
-                                <div class="present-name">
-                                    <span class="header">Вам подарок при первом заказе</span>
-                                    Батарея салютов Новогодняя затея
-                                </div>
-                                <div class="present-add">
-                                    Добавить
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="goods">
                         <div class="header">В корзине 4 товара</div>
 
@@ -495,33 +470,22 @@
                         </div>
 
                     </div>
-                    <div class="info">
-                        <div class="wrap">
-                            <div class="present">
-                                <span class="header">Вам подарок при первом заказе</span>
-                                <div class="flex">
-                                    <div class="present-image">
-                                        <div class="round" style="background-image: url(images/good.jpg)"></div>
-                                    </div>
-                                    <div class="present-info">
-                                        <div class="present-name">
-                                            <span class="header">Вам подарок при первом заказе</span>
-                                            Батарея салютов Новогодняя затея
-                                        </div>
-                                        <div class="present-add">
-                                            Добавить
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
+                    <div class="info">
+
+                        <div class="wrap">
                             <div class="order-block">
+
+                                <!--
+
                                 <div class="profit">
                                     <span class="text">Ваша выручка</span>
                                     <span class="price">1 000 000 руб.*</span>
                                 </div>
                                 <div class="profit-alert">*Расчет осуществляется, исходя из средних розничных цен</div>
                                 <div class="line"></div>
+
+                                -->
 
                                 <div class="order-sum">
                                     <span>Товары (4)</span>
@@ -546,25 +510,52 @@
                             </div>
                         </div>
 
-                        <div class="sertificated">
-                            <a class="blue">Скачать все сертификаты <span class="korsar-icon inbox"></span></a>
-                            <a class="green">Скачать все штрих-коды <span class="korsar-icon inbox"></span></a>
-                        </div>
+                        <div class="after-order">
 
-                        <div class="mass-volume">
-                            <div class="flex">
-                                <span>Вес</span>
-                                <span class="mass">2000 кг</span>
+                            <div class="mass-volume">
+                                <div class="flex">
+                                    <span>Вес</span>
+                                    <span class="mass">2000 кг</span>
+                                </div>
+                                <div class="flex">
+                                    <span>Объем</span>
+                                    <span class="volume">4.340 м<sup>2</sup></span>
+                                </div>
                             </div>
-                            <div class="flex">
-                                <span>Объем</span>
-                                <span class="volume">4.340 м<sup>2</sup></span>
-                            </div>
-                        </div>
 
+                            <div class="after-order_delivery">
+                                <div class="delivery">
+                                    <p class="delivery_header">Способ получения товара</p>
+                                    <div class="delivery_row">
+                                        <div class="delivery_process">
+                                            <div class="delivery_circle" id="circle-1"></div>
+                                            <img src="images/svg/stock-black.svg" alt="">
+                                        </div>
+                                        <div>Самовывоз со склада в Москве</div>
+                                    </div>
+                                    <div class="delivery_row delivery-call-modal" data-target="#delivery-modal-1">
+                                        <div class="delivery_process">
+                                            <div class="delivery_circle" id="circle-delivery"></div>
+                                            <img src="images/svg/delivery-black.svg" alt="">
+                                        </div>
+                                        <div>Доставка доступна<br>от 50 000 руб.</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="sertificated">
+                                <a class="blue">Скачать все сертификаты <span class="korsar-icon inbox"></span></a>
+                                <a class="green">Скачать все штрих-коды <span class="korsar-icon inbox"></span></a>
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>
+
+
+
 
                 <div class="good_similars">
                     <span class="similars_header">Вы недавно смотрели</span>
@@ -1458,6 +1449,16 @@
             </article>
         </div>
     </div>
+
+<div class="delivery-modal" id="delivery-modal-1">
+    <div class="delivery-body">
+        <div class="round">
+            <span class="korsar-icon close"></span>
+        </div>
+        <b>Платная доставка:</b><p>Москва и Московская область, до транспортной компании при заказе меньше 49 900 руб. Стоимость доставки вы можете уточнить у Вашего менеджера отдела продаж.</p>
+        <b>Бесплатная доставка:</b><p> Москва и Московская область, до транспортной компании при заказе от 49 900 руб.</p>
+    </div>
+</div>
 
 </div>
 <!-- f2 -->
