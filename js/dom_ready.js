@@ -46,7 +46,7 @@ function cart_zz_call() {
                     var modal = row.closest(".modal");
                     if (modal.length !== 0) {
                         input = modal.find(".item-count__count").find("input");
-                        console.log(modal, input);
+                        //console.log(modal, input);
                     }
                 }
 
@@ -62,7 +62,6 @@ function cart_zz_call() {
                     //console.log(goodv2, input);
                 }
 
-
                 multiplicity = getMultiplicity(row);
 
                 if (input) {
@@ -72,7 +71,7 @@ function cart_zz_call() {
                     }
                     updateCartOnInputChange(input);
                 } else {
-                    console.log(good, modal, goodv2);
+                    //console.log(good, modal, goodv2);
                 }
             }
         });
@@ -130,7 +129,7 @@ function cart_zz_call() {
      */
     function modalUpdateText($modal, $button) {
         var container = $button.closest(".good");
-        console.log(container);
+        //console.log(container);
         if (!container.length)
             return;
 
@@ -163,7 +162,7 @@ function cart_zz_call() {
         $modal.find(".flex-row-price").removeClass("flex-row-price").addClass("good-v2__price-row").find("span").addClass("good-v2__price-col");
         $modal.find("#good-prices").find(".current").addClass("good-v2__price-rwo_current");
 
-        console.log(d);
+        // console.log(d);
     }
 
     /**
@@ -264,7 +263,7 @@ function cart_zz_call() {
         }
 
         var min_quantity = 1;
-        console.log("updateCartOnInputChange: ", quantity);
+        //console.log("updateCartOnInputChange: ", quantity);
         $parent = $input.parent();
         $increment = $parent.find(".increment");
         $decrement = $parent.find(".decrement");
@@ -299,7 +298,7 @@ function cart_zz_call() {
 
     //  #scroll-modal__item-count .increment
     $('.good_quantity_block .increment, .add-control .increment').click(function () {
-        console.log('Click');
+        //console.log('Click');
         var input = $(this).parent().find("input");
         var quantity = parseInt(input.val());
         var multiplicity = getMultiplicity($(this));
@@ -408,13 +407,24 @@ function cart_zz_call() {
                                 add_to_cart_message(button);
                             }
 
+                            // Update quantity of goods vitrine && good card
+                            var good = $("#good-id-" + ID);
+                            if (good) {
+                                var q = $(good).find('.quantity');
+                                for (var ii = 0; q.length > ii; ii++) {
+                                    var qq = $(q[ii]);
+                                    console.log(ID, qq, +$(qq).html(), quantity);
+                                    $(qq).html(+$(qq).html() - quantity);
+                                }
+                            }
+
                             //Yandex
                             dataLayer.push({
                                 "ecommerce": {
                                     "add": {
                                         "products": [
                                             {
-                                                "id": good_id,
+                                                "id": ID,
                                                 "name": name,
                                                 "price": data.price,
                                                 "category": "Аксессуары/Сумки",
@@ -707,7 +717,7 @@ function cart_zz_call() {
         p = parseInt(p);
 
 
-        console.log(p);
+        //console.log(p);
         if (p < 49900) {
 
             $(".cart-v2-wrapper .present .present-add").css({"display": "none"});
@@ -730,36 +740,36 @@ function cart_zz_call() {
         size: 40,
         value: 0,
         fill: "#F02626",
-        animationStartValue:0
+        animationStartValue: 0
     });
 
     $('#circle-moscowfree').circleProgress({
         size: 40,
         value: 0,
         fill: "#F02626",
-        animationStartValue:0
+        animationStartValue: 0
     });
 
     function setProgress(dc, price, maxPrice) {
         var attr = dc.attr('id');
-        if(!price) {
+        if (!price) {
             price = "0";
         }
-        if(!window.prevDeliveryProgress[attr]) {
+        if (!window.prevDeliveryProgress[attr]) {
             window.prevDeliveryProgress[attr] = 0;
         }
         var delivery_progress = (100 / maxPrice) * parseFloat(price.replace(/\s/g, ''));
         var delivery_color = "#F02626";
         var delivery_class = "bad";
         dc.parent().parent().addClass(delivery_class);
-        if(delivery_progress >= 100 ) {
+        if (delivery_progress >= 100) {
             delivery_progress = 100;
             delivery_color = "#08d04c";
             dc.parent().parent().removeClass(delivery_class);
         }
         dc.circleProgress({
             value: delivery_progress / 100,
-            fill:delivery_color,
+            fill: delivery_color,
             size: 40,
             animationStartValue: window.prevDeliveryProgress[attr]
         });
@@ -770,7 +780,7 @@ function cart_zz_call() {
 
     var startPrice = $(".cart-v2-wrapper .order_price_real").html();
 
-    if(!startPrice) {
+    if (!startPrice) {
         startPrice = "0";
     }
 

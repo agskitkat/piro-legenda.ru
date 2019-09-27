@@ -1,4 +1,3 @@
-
 $disabled_color:#BBBBBB;
 $active_color:#777777;
 $border-fullwidth-line-color: #E8E8E8;
@@ -693,7 +692,6 @@ fieldset.checkbox {
 
 
 
-
 .top-page-padding {
   padding-top:12px;
 }
@@ -703,11 +701,11 @@ img.width-load-control {
   transition:all 0.2s;
 }
 img {
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  pointer-events: none;
+  //position: relative;
+  //-webkit-user-select: none;
+  //-moz-user-select: none;
+  //user-select: none;
+  //pointer-events: none;
 }
 
 .tooltip {

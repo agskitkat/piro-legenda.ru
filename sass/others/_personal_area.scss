@@ -6,7 +6,6 @@ $green: #08d04c;
 $red: #F12626;
 $blue: #0F28BF;
 
-
 .page-personal button, .page-personal .btn {
    border-radius: 5px;
    color:$gray-1;
@@ -555,9 +554,12 @@ $blue: #0F28BF;
   .personal-block {
     position: relative;
     .stock-balance {
-      position:absolute;
+      display: flex;
       right:0px;
       top:240px;
+      .button {
+        margin:5px;
+      }
     }
 
     .fragments {
