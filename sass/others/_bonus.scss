@@ -14,15 +14,6 @@
         line-height: 33px;
         font-size: 15px;
       }
-      .sale-red-status {
-        color:#F12626;
-      }
-      .sale-silver-status {
-        color:#B6B6B6;
-      }
-      .sale-gold-status {
-        color:#E9D56A;
-      }
       .pair {
         font-size: 14px;
         margin-bottom:5px;
@@ -73,7 +64,7 @@
     }
 
     .row-1, .row-2 {
-        width:50%;
+      width:50%;
       float:left;
     }
   }
@@ -88,14 +79,14 @@
   .page-bonus {
     .bonuses {
       .bonus {
-          position:relative;
-          width:50%;
-          float:left;
-          height:200px;
-          padding:5px 0px;
-          margin-bottom: 0px;
-          padding-left:15px;
-          font-size: 15px;
+        position:relative;
+        width:50%;
+        float:left;
+        height:130px;
+        padding:5px 0px;
+        margin-bottom: 0px;
+        padding-left:15px;
+        font-size: 15px;
         .pair {
           .key {
             width:60%;
@@ -109,9 +100,9 @@
         content: " ";
         display:block;
         position:absolute;
-        height:170px;
+        height:130px;
         border-left:1px solid $gray-2;
-        top:15px;
+        top:0px;
         right:0px;
       }
       .bonus:nth-child(3),.bonus:nth-child(4){
@@ -127,6 +118,11 @@
       .bonus {
         padding-left:10%;
       }
+    }
+    .bonuses:after {
+      content: "";
+      display: block;
+      clear: both;
     }
   }
 }

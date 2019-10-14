@@ -1,6 +1,9 @@
 .opt-discount-bonus {
   display:none;
 }
+.more-opt-discount-bonus {
+  display:none;
+}
 
 @media (min-width: 1024px) {
   .opt-discount-bonus {
@@ -77,6 +80,20 @@
         .key {
           width:100px;
         }
+      }
+    }
+  }
+
+  .more-opt-discount-bonus {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    .avangar {
+      width:40%;
+      font-size: 12px;
+      line-height: 16px;
+      .key {
+        color: #BBB;
       }
     }
   }
