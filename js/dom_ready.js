@@ -850,6 +850,29 @@ function delivery_tab() {
         }
     });
 }
+$(function() {
+
+    $('.mobile-expend-block').each(function (k,v) {
+        if($(v).find('.content').innerHeight() <= 112) {
+            $(v).find('.expend-fade').hide();
+            $(v).find('.expend-button').hide();
+        }
+    });
+
+    $('.mobile-expend-block').click(function(e) {
+        if(!this.isOpen) {
+            $(this).find('.expend-text').addClass('show').removeClass('hide');
+            $(this).find('.expend-button').text('скрыть');
+            $(this).find('.expend-fade').addClass('hide').removeClass('show');
+            this.isOpen = true;
+        } else {
+            $(this).find('.expend-text').addClass('hide').removeClass('show');
+            $(this).find('.expend-button').text('ещё');
+            $(this).find('.expend-fade').addClass('show').removeClass('hide');
+            this.isOpen = false;
+        }
+    });
+});
 var liveSearch = function(config) {
     console.log(config);
     var MIN_QUERY_LEN = config.MIN_QUERY_LEN ? config.MIN_QUERY_LEN : 3;
@@ -1352,7 +1375,7 @@ function paly_video_zz_call() {
 var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="display: block; opacity: 1;">\n' +
     '            <div class="wrap">\n' +
     '                <div class="modal-body" style="max-width:360px; height:420px">\n' +
-    '                    <div class="close"><span class="korsar-icon close"></span></div>\n' +
+    '                    <div class="close" onclick="$(this).closest(\'.js-action-form-was-send\').remove();$(\'body\').css({\'overflow\':\'visible\'})"><span class="korsar-icon close"></span></div>\n' +
     '                    <div class="header" style="margin-top:20px;margin-bottom:20px;"></div>\n' +
     '                    <div class="form-2"  style="text-align: center;">\n' +
     '                        <img style="width:80px;" src="/local/templates/pyrosalut/images/svg/check-2.svg">\n' +
@@ -1362,12 +1385,27 @@ var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="d
     '            </div>\n' +
     '        </div>';
 
+var modal_complite_proff = '<div class="korsar-modal js-action-form-was-send" style="display: block; opacity: 1;">\n' +
+    '            <div class="wrap">\n' +
+    '                <div class="modal-body" style="max-width:360px; height:420px">\n' +
+    '                    <div class="close" onclick="$(this).closest(\'.js-action-form-was-send\').remove();$(\'body\').css({\'overflow\':\'visible\'})"><span class="korsar-icon close"></span></div>\n' +
+    '                    <div class="header" style="margin-top:20px;margin-bottom:20px;"></div>\n' +
+    '                    <div class="form-2"  style="text-align: center;">\n' +
+    '                        <img style="width:80px;" src="/local/templates/pyrosalut/images/svg/check-2.svg">\n' +
+    '                        <p>Спасибо</p><p>Менеджер отдела продаж свяжется с вами в ближайшее время.</p>\n' +
+    '                    </div>\n' +
+    '                </div>\n' +
+    '            </div>\n' +
+    '        </div>';
+
 var block_send = false;
 var old_text = "";
+
+
 function test_send_form(element) {
 
     var reachGoal = $(element).closest(".korsar-modal").attr('data-reachgoal');
-    console.log("reachGoal:"+ reachGoal);
+
     var btn =  $(element);
 
     var form_1 = $(element).parent();
@@ -1380,6 +1418,12 @@ function test_send_form(element) {
         var phone = form_1.find(".i-phone").val();
         var email = form_1.find(".i-email").val();
         var point = form_1.find(".i-point").val();
+
+        var proff = "";
+        if(form_1.find(".i-prof")) {
+            proff = form_1.find(".i-prof").val();
+        }
+
         //showBlock_2(name);
 
 
@@ -1396,7 +1440,7 @@ function test_send_form(element) {
         $.ajax({
             type: "POST",
             url: "/local/ajax/hash_auth.php",
-            data: JSON.stringify({name: name, email: email, phone: phone,city: point})
+            data: JSON.stringify({name: name, email: email, phone: phone,city: point, proff: proff})
         }).done(function (data) {
             block_send = true;
             btn.text(old_text);
@@ -1416,7 +1460,12 @@ function test_send_form(element) {
                     $(this).css({"display": "none"});
                 }).removeClass("active");
 
-                $("body").append(modal_complite);
+                if(proff) {
+                    $("body").append(modal_complite_proff);
+                    $(element).html("Заявка принята");
+                } else {
+                    $("body").append(modal_complite);
+                }
 
                 if (reachGoal) {
                     window.yaCounter51429325.reachGoal(reachGoal);
@@ -1439,11 +1488,11 @@ function price_form_zz_call() {
 
     var modal = '<div class="korsar-modal js-action-open-price">'+
         '<div class="wrap">'+
-        '<div class="modal-body" style="max-width:360px; height:480px">'+
+        '<div class="modal-body">'+
         '<div class="close">'+
         '<span class="korsar-icon close"></span>'+
         '</div>'+
-        '<div class="header" style="margin-top:20px;margin-bottom:0px;">Оформи заявку сейчас и получить <span class="red">скидку до 45%</span> !</div>'+
+        '<div class="header">Заполни форму сейчас! <span class="red">скидки до 45%</span></div>'+
         '<div class="form">'+
         '<fieldset>'+
         '<span class="korsar-icon user-w"></span>'+
@@ -1462,13 +1511,13 @@ function price_form_zz_call() {
         '<input type="text" class="i-point korsar-input" placeholder="Город" data-pattern="notnull" required>'+
         '</fieldset>'+
         '<button type="button" class="js-action-do-auth button green active" onclick="test_send_form(this)">Получить прайс-лист</button>'+
-        '<fieldset class="checkbox" style="padding-top: 21px;">' +
+        '<div class="checkbox" style="padding-top: 21px;">' +
         '<span class="checkbox">' +
         '<span class="korsar-icon check">' +
         '</span>' +
         '</span> ' +
-        '<label style="font-size: 9px;">Согласен(а) с <a href="/personal/personal-data-policy/">политикой конфиденциальности</a></label>' +
-        '<input type="hidden"></fieldset>'+
+        '<label>Согласен(а) с <a href="/personal/personal-data-policy/">политикой конфиденциальности</a></label>' +
+        '<input type="hidden"></div>'+
         '</div>'+
         '</div>'+
         '</div>'+
@@ -1565,7 +1614,7 @@ function start_zz_call() {
 
     // Filter First check
     var is_checker_some = false;
-    $(".filter-items .item").each(function(k,v) {
+   $(".filter-items .item").each(function(k,v) {
         var i = $(this).find("input");
         if(i.is(":checked")) {
             i.closest(".item").addClass("current");
@@ -1573,9 +1622,10 @@ function start_zz_call() {
             is_checker_some = true;
         }
     });
-    if(!is_checker_some) {
-        $(".bx-filter-parameters-box:first").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
-    }
+    //if(!is_checker_some) {
+        $(".bx-filter-parameters-box:nth-child(1)").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
+        $(".bx-filter-parameters-box:nth-child(2)").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
+    //}
     /*
          /FILTER
    */
@@ -1610,7 +1660,12 @@ function start_zz_call() {
             event.preventDefault();
 
             if($(this).is('.product')) {
-                window.history.back();
+                var backUrl =  $(this).attr('data-back-url');
+                if(backUrl) {
+                    window.location.href = backUrl;
+                } else {
+                    history.go(-1);
+                }
                 return false;
             }
 
@@ -1803,7 +1858,7 @@ function start_zz_call() {
 
 
     $(".menu-back-link").click(function(){
-        parent.history.back();
+        history.go(-1);
         return false;
     });
 
@@ -2419,6 +2474,8 @@ function remove_from_cart_YE(purchase, goods) {
 }
 "use strict";
 $().ready(function(){
+    price_form_zz_call();
+    modal_zz_call();
     catalog_zz_call();
     swipe_slider_zz_call();
     start_zz_call();
@@ -2428,9 +2485,7 @@ $().ready(function(){
     login_zz_call();
     cart_zz_call();
     time_counter_zz_call();
-    modal_zz_call();
     loader_zz_call();
-    price_form_zz_call();
     zz_scroll_modal();
     zz_auth_modal();
     delivery_tab();
@@ -2475,45 +2530,66 @@ function loader_zz_call() {
 };
 function modal_zz_call(){
 
-    $(".call-modal").unbind('click').on('click', function(e) {
+    $(".call-modal").on('click', function(e) {
         e.preventDefault();
+
         var d = $(this).attr('data-target');
+
         var datareachgoal = $(this).attr('data-reachgoal');
+
         if(datareachgoal) {
             $(d).attr('data-reachgoal', datareachgoal);
         }
-        $(d).css({"display":"block"}).animate({
+        $(d).animate({
             opacity: 1
-        },200);
+        },200).addClass('active');
+        $("body").css({"overflow":"hidden"});
         return false;
     });
 
-    $("body").unbind('click').on("click", ".korsar-modal .close", function(e) {
-        e.preventDefault();
-        var v  = $(this).closest(".korsar-modal").find("video");
-        $.each(v, function(k, v){
-            v.pause();
+    $(".korsar-modal").each(function(key, element){
+        $(element).on("click", ".close", function(e) {
+            console.log("click  .korsar-modal .close");
+            e.preventDefault();
+            $("body").css({"overflow":"visible"});
+            var v  = $(this).closest(".korsar-modal").find("video");
+            $.each(v, function(k, v){
+                v.pause();
+            });
+            $(this).closest(".korsar-modal").animate({
+                opacity: 0
+            },200, function(){
+                $(this).removeClass('active');;
+            });
+            return false;
         });
-        $(this).closest(".korsar-modal").animate({
+    });
+
+
+
+    $("body").unbind('click').on("click", ".modal-mysalut .close", function(e) {
+
+        var $modal = $(this).closest(".modal-mysalut");
+        $modal.animate({
             opacity: 0
         },200, function(){
-            $(this).css({"display":"none"});
+            $modal.removeClass('active');
+            $("body").css({"overflow":"visible"});
         });
         return false;
     });
-
 
     $('.cart-v2-wrapper .delivery-call-modal').on('click', function(e) {
         e.preventDefault();
+        $("body").css({"overflow":"visible"});
         var d = $(this).attr('data-target');
         $(d).css({"display":"flex"}).animate({
             opacity: 1
         },200);
         $(d).find('.round').unbind('click').on('click', function(){
-            $(d).css({"display":"none"});
+            $(d).css({"display":"none"}).removeClass('active');
         });
     });
-
 };
 function time_counter_zz_call(){
     $(".time-counter").each(function(key, counter){

@@ -1,5 +1,12 @@
 
 
+.header-v2 {
+  .mobile {
+    .blue-line, .yellow-line, .green-line, .flip-3d, .red-line  {
+      display:none;
+    }
+  }
+}
 
 // Header hide on product body class
 .product {
@@ -18,7 +25,7 @@
           }
         }
       }
-      .search-line {
+      .search-line,  .flip-3d {
         display:none;
       }
       .menu-block-header {
@@ -31,12 +38,14 @@
 .catalog {
   .header-v2 {
     .mobile {
-      .blue-line {
+      .blue-line, .yellow-line, .green-line, .flip-3d, .red-line   {
         display:block;
       }
     }
   }
 }
+
+
 
 .header-v2 {
   position: relative;
@@ -51,10 +60,14 @@
       height:30px;
       border-bottom: 1px solid #E8E8E8;
       padding:0 20px;
+
       .phone {
         font-size: 12px;
       }
       .worcktime {
+        display:none;
+      }
+      .button  {
         display:none;
       }
     }
@@ -197,19 +210,49 @@
       }
     }
 
-    .blue-line {
+
+
+    /*
+      HEADER TiaZER STRING
+    */
+    .yellow-line {
       display:none;
-      height:21px;
-      line-height: 21px;
+      height:35px;
+      line-height: 35px;
       color:#000;
       background-color: $yellow;
       font-size: 12px;
       text-align: center;
     }
 
+    .green-line {
+      display:none;
+      height:35px;
+      line-height: 21px;
+      padding-top: 5px;
+      color:#FFF;
+      background-color: $green;
+      font-size: 12px;
+      text-align: center;
+    }
+    .red-line {
+      display:none;
+      height:40px;
+      padding-top: 5px;
+      color:#FFF;
+      background-color: $red;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      padding-left:40px;
+      padding-right: 40px;
+    }
+
+
     .menu-block-header {
       background: #FFF;
-      margin-top:-138px;
+      margin-top:-150px;
       position: relative;
       z-index: 100501;
       .menu-mobile-control {
@@ -333,6 +376,8 @@
         }
         .menu-item.price-list-item {
           border-top: 0px solid #E8E8E8;
+          background-color: $green;
+          color:#FFF;
         }
         .menu-item.active {
           color:$blue;
@@ -360,9 +405,51 @@
 
 }
 
+@media (min-width: 414px) {
+  .header-v2 {
+    .mobile {
+      .red-line {
+        display:none;
+        height:21px;
+        padding-top: 0px;
+        color:#FFF;
+        background-color: $red;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 21px;
+        text-align: center;
+        padding-left:40px;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .header-v2 {
     .mobile {
+      .phone-line {
+        height: 60px;
+        justify-content: flex-start;
+        .phone {
+          margin-right: 23px;
+        }
+        .worcktime {
+          display: block;
+          font-size: 10px;
+          line-height: 9px;
+          color: rgba(28, 28, 28, 0.5);
+        }
+        .button {
+          display:flex;
+          max-width:200px;
+          margin-left: 52px;
+          padding:0 15px;
+          text-transform: none;
+          font-weight: bold;
+
+        }
+      }
       .logo-line {
         .cart-btn.get-price {
           width:180px;
@@ -413,7 +500,7 @@
         .top-line {
           display:flex;
           align-items: center;
-          height:48px;
+          height:60px;
 
           .menu-gray {
             padding-right:40px;
@@ -431,14 +518,17 @@
             }
           }
           .menu-price-list {
+            max-width:200px;
             cursor: pointer;
-            margin:auto;
+            margin: 0 0 0 auto;
             font-weight: bold;
             font-size: 12px;
-            padding-right:15px;
+            padding:0 15px;
+            height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-transform: none;
             img {
               margin-right:10px;
               width:28px;

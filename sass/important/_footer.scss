@@ -120,6 +120,15 @@ footer .footer-about {
   display:block;
 }
 
+footer .korsar-mobile-policity {
+  font-size: 14px;
+  text-align: center;
+  color: rgba(28, 28, 28, 0.5);
+  border-top:1px solid $gray-line;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
 footer .korsar {
   clear: both;
   text-align: center;
@@ -186,11 +195,15 @@ footer .korsar {
   footer .policity {
     display:inline;
     float:right;
-    margin-top:-59px;
+    margin-top:-70px;
     font-size: 12px;
     color:#8C8C8C;
+    text-align: right;
   }
 
+  footer .korsar-mobile-policity {
+    display: none;
+  }
 
   footer .col-footer-more {
     clear: both;
@@ -328,5 +341,8 @@ footer .korsar {
   }
   footer .col-footer-more .list-unstyled {
     padding-right: 30px;
+  }
+  footer .policity {
+    text-align: left;
   }
 }

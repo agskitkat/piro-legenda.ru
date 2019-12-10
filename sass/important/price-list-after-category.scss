@@ -9,8 +9,8 @@
   border: none;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  background: #08D04C;
-  color:#FFF;
+  background: $yellow;
+  color:#000;
   &__content {
     display:flex;
     align-items: center;

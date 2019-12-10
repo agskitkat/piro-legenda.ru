@@ -1,7 +1,7 @@
 var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="display: block; opacity: 1;">\n' +
     '            <div class="wrap">\n' +
     '                <div class="modal-body" style="max-width:360px; height:420px">\n' +
-    '                    <div class="close"><span class="korsar-icon close"></span></div>\n' +
+    '                    <div class="close" onclick="$(this).closest(\'.js-action-form-was-send\').remove();$(\'body\').css({\'overflow\':\'visible\'})"><span class="korsar-icon close"></span></div>\n' +
     '                    <div class="header" style="margin-top:20px;margin-bottom:20px;"></div>\n' +
     '                    <div class="form-2"  style="text-align: center;">\n' +
     '                        <img style="width:80px;" src="/local/templates/pyrosalut/images/svg/check-2.svg">\n' +
@@ -11,12 +11,27 @@ var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="d
     '            </div>\n' +
     '        </div>';
 
+var modal_complite_proff = '<div class="korsar-modal js-action-form-was-send" style="display: block; opacity: 1;">\n' +
+    '            <div class="wrap">\n' +
+    '                <div class="modal-body" style="max-width:360px; height:420px">\n' +
+    '                    <div class="close" onclick="$(this).closest(\'.js-action-form-was-send\').remove();$(\'body\').css({\'overflow\':\'visible\'})"><span class="korsar-icon close"></span></div>\n' +
+    '                    <div class="header" style="margin-top:20px;margin-bottom:20px;"></div>\n' +
+    '                    <div class="form-2"  style="text-align: center;">\n' +
+    '                        <img style="width:80px;" src="/local/templates/pyrosalut/images/svg/check-2.svg">\n' +
+    '                        <p>Спасибо</p><p>Менеджер отдела продаж свяжется с вами в ближайшее время.</p>\n' +
+    '                    </div>\n' +
+    '                </div>\n' +
+    '            </div>\n' +
+    '        </div>';
+
 var block_send = false;
 var old_text = "";
+
+
 function test_send_form(element) {
 
     var reachGoal = $(element).closest(".korsar-modal").attr('data-reachgoal');
-    console.log("reachGoal:"+ reachGoal);
+
     var btn =  $(element);
 
     var form_1 = $(element).parent();
@@ -29,6 +44,12 @@ function test_send_form(element) {
         var phone = form_1.find(".i-phone").val();
         var email = form_1.find(".i-email").val();
         var point = form_1.find(".i-point").val();
+
+        var proff = "";
+        if(form_1.find(".i-prof")) {
+            proff = form_1.find(".i-prof").val();
+        }
+
         //showBlock_2(name);
 
 
@@ -45,7 +66,7 @@ function test_send_form(element) {
         $.ajax({
             type: "POST",
             url: "/local/ajax/hash_auth.php",
-            data: JSON.stringify({name: name, email: email, phone: phone,city: point})
+            data: JSON.stringify({name: name, email: email, phone: phone,city: point, proff: proff})
         }).done(function (data) {
             block_send = true;
             btn.text(old_text);
@@ -65,7 +86,12 @@ function test_send_form(element) {
                     $(this).css({"display": "none"});
                 }).removeClass("active");
 
-                $("body").append(modal_complite);
+                if(proff) {
+                    $("body").append(modal_complite_proff);
+                    $(element).html("Заявка принята");
+                } else {
+                    $("body").append(modal_complite);
+                }
 
                 if (reachGoal) {
                     window.yaCounter51429325.reachGoal(reachGoal);
@@ -88,11 +114,11 @@ function price_form_zz_call() {
 
     var modal = '<div class="korsar-modal js-action-open-price">'+
         '<div class="wrap">'+
-        '<div class="modal-body" style="max-width:360px; height:480px">'+
+        '<div class="modal-body">'+
         '<div class="close">'+
         '<span class="korsar-icon close"></span>'+
         '</div>'+
-        '<div class="header" style="margin-top:20px;margin-bottom:0px;">Оформи заявку сейчас и получить <span class="red">скидку до 45%</span> !</div>'+
+        '<div class="header">Заполни форму сейчас! <span class="red">скидки до 45%</span></div>'+
         '<div class="form">'+
         '<fieldset>'+
         '<span class="korsar-icon user-w"></span>'+
@@ -111,13 +137,13 @@ function price_form_zz_call() {
         '<input type="text" class="i-point korsar-input" placeholder="Город" data-pattern="notnull" required>'+
         '</fieldset>'+
         '<button type="button" class="js-action-do-auth button green active" onclick="test_send_form(this)">Получить прайс-лист</button>'+
-        '<fieldset class="checkbox" style="padding-top: 21px;">' +
+        '<div class="checkbox" style="padding-top: 21px;">' +
         '<span class="checkbox">' +
         '<span class="korsar-icon check">' +
         '</span>' +
         '</span> ' +
-        '<label style="font-size: 9px;">Согласен(а) с <a href="/personal/personal-data-policy/">политикой конфиденциальности</a></label>' +
-        '<input type="hidden"></fieldset>'+
+        '<label>Согласен(а) с <a href="/personal/personal-data-policy/">политикой конфиденциальности</a></label>' +
+        '<input type="hidden"></div>'+
         '</div>'+
         '</div>'+
         '</div>'+

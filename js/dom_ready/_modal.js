@@ -1,42 +1,63 @@
 function modal_zz_call(){
 
-    $(".call-modal").unbind('click').on('click', function(e) {
+    $(".call-modal").on('click', function(e) {
         e.preventDefault();
+
         var d = $(this).attr('data-target');
+
         var datareachgoal = $(this).attr('data-reachgoal');
+
         if(datareachgoal) {
             $(d).attr('data-reachgoal', datareachgoal);
         }
-        $(d).css({"display":"block"}).animate({
+        $(d).animate({
             opacity: 1
-        },200);
+        },200).addClass('active');
+        $("body").css({"overflow":"hidden"});
         return false;
     });
 
-    $("body").unbind('click').on("click", ".korsar-modal .close", function(e) {
-        e.preventDefault();
-        var v  = $(this).closest(".korsar-modal").find("video");
-        $.each(v, function(k, v){
-            v.pause();
+    $(".korsar-modal").each(function(key, element){
+        $(element).on("click", ".close", function(e) {
+            console.log("click  .korsar-modal .close");
+            e.preventDefault();
+            $("body").css({"overflow":"visible"});
+            var v  = $(this).closest(".korsar-modal").find("video");
+            $.each(v, function(k, v){
+                v.pause();
+            });
+            $(this).closest(".korsar-modal").animate({
+                opacity: 0
+            },200, function(){
+                $(this).removeClass('active');;
+            });
+            return false;
         });
-        $(this).closest(".korsar-modal").animate({
+    });
+
+
+
+    $("body").unbind('click').on("click", ".modal-mysalut .close", function(e) {
+
+        var $modal = $(this).closest(".modal-mysalut");
+        $modal.animate({
             opacity: 0
         },200, function(){
-            $(this).css({"display":"none"});
+            $modal.removeClass('active');
+            $("body").css({"overflow":"visible"});
         });
         return false;
     });
-
 
     $('.cart-v2-wrapper .delivery-call-modal').on('click', function(e) {
         e.preventDefault();
+        $("body").css({"overflow":"visible"});
         var d = $(this).attr('data-target');
         $(d).css({"display":"flex"}).animate({
             opacity: 1
         },200);
         $(d).find('.round').unbind('click').on('click', function(){
-            $(d).css({"display":"none"});
+            $(d).css({"display":"none"}).removeClass('active');
         });
     });
-
 };

@@ -89,6 +89,10 @@ body, html {
   }
 }
 
+.display-768 {
+  display: none;
+}
+
 
 .container-2 {
   width:100%!important;
@@ -108,6 +112,9 @@ body, html {
   }
   .width-line {
     border-bottom: 1px solid $border-fullwidth-line-color;
+  }
+  .display-768 {
+    display: block;
   }
 }
 // Large devices (desktops, 992px and up)
@@ -202,6 +209,14 @@ label {
   cursor: pointer;
 }
 
+.button.h40 {
+  height:40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
 .button:hover,
 .button.active {
   background: $gray-1;
@@ -236,9 +251,9 @@ label {
 
 .button.yellow,
 .button.yellow.active:hover {
-  background: #FCC30D;
+  background: #F9DB67;
   color:#000;
-  border-color:#FCC30D;
+  border-color:#F9DB67;
 }
 
 .button.yellow:hover,
@@ -774,6 +789,9 @@ img {
       }
     }
   }
+}
+.korsar-modal.active {
+  display:block;
 }
 .korsar-modal.video-modal{
   .wrap {

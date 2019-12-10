@@ -1,0 +1,63 @@
+.mobile-expend-block {
+  position:relative;
+  padding-top: 10px;
+  .expend-text {
+    overflow: hidden;
+    transition: max-height 0.25s;
+    &.hide {
+      max-height: 112px;
+    }
+
+    &.show {
+      max-height: 1000px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .expend-fade {
+    position: absolute;
+    bottom:0px;
+    right: 45px;
+    z-index: 0;
+    display: block;
+    height: 19px;
+    width: 60px;
+    transition: width 0.25s;
+    background: linear-gradient( to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 1) 80% );
+    &.hide {
+      width: 1px;
+    }
+  }
+  .expend-button {
+    z-index: 1;
+    bottom:0px;
+    right:0px;
+    position: absolute;
+    color:$gray-1;
+    background-color: #DDD;
+    border-radius: 20px;
+    padding:0 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .expend-fade.hide + .expend-button {
+    bottom: -25px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .mobile-expend-block {
+    .expend-text {
+      &.hide {
+        max-height: 1000px;
+      }
+    }
+    .expend-fade {
+      display: none;
+    }
+    .expend-button {
+      display: none;
+    }
+  }
+}

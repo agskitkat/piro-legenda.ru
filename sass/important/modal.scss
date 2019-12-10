@@ -11,6 +11,9 @@
   z-index: 100505;
   .content {
     position:relative;
+    overflow-y: scroll;
+    max-height: 100vh;
+    padding:20px 0px;
   }
   .close {
     position: absolute;
@@ -22,9 +25,10 @@
     width: 45px;
     height: 45px;
     right: 10px;
-    top: 10px;
-    border: 1px solid #DDD;
+    top: 30px;
+    border: 1px solid #000;
     cursor:pointer;
+
     img {
       margin-top: 10px;
       width: 23px;
@@ -43,7 +47,13 @@
   display:flex;
 }
 
-
+@media (min-width: 1024px) {
+  .modal-mysalut {
+    .content {
+      overflow-y: visible;
+    }
+  }
+}
 
 
 .auth-block {

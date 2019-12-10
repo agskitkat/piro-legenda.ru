@@ -41,7 +41,7 @@ function start_zz_call() {
 
     // Filter First check
     var is_checker_some = false;
-    $(".filter-items .item").each(function(k,v) {
+   $(".filter-items .item").each(function(k,v) {
         var i = $(this).find("input");
         if(i.is(":checked")) {
             i.closest(".item").addClass("current");
@@ -49,9 +49,10 @@ function start_zz_call() {
             is_checker_some = true;
         }
     });
-    if(!is_checker_some) {
-        $(".bx-filter-parameters-box:first").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
-    }
+    //if(!is_checker_some) {
+        $(".bx-filter-parameters-box:nth-child(1)").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
+        $(".bx-filter-parameters-box:nth-child(2)").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
+    //}
     /*
          /FILTER
    */
@@ -86,7 +87,12 @@ function start_zz_call() {
             event.preventDefault();
 
             if($(this).is('.product')) {
-                window.history.back();
+                var backUrl =  $(this).attr('data-back-url');
+                if(backUrl) {
+                    window.location.href = backUrl;
+                } else {
+                    history.go(-1);
+                }
                 return false;
             }
 
@@ -279,7 +285,7 @@ function start_zz_call() {
 
 
     $(".menu-back-link").click(function(){
-        parent.history.back();
+        history.go(-1);
         return false;
     });
 

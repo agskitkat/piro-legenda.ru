@@ -164,45 +164,66 @@ function loader_zz_call() {
 };
 function modal_zz_call(){
 
-    $(".call-modal").unbind('click').on('click', function(e) {
+    $(".call-modal").on('click', function(e) {
         e.preventDefault();
+
         var d = $(this).attr('data-target');
+
         var datareachgoal = $(this).attr('data-reachgoal');
+
         if(datareachgoal) {
             $(d).attr('data-reachgoal', datareachgoal);
         }
-        $(d).css({"display":"block"}).animate({
+        $(d).animate({
             opacity: 1
-        },200);
+        },200).addClass('active');
+        $("body").css({"overflow":"hidden"});
         return false;
     });
 
-    $("body").unbind('click').on("click", ".korsar-modal .close", function(e) {
-        e.preventDefault();
-        var v  = $(this).closest(".korsar-modal").find("video");
-        $.each(v, function(k, v){
-            v.pause();
+    $(".korsar-modal").each(function(key, element){
+        $(element).on("click", ".close", function(e) {
+            console.log("click  .korsar-modal .close");
+            e.preventDefault();
+            $("body").css({"overflow":"visible"});
+            var v  = $(this).closest(".korsar-modal").find("video");
+            $.each(v, function(k, v){
+                v.pause();
+            });
+            $(this).closest(".korsar-modal").animate({
+                opacity: 0
+            },200, function(){
+                $(this).removeClass('active');;
+            });
+            return false;
         });
-        $(this).closest(".korsar-modal").animate({
+    });
+
+
+
+    $("body").unbind('click').on("click", ".modal-mysalut .close", function(e) {
+
+        var $modal = $(this).closest(".modal-mysalut");
+        $modal.animate({
             opacity: 0
         },200, function(){
-            $(this).css({"display":"none"});
+            $modal.removeClass('active');
+            $("body").css({"overflow":"visible"});
         });
         return false;
     });
-
 
     $('.cart-v2-wrapper .delivery-call-modal').on('click', function(e) {
         e.preventDefault();
+        $("body").css({"overflow":"visible"});
         var d = $(this).attr('data-target');
         $(d).css({"display":"flex"}).animate({
             opacity: 1
         },200);
         $(d).find('.round').unbind('click').on('click', function(){
-            $(d).css({"display":"none"});
+            $(d).css({"display":"none"}).removeClass('active');
         });
     });
-
 };
 window.dataLayer = window.dataLayer || [];
 // Include on HEADER !!!  /open
@@ -247,7 +268,7 @@ function start_zz_call() {
 
     // Filter First check
     var is_checker_some = false;
-    $(".filter-items .item").each(function(k,v) {
+   $(".filter-items .item").each(function(k,v) {
         var i = $(this).find("input");
         if(i.is(":checked")) {
             i.closest(".item").addClass("current");
@@ -255,9 +276,10 @@ function start_zz_call() {
             is_checker_some = true;
         }
     });
-    if(!is_checker_some) {
-        $(".bx-filter-parameters-box:first").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
-    }
+    //if(!is_checker_some) {
+        $(".bx-filter-parameters-box:nth-child(1)").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
+        $(".bx-filter-parameters-box:nth-child(2)").addClass("bx-active").find(".filter-items.items-vertical").addClass("bx-active");
+    //}
     /*
          /FILTER
    */
@@ -292,7 +314,12 @@ function start_zz_call() {
             event.preventDefault();
 
             if($(this).is('.product')) {
-                window.history.back();
+                var backUrl =  $(this).attr('data-back-url');
+                if(backUrl) {
+                    window.location.href = backUrl;
+                } else {
+                    history.go(-1);
+                }
                 return false;
             }
 
@@ -485,7 +512,7 @@ function start_zz_call() {
 
 
     $(".menu-back-link").click(function(){
-        parent.history.back();
+        history.go(-1);
         return false;
     });
 
