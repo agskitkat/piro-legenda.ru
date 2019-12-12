@@ -150,4 +150,45 @@ function price_form_zz_call() {
         '</div>';
 
     $("body").append(modal);
+
+
+    var proff = '<div class="korsar-modal js-action-open-prof">'+
+        '<div class="wrap">'+
+        '<div class="modal-body">'+
+        '<div class="close">'+
+        '<span class="korsar-icon close"></span>'+
+        '</div>'+
+        '<div class="header">Оформление заявки</div>'+
+        '<div class="form">'+
+        '<fieldset>'+
+        '<span class="korsar-icon user-w"></span>'+
+        '<input type="text" class="i-name korsar-input" placeholder="Имя"  data-pattern="notnull" required>'+
+        '</fieldset>'+
+        '<fieldset>'+
+        '<span class="korsar-icon phone"></span>'+
+        '<input type="text" class="i-phone korsar-input" placeholder="Телефон" data-pattern="phone" required>'+
+        '</fieldset>'+
+        '<fieldset>'+
+        '<span class="korsar-icon mail"></span>'+
+        '<input type="text" class="i-email korsar-input" placeholder="Email" data-pattern="email" required>'+
+        '</fieldset>'+
+        '<fieldset>'+
+        '<span class="korsar-icon point"></span>'+
+        '<input type="text" class="i-point korsar-input" placeholder="Город" data-pattern="notnull" required>'+
+        '</fieldset>' +
+        '<input type="hidden" class="i-prof" name="prof" value="Y">'+
+        '<button type="button" class="js-action-do-auth  button active yellow radius" onclick="test_send_form(this)">Отправить</button>'+
+        '<div class="checkbox" style="padding-top: 21px;">' +
+        '<span class="checkbox">' +
+        '<span class="korsar-icon check">' +
+        '</span>' +
+        '</span> ' +
+        '<label>Согласен(а) с <a href="/personal/personal-data-policy/">политикой конфиденциальности</a></label>' +
+        '<input type="hidden"></div>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>';
+
+    $("body").append(proff);
 };

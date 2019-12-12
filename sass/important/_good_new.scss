@@ -221,6 +221,17 @@ $header-font-size: 16px;
         line-height: 19px
       }
     }
+    .call-prof-modal {
+      margin-top: 10px;
+      padding: 25px 0px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      .button {
+        height: 40px;
+        line-height: 40px;
+        padding:0px;
+
+      }
+    }
   }
 
   .good-v2__sittings-block {
@@ -900,7 +911,7 @@ $header-font-size: 16px;
         width:50%;
         padding: 0px;
         border-bottom: 0px solid rgba(0, 0, 0, 0.1);
-        transform: translateY(-18px);
+        //transform: translateY(-18px);
         .good-v2__sitting-header {
           font-weight: bold;
           font-size: $header-font-size;
@@ -979,6 +990,33 @@ $header-font-size: 16px;
         margin-top: 10px;
         font-size: 14px;
         line-height: 25px;
+      }
+    }
+  }
+  .good-v2.profi {
+    .good-v2__sittings-block {
+      .good_v2_options_good_block {
+        transform: translateY(-40px);
+      }
+      .good-v2__sitting {
+        padding-top: 40px;
+      }
+    }
+    .good-v2__downloads-block {
+      transform: translateY(-80px);
+    }
+    .good-v2__info {
+      .call-prof-modal {
+        margin-top: 10px;
+        padding: 25px 0px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        .button {
+          width: 160px;
+          height: 45px;
+          line-height: 45px;
+          padding:0px;
+
+        }
       }
     }
   }
@@ -1086,8 +1124,45 @@ $header-font-size: 16px;
       }
     }
   }
-}
+  .good-v2.profi {
+    .good-v2__sittings-block {
+      .good_v2_options_good_block {
+        transform: translateY(-80px);
+      }
+      .good-v2__sitting {
 
+      }
+    }
+    .good-v2__downloads-block {
+      transform: translateY(-120px);
+    }
+    .good-v2__info {
+      .call-prof-modal {
+
+      }
+    }
+  }
+}
+@media (min-width: 1170px) {
+  .good-v2.profi {
+    .good-v2__sittings-block {
+      .good_v2_options_good_block {
+        transform: translateY(-100px);
+      }
+      .good-v2__sitting {
+
+      }
+    }
+    .good-v2__downloads-block {
+      transform: translateY(-140px);
+    }
+    .good-v2__info {
+      .call-prof-modal {
+
+      }
+    }
+  }
+}
 @media (min-width: 1440px) {
   .good-v2 {
     .good-v2__media {
@@ -1123,6 +1198,25 @@ $header-font-size: 16px;
       }
       .good-v2__options-wrap {
         transform: translateY(-25px);
+      }
+    }
+  }
+  .good-v2.profi {
+    .good-v2__sittings-block {
+      .good_v2_options_good_block {
+        transform: translateY(-160px);
+        margin:0px;
+      }
+      .good-v2__sitting {
+
+      }
+    }
+    .good-v2__downloads-block {
+      transform: translateY(-200px);
+    }
+    .good-v2__info {
+      .call-prof-modal {
+
       }
     }
   }
