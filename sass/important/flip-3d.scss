@@ -11,7 +11,20 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  animation: flip-3d 5s forwards;
+  animation: flip-3d 3s forwards;
+}
+.flip-3d .flip-box-inner.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  animation: flip-3d-circle 30s forwards;
+  animation-delay: 5s;
+}
+.flip-3d .flip-box-inner.delay10 {
+  animation-delay: 3s;
 }
 
 .flip-3d .flip-box-front, .flip-3d .flip-box-back {
@@ -34,7 +47,32 @@
    from {
     transform: rotateX(0deg);
   }
-  90% {
+  80% {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(180deg);
+  }
+}
+
+
+@keyframes flip-3d-circle {
+  from {
+    transform: rotateX(0deg);
+  }
+  30% {
+    transform: rotateX(0deg);
+  }
+  33% {
+    transform: rotateX(180deg);
+  }
+  63% {
+    transform: rotateX(180deg);
+  }
+  66% {
+    transform: rotateX(0deg);
+  }
+  96% {
     transform: rotateX(0deg);
   }
   to {

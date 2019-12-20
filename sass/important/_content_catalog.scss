@@ -928,6 +928,11 @@ $green: #3DDB05;
       }
     }
   }
+  .goods .good .good_name_price_block.elki {
+      .good_prices_mode {
+        min-height: auto;
+      }
+  }
 
 
   .catalog-block .goods .good .good_buy .good_quantity,

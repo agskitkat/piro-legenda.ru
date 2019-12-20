@@ -81,6 +81,14 @@
         display: block;
         clear: both;
       }
+      .vcard-item.yandex-navigator-link {
+        border-radius: 5px;
+        border: 2px solid #F9DB67;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:10px;
+      }
   }
 
   .social {
@@ -304,6 +312,7 @@
         }
       }
     }
+
   }
 }
 
@@ -386,6 +395,9 @@
             display:inline;
           }
         }
+      }
+      .vcard-item.yandex-navigator-link {
+        display: none;
       }
     }
     .social {

@@ -896,7 +896,7 @@ var liveSearch = function(config) {
                 return fn.apply(this, args);
             } else execOnUnlock = true;
         }
-    }
+    };
 
     var result = [];
     var searchItemsBySearchString  = limitExecByInterval(function(str) {
