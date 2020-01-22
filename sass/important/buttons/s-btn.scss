@@ -1,0 +1,96 @@
+/*
+    Простейшая кнопка с эффектом hover
+    <a href="#" class="s-btn">Заказать</a>
+    <button class="s-btn">Заказать</button>
+*/
+// Базовая сетка (4px)
+$grid-base: 4;
+// Фабрика кнопок
+$button-styles-array: (
+  "": (
+    "font-size": 20px,
+    "line-height": 5,
+    "border-radius": 5px,
+    "font-color": #FFF,
+    "background-color": #0cc61d,
+    "background-hover-color": #00d514,
+    "height": 15,
+  ),
+  /*
+  Добавляя массив создаём модификатор, нпаример yellow
+  <button class="s-btn yellow">Заказать</button>
+  */
+  "yellow": (
+    "font-size": 16px,
+    "line-height": 12,
+    "border-radius": 5px,
+    "font-color": #000,
+    "background-color": #F9DB67,
+    "background-hover-color": #f9ce32,
+    "height": 12,
+    "isBold": true
+  ),
+  "gray": (
+    "font-size": 16px,
+    "line-height": 12,
+    "border-radius": 5px,
+    "font-color": $black,
+    "background-color": #EDEDED,
+    "background-hover-color": #c9c9c9,
+    "height": 12,
+    "isBold": true
+  ),
+);
+
+$name: "s-btn";
+$styles: map-get($button-styles-array, "");
+
+.#{$name} {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  @if(map-get($styles, "isBold")) {
+    font-weight: bold;
+  } @else {
+    font-weight: normal;
+  }
+  align-items: center;
+  justify-content: center;
+  font-size: map-get($styles, "font-size");
+  line-height: map-get($styles, "line-height") * $grid-base + px;
+  height: map-get($styles, "height") * $grid-base + px;
+  border-radius: map-get($styles, "border-radius");
+  background-color: map-get($styles, "background-color");
+  color: map-get($styles, "font-color");
+  text-decoration: none;
+  padding: 0 5 * $grid-base + px;
+  border: none;
+  transition: background-color ease-in-out 0.2s;
+}
+.#{$name}:hover {
+  background-color: map-get($styles,"background-hover-color");
+}
+.#{$name}.inline {
+  display: inline-flex;
+}
+
+@each $class, $styles in $button-styles-array {
+  @if ($class != "") {
+    .#{$name}.#{$class} {
+      @if(map-get($styles, "isBold")) {
+        font-weight: bold;
+      } @else {
+        font-weight: normal;
+      }
+      font-size: map-get($styles, "font-size");
+      line-height: map-get($styles, "line-height") * $grid-base + px;
+      height: map-get($styles, "height") * $grid-base + px;
+      border-radius: map-get($styles, "border-radius");
+      background-color: map-get($styles, "background-color");
+      color: map-get($styles, "font-color");
+    }
+    .#{$name}.#{$class}:hover {
+      background-color: map-get($styles,"background-hover-color");
+    }
+  }
+}

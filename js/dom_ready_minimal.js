@@ -144,7 +144,7 @@ function loader_zz_call() {
             "opacity":1
         });
     });
-
+ 
     $('img.lizy_load').css({
         "transition": "all 0.4s",
         "opacity": 0,

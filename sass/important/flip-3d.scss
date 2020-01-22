@@ -11,7 +11,7 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  animation: flip-3d 3s forwards;
+  animation: flip-3d 4s forwards;
 }
 .flip-3d .flip-box-inner.circle {
   position: relative;
@@ -24,7 +24,7 @@
   animation-delay: 5s;
 }
 .flip-3d .flip-box-inner.delay10 {
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 .flip-3d .flip-box-front, .flip-3d .flip-box-back {

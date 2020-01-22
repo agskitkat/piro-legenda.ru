@@ -324,7 +324,61 @@ label {
   cursor: no-drop;
 }
 
+fieldset.promo .button-right {
+  cursor: pointer;
+  margin-top: -6px;
+  float: right;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #AEAEAE;
+  text-align: center;
+}
 
+
+
+fieldset.promo {
+  padding:0px;
+  input {
+    float:left;
+    width:calc(100% - 50px);
+    border:0px;
+    border-bottom:1px solid #AEAEAE;
+    height:30px;
+    padding-right: 0px;
+    border-radius: 0px;
+    padding-left:30px;
+    padding-bottom:10px;
+    margin:0px;
+  }
+  input::placeholder {
+    font-size: 14px;
+    color: #AEAEAE;
+  }
+  > img {
+    position:absolute;
+    left:0px;
+    top:0px;
+  }
+  .button-right {
+    cursor: pointer;
+    margin-top:-6px;
+    float:right;
+    display: block;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border: 1px solid #AEAEAE;
+    text-align: center;
+    > img {
+      margin-top:10px;
+      width:18px;
+      height:18px;
+    }
+  }
+}
 
 
 .deg90 {

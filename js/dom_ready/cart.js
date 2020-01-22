@@ -247,7 +247,7 @@ function cart_zz_call() {
 
 
     /**
-     * ендлер изменения инпута количества у товаров
+     * Хендлер изменения инпута количества у товаров
      * @param $input
      */
     function updateCartOnInputChange($input) {
@@ -656,8 +656,8 @@ function cart_zz_call() {
 
             $(discountInfoList).append('<div class="order-sum order-sum_littel">\n' +
             '\t\t\t\t\t\t<div class="order-sum__flex red">\n' +
-            '\t\t\t\t\t\t\t<span>'+v.PRECENT+' <span class="black">от '+numberWithSpaces(v.FULL_SUMM)+' ₽</span></span>\n' +
-            '\t\t\t\t\t\t\t<span class="red">-'+numberWithSpaces(v.SUM)+' ₽</span>\n' +
+            '\t\t\t\t\t\t\t<span>'+v.PRECENT+' <span class="black">от '+numberWithSpaces( v.FULL_SUMM.toFixed(2) )+' ₽</span></span>\n' +
+            '\t\t\t\t\t\t\t<span class="red">-'+numberWithSpaces(v.SUM.toFixed(2))+' ₽</span>\n' +
             '\t\t\t\t\t\t</div>\n' +
             '\t\t\t\t\t\t<div class="order-sum__desc">'+v.NAME+'</div>\n' +
             '\t\t\t\t\t</div>');
@@ -692,12 +692,8 @@ function cart_zz_call() {
                 good.find(".total_good_sum").css({"display": "none"});
                 good.find(".total_good_sum:not(.big)").css({"display": "block"});
             }
-
-
         });
-
-
-    }
+    }  
 
     $(".info-wrapper .btn-block .button, .btn-block-desctop .button").click(function (e) {
         e.preventDefault();
@@ -830,4 +826,48 @@ function cart_zz_call() {
 
     setProgress($('#circle-delivery'), startPrice, window.nowPriceToDelivery);
     setProgress($('#circle-moscowfree'), startPrice, window.allowFreeShippingMoscow);
-}
+
+
+
+
+
+    // Применение промо кода
+    $(".js-action-do-promo").click( function() {
+        var container = $(this).closest(".promo");
+        var loader = $(this).closest(".menu").find(".menu-loader");
+        var code = container.find("input").val();
+        console.log(code);
+        loader.addClass("active");
+
+        container.find(".msg-cupon").remove();
+
+
+        // Отправляем данные
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/local/ajax/add2basket_v2.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState != 4) return false;
+            if (xhr.status != 200) {
+                console.error("СART: ошибка на сервере: " + xhr.status, xhr.statusText);
+            } else {
+                setTimeout(function () {
+                    //item.remove();
+                }, 200);
+                var data = JSON.parse(xhr.responseText);
+                update_cart(data);
+                update_mini_cart(data.price, data.count_item);
+
+                loader.removeClass("active");
+
+                if(!data.coupon_msg.code) {
+                    container.append('<div class="msg-cupon error">'+data.coupon_msg.error+'</div>');
+                } else {
+                    container.append('<div class="msg-cupon ok">'+data.coupon_msg.success+'</div>');
+                }
+            }
+        }
+        xhr.send(JSON.stringify({"type":"couponAdd", "coupon":code} ));
+
+    });
+} 

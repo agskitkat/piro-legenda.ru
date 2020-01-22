@@ -80,6 +80,10 @@
         display: none;
       }
 
+      .discount-info-row {
+        color:$red;
+      }
+
       .good-image {
         width: 100px;
 
@@ -333,7 +337,7 @@
         }
 
         .order-result {
-          border-top: $gray-2 1px solid;
+          //border-top: $gray-2 1px solid;
           margin-top: 27px;
           padding-top: 20px;
           padding-bottom: 20px;
@@ -491,6 +495,30 @@
 
     .bonus-block {
       padding: 0 20px;
+    }
+
+    .promo-code-input {
+      margin-top: 15px;
+      padding-top: 20px;
+      border-top: 1px solid #E8E8E8;
+      .promo {
+
+        .msg-cupon {
+          font-size:10px;
+          padding:10px;
+          margin-top:40px;
+          clear: both;
+          border-radius: 5px;
+        }
+        .msg-cupon.error {
+          background-color: #F81818;
+          color:#FFF;
+        }
+        .msg-cupon.ok {
+          background-color: #40D697;
+          color:#FFF;
+        }
+      }
     }
   }
 }
@@ -757,7 +785,7 @@
         .order-block {
           padding-top: 1px;
           .order-result {
-            border-top:1px solid $gray-2;
+            //border-top:1px solid $gray-2;
             margin-top: 15px;
             padding-top: 16px;
             padding-bottom: 19px;

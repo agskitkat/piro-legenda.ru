@@ -251,7 +251,7 @@ function cart_zz_call() {
 
 
     /**
-     * ендлер изменения инпута количества у товаров
+     * Хендлер изменения инпута количества у товаров
      * @param $input
      */
     function updateCartOnInputChange($input) {
@@ -660,8 +660,8 @@ function cart_zz_call() {
 
             $(discountInfoList).append('<div class="order-sum order-sum_littel">\n' +
             '\t\t\t\t\t\t<div class="order-sum__flex red">\n' +
-            '\t\t\t\t\t\t\t<span>'+v.PRECENT+' <span class="black">от '+numberWithSpaces(v.FULL_SUMM)+' ₽</span></span>\n' +
-            '\t\t\t\t\t\t\t<span class="red">-'+numberWithSpaces(v.SUM)+' ₽</span>\n' +
+            '\t\t\t\t\t\t\t<span>'+v.PRECENT+' <span class="black">от '+numberWithSpaces( v.FULL_SUMM.toFixed(2) )+' ₽</span></span>\n' +
+            '\t\t\t\t\t\t\t<span class="red">-'+numberWithSpaces(v.SUM.toFixed(2))+' ₽</span>\n' +
             '\t\t\t\t\t\t</div>\n' +
             '\t\t\t\t\t\t<div class="order-sum__desc">'+v.NAME+'</div>\n' +
             '\t\t\t\t\t</div>');
@@ -696,12 +696,8 @@ function cart_zz_call() {
                 good.find(".total_good_sum").css({"display": "none"});
                 good.find(".total_good_sum:not(.big)").css({"display": "block"});
             }
-
-
         });
-
-
-    }
+    }  
 
     $(".info-wrapper .btn-block .button, .btn-block-desctop .button").click(function (e) {
         e.preventDefault();
@@ -834,7 +830,51 @@ function cart_zz_call() {
 
     setProgress($('#circle-delivery'), startPrice, window.nowPriceToDelivery);
     setProgress($('#circle-moscowfree'), startPrice, window.allowFreeShippingMoscow);
-}
+
+
+
+
+
+    // Применение промо кода
+    $(".js-action-do-promo").click( function() {
+        var container = $(this).closest(".promo");
+        var loader = $(this).closest(".menu").find(".menu-loader");
+        var code = container.find("input").val();
+        console.log(code);
+        loader.addClass("active");
+
+        container.find(".msg-cupon").remove();
+
+
+        // Отправляем данные
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/local/ajax/add2basket_v2.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState != 4) return false;
+            if (xhr.status != 200) {
+                console.error("СART: ошибка на сервере: " + xhr.status, xhr.statusText);
+            } else {
+                setTimeout(function () {
+                    //item.remove();
+                }, 200);
+                var data = JSON.parse(xhr.responseText);
+                update_cart(data);
+                update_mini_cart(data.price, data.count_item);
+
+                loader.removeClass("active");
+
+                if(!data.coupon_msg.code) {
+                    container.append('<div class="msg-cupon error">'+data.coupon_msg.error+'</div>');
+                } else {
+                    container.append('<div class="msg-cupon ok">'+data.coupon_msg.success+'</div>');
+                }
+            }
+        }
+        xhr.send(JSON.stringify({"type":"couponAdd", "coupon":code} ));
+
+    });
+} 
 function delivery_tab() {
 
     $(".delivery-tree .header-main").click(function(){
@@ -996,6 +1036,9 @@ function login_zz_call() {
     //centerdAlternative();
 };
 // Login page /stop
+function mask_zz_call() {
+    $("input.phone_mask").mask("+7(999)999-99-99", {autoclear: false});
+}
 // INCLUDE HEADER /start
 function menu_zz_call() {
     var debug = false;
@@ -1372,6 +1415,37 @@ function paly_video_zz_call() {
     }
 };
 // INCLUDE where good video /close
+function preorder_zz_call() {
+
+    function setErrorOnInput(input, str) {
+        var block = $(input).closest(".input-border-label-out");
+        $(block).addClass("error");
+        var error = $(block).find("error");
+        $(error).html(str);
+    }
+
+    function removeErrorOnInput(input) {
+        var block = $(input).closest(".input-border-label-out");
+        $(block).removeClass("error");
+    }
+
+    $("#sendSMS").click(function() {
+        var input = $("#phoneSMS");
+        var phone = $(input).val();
+        var res = phone.match(/\+7\(\d{3}\)\d{3}\-\d{2}\-\d{2}/gm);
+
+        if(!res) {
+            setErrorOnInput(input, "Неверно указан номер телефона");
+            return false;
+        }
+        removeErrorOnInput(input);
+
+        $(".sms-step-1").hide();
+        $(".sms-step-2").addClass("active");
+
+        //TODO: HERE
+    });
+}
 var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="display: block; opacity: 1;">\n' +
     '            <div class="wrap">\n' +
     '                <div class="modal-body" style="max-width:360px; height:420px">\n' +
@@ -2530,6 +2604,8 @@ $().ready(function(){
     zz_scroll_modal();
     zz_auth_modal();
     delivery_tab();
+    mask_zz_call();
+    preorder_zz_call();
 });
 function catalog_zz_call(){
     var l = $(".catalog .catalog-block .goods .good").length;
@@ -2551,7 +2627,7 @@ function loader_zz_call() {
             "opacity":1
         });
     });
-
+ 
     $('img.lizy_load').css({
         "transition": "all 0.4s",
         "opacity": 0,
