@@ -30,7 +30,7 @@
                                 <div class="input-border-label-out">
                                     <label>
                                         <span class="label">Код из SMS</span>
-                                        <input type="text">
+                                        <input id="smsCode" type="text">
                                         <p class="error">Неверно указан Код из SMS</p>
                                     </label>
                                 </div>
@@ -41,7 +41,7 @@
 
                             <button id="sendSMS" class="s-btn yellow sms-step-1">Получить код в SMS</button>
 
-                            <button class="s-btn sms-step-2 yellow">Ввести код</button>
+                            <button id="sendCode" class="s-btn sms-step-2 yellow">Ввести код</button>
                         </div>
 
                     </div>
@@ -49,7 +49,7 @@
                     <div class="right">
                         <div class="header">Оформить заказ как гость</div>
                         <div class="textInfo">Получить вашу скидку вы сможете при оформлении заказа как авторизованный пользователь.</div>
-                        <button class="s-btn gray">Продолжить без регистрации</button>
+                        <a href="#order" class="s-btn gray">Продолжить без регистрации</a>
                     </div>
 
                 </div>

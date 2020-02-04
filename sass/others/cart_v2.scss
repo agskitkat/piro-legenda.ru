@@ -1,4 +1,5 @@
 .cart-v2-wrapper {
+  padding-top: 20px;
   .present {
     padding-bottom: 40px;
 
@@ -631,6 +632,7 @@
 
 @media (min-width: 768px) {
   .cart-v2-wrapper {
+    padding-top: 0px;
     .goods {
       .good {
         .good-image {

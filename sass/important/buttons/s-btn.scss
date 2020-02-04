@@ -22,7 +22,7 @@ $button-styles-array: (
   */
   "yellow": (
     "font-size": 16px,
-    "line-height": 12,
+    "line-height": 5,
     "border-radius": 5px,
     "font-color": #000,
     "background-color": #F9DB67,
@@ -32,7 +32,7 @@ $button-styles-array: (
   ),
   "gray": (
     "font-size": 16px,
-    "line-height": 12,
+    "line-height": 5,
     "border-radius": 5px,
     "font-color": $black,
     "background-color": #EDEDED,
@@ -54,6 +54,7 @@ $styles: map-get($button-styles-array, "");
   } @else {
     font-weight: normal;
   }
+  text-align: center;
   align-items: center;
   justify-content: center;
   font-size: map-get($styles, "font-size");

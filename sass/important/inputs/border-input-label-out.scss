@@ -61,6 +61,7 @@ $styles: map-get($border-input-label-out-array,"");
 .#{$name} {
   box-sizing: border-box;
   display: block;
+  text-align: left;
   label {
     box-sizing: border-box;
     display: block;

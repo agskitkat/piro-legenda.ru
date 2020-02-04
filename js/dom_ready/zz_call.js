@@ -16,5 +16,4 @@ $().ready(function(){
     zz_auth_modal();
     delivery_tab();
     mask_zz_call();
-    preorder_zz_call();
 });

@@ -1415,37 +1415,8 @@ function paly_video_zz_call() {
     }
 };
 // INCLUDE where good video /close
-function preorder_zz_call() {
 
-    function setErrorOnInput(input, str) {
-        var block = $(input).closest(".input-border-label-out");
-        $(block).addClass("error");
-        var error = $(block).find("error");
-        $(error).html(str);
-    }
 
-    function removeErrorOnInput(input) {
-        var block = $(input).closest(".input-border-label-out");
-        $(block).removeClass("error");
-    }
-
-    $("#sendSMS").click(function() {
-        var input = $("#phoneSMS");
-        var phone = $(input).val();
-        var res = phone.match(/\+7\(\d{3}\)\d{3}\-\d{2}\-\d{2}/gm);
-
-        if(!res) {
-            setErrorOnInput(input, "Неверно указан номер телефона");
-            return false;
-        }
-        removeErrorOnInput(input);
-
-        $(".sms-step-1").hide();
-        $(".sms-step-2").addClass("active");
-
-        //TODO: HERE
-    });
-}
 var modal_complite = '<div class="korsar-modal js-action-form-was-send" style="display: block; opacity: 1;">\n' +
     '            <div class="wrap">\n' +
     '                <div class="modal-body" style="max-width:360px; height:420px">\n' +
@@ -2605,7 +2576,6 @@ $().ready(function(){
     zz_auth_modal();
     delivery_tab();
     mask_zz_call();
-    preorder_zz_call();
 });
 function catalog_zz_call(){
     var l = $(".catalog .catalog-block .goods .good").length;

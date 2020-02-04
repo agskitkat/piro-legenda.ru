@@ -17,7 +17,7 @@ $blue-2: #8692DE;
   color: $black;
 }
 
-.form button {
+/*.form button {
   border-radius: 5px;
   color:$gray-1;
   border:1px solid $gray-1;
@@ -36,11 +36,11 @@ $blue-2: #8692DE;
   background: $green;
   color:#FFF;
   border-color:$green;
-}
+}*/
 
 .page-auth .auth-block {
   position:relative;
-  height:100vh;
+  //height:100vh;
 }
 .page-auth {
   text-align: center;
@@ -63,8 +63,12 @@ $blue-2: #8692DE;
     font-weight: bold;
     color:$black;
   }
+  .fragments {
+    width:100%;
+  }
   .fragment {
-    max-width:500px;
+    max-width:360px;
+    width:100%;
     text-align: center;
     margin:0 auto;
     display:none;
@@ -72,15 +76,14 @@ $blue-2: #8692DE;
         display:block;
         font-size: 16px;
         padding-top:45px;
-        width:250px;
+        width:100%;
         margin: 0 auto;
         font-weight: 500;
       }
 
       .form {
         padding-top:32px;
-        padding-right: 20px;
-        padding-left: 20px;
+
       }
 
       .form {
